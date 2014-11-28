@@ -65,7 +65,7 @@ ymaps.ready(function () {
                 var parts = geoObjectData.Point.pos.split(' ');
                 var point = new ymaps.geometry.Point([+parts[1], +parts[0]]);
                 map.geoObjects.add(new ymaps.Placemark(point, {
-                    balloonContent: 'цвет <strong>вконтакте</strong>'
+                    balloonContent: geoObjectData.metaDataProperty.GeocoderMetaData.text
                 }, {
                     preset: 'islands#circleIcon',
                     iconColor: '#4d7198'
