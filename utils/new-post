@@ -1,0 +1,2 @@
+OUTPUT="$(java -classpath utils/jekyll-boost.jar ru.yamakarov.jekyll.Main -n $1)"
+vim _posts/$OUTPUT
