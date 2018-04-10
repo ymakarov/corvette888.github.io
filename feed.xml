@@ -1,5 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-09T15:49:51+03:00</updated><id>http://localhost:4000/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке приложений баз данных
-</subtitle><entry><title type="html">BufferedReader и JSch</title><link href="http://localhost:4000/java/2018/04/09/blocking-call.html" rel="alternate" type="text/html" title="BufferedReader и JSch" /><published>2018-04-09T12:38:00+03:00</published><updated>2018-04-09T12:38:00+03:00</updated><id>http://localhost:4000/java/2018/04/09/blocking-call</id><content type="html" xml:base="http://localhost:4000/java/2018/04/09/blocking-call.html">&lt;p&gt;У меня возникла проблема при работе через ssh с помощью &lt;a href=&quot;http://www.jcraft.com/jsch/&quot;&gt;Jsch&lt;/a&gt;.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-10T07:13:17+03:00</updated><id>http://localhost:4000/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке приложений баз данных
+</subtitle><entry><title type="html">Не читайте до обеда советских газет.</title><link href="http://localhost:4000/habr/2018/04/10/habr-vs-scholar.html" rel="alternate" type="text/html" title="Не читайте до обеда советских газет." /><published>2018-04-10T06:26:00+03:00</published><updated>2018-04-10T06:26:00+03:00</updated><id>http://localhost:4000/habr/2018/04/10/habr-vs-scholar</id><content type="html" xml:base="http://localhost:4000/habr/2018/04/10/habr-vs-scholar.html">&lt;p&gt;Первым кто обратил мое внимание на то, что не надо читать новости был &lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%A4%D0%B5%D1%80%D1%80%D0%B8%D1%81%D1%81,_%D0%A2%D0%B8%D0%BC%D0%BE%D1%82%D0%B8&quot;&gt;Тим Феррис&lt;/a&gt; в своей книге &lt;a href=&quot;https://www.ozon.ru/context/detail/id/4345001/&quot;&gt;Как работать по 4 часа в неделю&lt;/a&gt;.
+Но это не помогло мне избавиться от своей пагубной зависимости читать новости.&lt;/p&gt;
+
+&lt;p&gt;Очень интересную мысль на тему новостей высказал &lt;a href=&quot;https://reshanov.com/&quot;&gt;Денис Решанов&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Если новости не влияют на твои дейстия, зачем их читать?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;И действительно. Вот я читаю новости про большую политику, а потом еду домой покупаю продукты в магазине, играю с детьми и разговариваю с женой. Новости никак не влияют на то, что я буду делать и говорить. 
+Они могут только испортить настроение и &lt;a href=&quot;https://www.youtube.com/watch?v=LxHdzGDazXg&quot;&gt;ухудшить пищеварение&lt;/a&gt;. Вот цитата для тех кто не любит, как я, или кому неудобно смотреть видео:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Преображенский:&lt;/strong&gt; Если вы заботитесь о своём пищеварении, мой добрый совет — не говорите за обедом о большевизме и о медицине. И — боже вас сохрани — не читайте до обеда советских газет.&lt;/p&gt;
+
+  &lt;p&gt;&lt;strong&gt;Борменталь:&lt;/strong&gt; Гм… Да ведь других нет.&lt;/p&gt;
+
+  &lt;p&gt;&lt;strong&gt;Преображенский:&lt;/strong&gt; Вот никаких и не читайте. Вы знаете, я произвёл 30 наблюдений у себя в клинике. И что же вы думаете? Пациенты, не читающие газет, чувствуют себя превосходно. Те же, которых я специально заставлял читать «Правду», — теряли в весе. […] Мало этого. Пониженные коленные рефлексы, скверный аппетит, угнетённое состояние духа.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Да к тому же у новостей есть свойство настигать тебя и приходить независимо от твоего желания. Вот например, вчера я смог удержаться от чтения новостей и только вечером узнал от коллеги про 
+черный понедельник и олигархов, которым за счет населения возместят потерянные деньги. И теперь самое главное я знаю, причем я не потратил на получение этой информации не минуты своего времени.
+Да она не глубокая, но знаете выбор у меня небольшой, я в силу семейных обстоятельств и воспитания, даже не хочу уезжать из своего район Санкт-Петербурга. И значит мне жить здесь и правительство может делать довольно большие дела. А когда мне надоест терпеть, я пожалуй запущу таки свой проект по отказу от представительской формы демократии и переходy к подлинному народовластию через передоставление законотворческих возможностей всему населению. Я уверен, что это с развитием комьютерных технологий возможно.&lt;/p&gt;
+
+&lt;p&gt;Однако, это пост задумывался не как откровения капитана про новости. 
+Развить мысль можно дальше. Надо следить за качеством потребляемой информации. &lt;a href=&quot;https://scholar.google.ru/citations?user=8VDN5LcAAAAJ&amp;amp;hl=ru&quot;&gt;Кирилл Маслинский&lt;/a&gt; 
+каждый раз, когда я сообщаю ему очередной жареный факт, интересуется у меня откуда я его узнал. И часто говорит: “Яша, надо аккуратно работать с источниками”.&lt;/p&gt;
+
+&lt;p&gt;Так вот позавчера, возвращаясь с &lt;a href=&quot;https://jpoint.ru/&quot;&gt;JPoint&lt;/a&gt;, мне повезло беседовать с нашим ведущим разработчиком &lt;a href=&quot;https://incubos.org/&quot;&gt;Вадимом Цесько&lt;/a&gt;. 
+Он высказал определенную критику по поводу &lt;a href=&quot;https://habrahabr.ru/&quot;&gt;Хабра&lt;/a&gt;. Качество статей на Хабре оставляет желать лучшего. 
+Материал не рецензируется и очень тяжело найти хорошие проверенные данные. Да есть качественные статьи, но их мало по сравнению со шлаком.
+Если ты хочешь развиваться как специалист гораздо эффективнее читать рецензируемые статьи. Они пишутся не один вечер и качественно проверяются.
+С помощью &lt;a href=&quot;https://scholar.google.ru/&quot;&gt;Google Scholar&lt;/a&gt; их довольно легко найти.&lt;/p&gt;
+
+&lt;p&gt;Например &lt;a href=&quot;https://scholar.google.ru/scholar?as_ylo=2018&amp;amp;q=distributed+systems+principles&amp;amp;hl=ru&amp;amp;as_sdt=0,5&quot;&gt;статьи про распределенные системы за 2018 год&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Я хочу стать лучше и считаю качество информации ключом к развитию. Удачи всем на этом трудном пути!&lt;/p&gt;</content><author><name></name></author><summary type="html">Первым кто обратил мое внимание на то, что не надо читать новости был Тим Феррис в своей книге Как работать по 4 часа в неделю. Но это не помогло мне избавиться от своей пагубной зависимости читать новости.</summary></entry><entry><title type="html">BufferedReader и JSch</title><link href="http://localhost:4000/java/2018/04/09/blocking-call.html" rel="alternate" type="text/html" title="BufferedReader и JSch" /><published>2018-04-09T12:38:00+03:00</published><updated>2018-04-09T12:38:00+03:00</updated><id>http://localhost:4000/java/2018/04/09/blocking-call</id><content type="html" xml:base="http://localhost:4000/java/2018/04/09/blocking-call.html">&lt;p&gt;У меня возникла проблема при работе через ssh с помощью &lt;a href=&quot;http://www.jcraft.com/jsch/&quot;&gt;Jsch&lt;/a&gt;.
 Чтение из канала зависало на получении данных и пользователь не мог это прервать.&lt;/p&gt;
 
 &lt;p&gt;Сначала программа выглядела так:&lt;/p&gt;
