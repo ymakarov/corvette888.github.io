@@ -1,11 +1,57 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-11T08:38:58+03:00</updated><id>http://localhost:4000/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке приложений баз данных
-</subtitle><entry><title type="html">Полезная информация по Java от Nitsan Wakart</title><link href="http://localhost:4000/java/2018/04/10/nitsan-wakart.html" rel="alternate" type="text/html" title="Полезная информация по Java от Nitsan Wakart" /><published>2018-04-10T15:34:00+03:00</published><updated>2018-04-10T15:34:00+03:00</updated><id>http://localhost:4000/java/2018/04/10/nitsan-wakart</id><content type="html" xml:base="http://localhost:4000/java/2018/04/10/nitsan-wakart.html">&lt;p&gt;&lt;a href=&quot;http://psy-lob-saw.blogspot.ru/&quot;&gt;Блог&lt;/a&gt; Nitsan Wakart - чумовый источник хардкора по Java.&lt;/p&gt;</content><author><name></name></author><summary type="html">Блог Nitsan Wakart - чумовый источник хардкора по Java.</summary></entry><entry><title type="html">Не читайте до обеда советских газет.</title><link href="http://localhost:4000/habr/2018/04/10/habr-vs-scholar.html" rel="alternate" type="text/html" title="Не читайте до обеда советских газет." /><published>2018-04-10T06:26:00+03:00</published><updated>2018-04-10T06:26:00+03:00</updated><id>http://localhost:4000/habr/2018/04/10/habr-vs-scholar</id><content type="html" xml:base="http://localhost:4000/habr/2018/04/10/habr-vs-scholar.html">&lt;p&gt;Первым кто обратил мое внимание на то, что не надо читать новости был &lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%A4%D0%B5%D1%80%D1%80%D0%B8%D1%81%D1%81,_%D0%A2%D0%B8%D0%BC%D0%BE%D1%82%D0%B8&quot;&gt;Тим Феррис&lt;/a&gt; в своей книге &lt;a href=&quot;https://www.ozon.ru/context/detail/id/4345001/&quot;&gt;Как работать по 4 часа в неделю&lt;/a&gt;.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-11T11:55:31+03:00</updated><id>http://localhost:4000/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке приложений баз данных
+</subtitle><entry><title type="html">Проверка правописания в vim</title><link href="http://localhost:4000/vim/2018/04/11/vim-spelling.html" rel="alternate" type="text/html" title="Проверка правописания в vim" /><published>2018-04-11T11:30:00+03:00</published><updated>2018-04-11T11:30:00+03:00</updated><id>http://localhost:4000/vim/2018/04/11/vim-spelling</id><content type="html" xml:base="http://localhost:4000/vim/2018/04/11/vim-spelling.html">&lt;p&gt;При написании статей я допускаю ошибки правописания. 
+Word хорошо справляется с этой задачей и подсвечивает неправильно написанные слова.
+Vim тоже &lt;a href=&quot;https://www.linux.com/learn/using-spell-checking-vim&quot;&gt;это умеет&lt;/a&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;:set spell &lt;span class=&quot;nv&quot;&gt;spelllang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;en_us,ru_ru&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Английский есть, а русский ему приходится скачивать и устанавливать:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;spellfile#LoadFile&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;: There is no writable spell directory.
+Shall I create /Users/yakov.makarov/.vim/spell
+
+Cannot find spell file &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;ru&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;utf-8
+Do you want me to try downloading it?
+
+Downloading ru.utf-8.spl...
+:!curl &lt;span class=&quot;s1&quot;&gt;'http://ftp.vim.org/pub/vim/runtime/spell/ru.utf-8.spl'&lt;/span&gt; -o &lt;span class=&quot;s1&quot;&gt;'/var/folders/m8/r3crydz15ygbg8y6q5fpw_xh0000gp/T/vun2CXm/0.spl'&lt;/span&gt;
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+&lt;span class=&quot;s2&quot;&gt;&quot;/var/folders/m8/r3crydz15ygbg8y6q5fpw_xh0000gp/T/vun2CXm/0.spl&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;noeol] 1280L, 837741C
+In which directory &lt;span class=&quot;k&quot;&gt;do &lt;/span&gt;you want to write the file:
+1. /Users/yakov.makarov/.vim/spell
+&lt;span class=&quot;s2&quot;&gt;&quot;~/.vim/spell/ru.utf-8.spl&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;New] 1280L, 837742C written
+Do you want me to try getting the .sug file?
+This will improve making suggestions &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;spelling mistakes,
+but it uses quite a bit of memory.
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;N]o, &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Y&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;es:
+Downloading ru.utf-8.sug...
+:!curl &lt;span class=&quot;s1&quot;&gt;'http://ftp.vim.org/pub/vim/runtime/spell/ru.utf-8.sug'&lt;/span&gt; -o &lt;span class=&quot;s1&quot;&gt;'/var/folders/m8/r3crydz15ygbg8y6q5fpw_xh0000gp/T/vPAIeQT/0.sug'&lt;/span&gt;
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+&lt;span class=&quot;s2&quot;&gt;&quot;~/.vim/spell/ru.utf-8.sug&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;New] 22937L, 3568429C written
+Press ENTER or &lt;span class=&quot;nb&quot;&gt;type command &lt;/span&gt;to &lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;И оно работает!
+A когда надоело смотреть на подсветку в консольном выводе, как в примере сверху, можно отключить подсветку:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;:set spell nospell&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Полезные команды:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;]s&lt;/strong&gt; - следующее неправильно написанное слово&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[s&lt;/strong&gt; - предыдущее неправильно написанное слово&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;zg&lt;/strong&gt; - добавить в словарь&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;z=&lt;/strong&gt; - варианты исправления&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Однозначно добавлю включение проверки в &lt;em&gt;.vimrc&lt;/em&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">При написании статей я допускаю ошибки правописания. Word хорошо справляется с этой задачей и подсвечивает неправильно написанные слова. Vim тоже это умеет:</summary></entry><entry><title type="html">Полезная информация по Java от Nitsan Wakart</title><link href="http://localhost:4000/java/2018/04/10/nitsan-wakart.html" rel="alternate" type="text/html" title="Полезная информация по Java от Nitsan Wakart" /><published>2018-04-10T15:34:00+03:00</published><updated>2018-04-10T15:34:00+03:00</updated><id>http://localhost:4000/java/2018/04/10/nitsan-wakart</id><content type="html" xml:base="http://localhost:4000/java/2018/04/10/nitsan-wakart.html">&lt;p&gt;&lt;a href=&quot;http://psy-lob-saw.blogspot.ru/&quot;&gt;Блог&lt;/a&gt; Nitsan Wakart - чумовый источник хардкора по Java.&lt;/p&gt;</content><author><name></name></author><summary type="html">Блог Nitsan Wakart - чумовый источник хардкора по Java.</summary></entry><entry><title type="html">Не читайте до обеда советских газет.</title><link href="http://localhost:4000/habr/2018/04/10/habr-vs-scholar.html" rel="alternate" type="text/html" title="Не читайте до обеда советских газет." /><published>2018-04-10T06:26:00+03:00</published><updated>2018-04-10T06:26:00+03:00</updated><id>http://localhost:4000/habr/2018/04/10/habr-vs-scholar</id><content type="html" xml:base="http://localhost:4000/habr/2018/04/10/habr-vs-scholar.html">&lt;p&gt;Первым кто обратил мое внимание на то, что не надо читать новости был &lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%A4%D0%B5%D1%80%D1%80%D0%B8%D1%81%D1%81,_%D0%A2%D0%B8%D0%BC%D0%BE%D1%82%D0%B8&quot;&gt;Тим Феррис&lt;/a&gt; в своей книге &lt;a href=&quot;https://www.ozon.ru/context/detail/id/4345001/&quot;&gt;Как работать по 4 часа в неделю&lt;/a&gt;.
 Но это не помогло мне избавиться от своей пагубной зависимости читать новости.&lt;/p&gt;
 
 &lt;p&gt;Очень интересную мысль на тему новостей высказал &lt;a href=&quot;https://reshanov.com/&quot;&gt;Денис Решанов&lt;/a&gt;:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Если новости не влияют на твои дейстия, зачем их читать?&lt;/p&gt;
+  &lt;p&gt;Если новости не влияют на твои действия, зачем их читать?&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;И действительно. Вот я читаю новости про большую политику, а потом еду домой покупаю продукты в магазине, играю с детьми и разговариваю с женой. Новости никак не влияют на то, что я буду делать и говорить. 
@@ -21,7 +67,7 @@
 
 &lt;p&gt;Да к тому же у новостей есть свойство настигать тебя и приходить независимо от твоего желания. Вот например, вчера я смог удержаться от чтения новостей и только вечером узнал от коллеги про 
 черный понедельник и олигархов, которым за счет населения возместят потерянные деньги. И теперь самое главное я знаю, причем я не потратил на получение этой информации не минуты своего времени.
-Да она не глубокая, но знаете выбор у меня небольшой, я в силу семейных обстоятельств и воспитания, даже не хочу уезжать из своего район Санкт-Петербурга. И значит мне жить здесь и правительство может делать довольно большие дела. А когда мне надоест терпеть, я пожалуй запущу таки свой проект по отказу от представительской формы демократии и переходy к подлинному народовластию через передоставление законотворческих возможностей всему населению. Я уверен, что это с развитием комьютерных технологий возможно.&lt;/p&gt;
+Да она не глубокая, но знаете выбор у меня небольшой, я в силу семейных обстоятельств и воспитания, даже не хочу уезжать из своего район Санкт-Петербурга. И значит мне жить здесь и правительство может делать довольно большие дела. А когда мне надоест терпеть, я пожалуй запущу таки свой проект по отказу от представительской формы демократии и переходу к подлинному народовластию через предоставление законотворческих возможностей всему населению. Я уверен, что это с развитием компьютерных технологий возможно.&lt;/p&gt;
 
 &lt;p&gt;Однако, это пост задумывался не как откровения капитана про новости. 
 Развить мысль можно дальше. Надо следить за качеством потребляемой информации. &lt;a href=&quot;https://scholar.google.ru/citations?user=8VDN5LcAAAAJ&amp;amp;hl=ru&quot;&gt;Кирилл Маслинский&lt;/a&gt; 

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>Проверка правописания в vim | Записки Java программиста</title>
+<meta name="generator" content="Jekyll v3.5.2" />
+<meta property="og:title" content="Проверка правописания в vim" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="При написании статей я допускаю ошибки правописания. Word хорошо справляется с этой задачей и подсвечивает неправильно написанные слова. Vim тоже это умеет:" />
+<meta property="og:description" content="При написании статей я допускаю ошибки правописания. Word хорошо справляется с этой задачей и подсвечивает неправильно написанные слова. Vim тоже это умеет:" />
+<link rel="canonical" href="http://localhost:4000/vim/2018/04/11/vim-spelling.html" />
+<meta property="og:url" content="http://localhost:4000/vim/2018/04/11/vim-spelling.html" />
+<meta property="og:site_name" content="Записки Java программиста" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-04-11T11:30:00+03:00" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/vim/2018/04/11/vim-spelling.html"},"url":"http://localhost:4000/vim/2018/04/11/vim-spelling.html","description":"При написании статей я допускаю ошибки правописания. Word хорошо справляется с этой задачей и подсвечивает неправильно написанные слова. Vim тоже это умеет:","@type":"BlogPosting","headline":"Проверка правописания в vim","dateModified":"2018-04-11T11:30:00+03:00","datePublished":"2018-04-11T11:30:00+03:00","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Записки Java программиста" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Записки Java программиста</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">Обо мне</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Проверка правописания в vim</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-04-11T11:30:00+03:00" itemprop="datePublished">Apr 11, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>При написании статей я допускаю ошибки правописания. 
+Word хорошо справляется с этой задачей и подсвечивает неправильно написанные слова.
+Vim тоже <a href="https://www.linux.com/learn/using-spell-checking-vim">это умеет</a>:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">:set spell <span class="nv">spelllang</span><span class="o">=</span>en_us,ru_ru</code></pre></figure>
+
+<p>Английский есть, а русский ему приходится скачивать и устанавливать:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">spellfile#LoadFile<span class="o">()</span>: There is no writable spell directory.
+Shall I create /Users/yakov.makarov/.vim/spell
+
+Cannot find spell file <span class="k">for</span> <span class="s2">"ru"</span> <span class="k">in </span>utf-8
+Do you want me to try downloading it?
+
+Downloading ru.utf-8.spl...
+:!curl <span class="s1">'http://ftp.vim.org/pub/vim/runtime/spell/ru.utf-8.spl'</span> -o <span class="s1">'/var/folders/m8/r3crydz15ygbg8y6q5fpw_xh0000gp/T/vun2CXm/0.spl'</span>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+<span class="s2">"/var/folders/m8/r3crydz15ygbg8y6q5fpw_xh0000gp/T/vun2CXm/0.spl"</span> <span class="o">[</span>noeol] 1280L, 837741C
+In which directory <span class="k">do </span>you want to write the file:
+1. /Users/yakov.makarov/.vim/spell
+<span class="s2">"~/.vim/spell/ru.utf-8.spl"</span> <span class="o">[</span>New] 1280L, 837742C written
+Do you want me to try getting the .sug file?
+This will improve making suggestions <span class="k">for </span>spelling mistakes,
+but it uses quite a bit of memory.
+<span class="o">[</span>N]o, <span class="o">(</span>Y<span class="o">)</span>es:
+Downloading ru.utf-8.sug...
+:!curl <span class="s1">'http://ftp.vim.org/pub/vim/runtime/spell/ru.utf-8.sug'</span> -o <span class="s1">'/var/folders/m8/r3crydz15ygbg8y6q5fpw_xh0000gp/T/vPAIeQT/0.sug'</span>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+<span class="s2">"~/.vim/spell/ru.utf-8.sug"</span> <span class="o">[</span>New] 22937L, 3568429C written
+Press ENTER or <span class="nb">type command </span>to <span class="k">continue</span></code></pre></figure>
+
+<p>И оно работает!
+A когда надоело смотреть на подсветку в консольном выводе, как в примере сверху, можно отключить подсветку:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">:set spell nospell</code></pre></figure>
+
+<p>Полезные команды:</p>
+<ul>
+  <li><strong>]s</strong> - следующее неправильно написанное слово</li>
+  <li><strong>[s</strong> - предыдущее неправильно написанное слово</li>
+  <li><strong>zg</strong> - добавить в словарь</li>
+  <li><strong>z=</strong> - варианты исправления</li>
+</ul>
+
+<p>Однозначно добавлю включение проверки в <em>.vimrc</em>.</p>
+
+  </div><a class="u-url" href="/vim/2018/04/11/vim-spelling.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Записки Java программиста</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Записки Java программиста</li><li><a class="u-email" href="mailto:yakov_makarov@mail.ru">yakov_makarov@mail.ru</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/ymakarov"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">ymakarov</span></a></li><li><a href="https://www.twitter.com/iamakarov"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">iamakarov</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Блог о разработке приложений баз данных
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
