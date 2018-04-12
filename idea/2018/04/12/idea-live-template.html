@@ -59,13 +59,15 @@
 
 <p>Кода шаблона:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">log4j</span><span class="o">.</span><span class="na">Logger</span> <span class="n">log</span> <span class="o">=</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">log4j</span><span class="o">.</span><span class="na">Logger</span><span class="o">.</span><span class="na">getLogger</span><span class="o">(</span><span class="n">$CLASS_NAME</span><span class="err">$</span><span class="o">.</span><span class="na">class</span><span class="o">);</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-groovy" data-lang="groovy"><span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">log4j</span><span class="o">.</span><span class="na">Logger</span> <span class="n">log</span> <span class="o">=</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">log4j</span><span class="o">.</span><span class="na">Logger</span><span class="o">.</span><span class="na">getLogger</span><span class="o">(</span><span class="n">$CLASS_NAME$</span><span class="o">.</span><span class="na">class</span><span class="o">);</span></code></pre></figure>
 
-<p><em>$CLASS_NAME$</em> задается через <strong>Edit variables</strong> и равен <em>className()</em>.</p>
+<p><em>$CLASS_NAME$</em> задается через <strong>Edit variables</strong> и равен <em>className()</em>:</p>
+
+<p><img src="http://localhost:4000/img/edit-variables.png" alt="Edit variables" /></p>
 
 <p>И внизу я указал, что шаблон работает в объявлениях.</p>
 
-<p>Voila!</p>
+<p><strong>Voila!</strong></p>
 
 <p>Теперь я могу генерировать объявление логера быстрее, чем стереть его.</p>
 
