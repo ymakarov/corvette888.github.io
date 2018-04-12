@@ -49,9 +49,7 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Давным давно в <a href="https://www.eclipse.org/">Eclipse</a> я писал строчки вида:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>private static final Logger log = Logger.getLogger(ZKChecker.class);
-</code></pre>
-</div>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">Logger</span> <span class="n">log</span> <span class="o">=</span> <span class="n">Logger</span><span class="o">.</span><span class="na">getLogger</span><span class="o">(</span><span class="n">ZKChecker</span><span class="o">.</span><span class="na">class</span><span class="o">);</span></code></pre></figure>
 
 <p>Автоматически написав <em>log</em> и нажав на Tab. 
 И сегодня у меня дошли руки добавить этот функционал в Idea.
@@ -61,9 +59,7 @@
 
 <p>Кода шаблона:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>private static final org.apache.log4j.Logger log = org.apache.log4j.Logger.getLogger($CLASS_NAME$.class);
-</code></pre>
-</div>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">log4j</span><span class="o">.</span><span class="na">Logger</span> <span class="n">log</span> <span class="o">=</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">log4j</span><span class="o">.</span><span class="na">Logger</span><span class="o">.</span><span class="na">getLogger</span><span class="o">(</span><span class="n">$CLASS_NAME</span><span class="err">$</span><span class="o">.</span><span class="na">class</span><span class="o">);</span></code></pre></figure>
 
 <p><em>$CLASS_NAME$</em> задается через <strong>Edit variables</strong> и равен <em>className()</em>.</p>
 
