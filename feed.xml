@@ -1,5 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-17T13:04:53+03:00</updated><id>http://localhost:4000/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке приложений баз данных
-</subtitle><entry><title type="html">Квадратный корень в Java</title><link href="http://localhost:4000/java/2018/04/17/square-root.html" rel="alternate" type="text/html" title="Квадратный корень в Java" /><published>2018-04-17T12:40:00+03:00</published><updated>2018-04-17T12:40:00+03:00</updated><id>http://localhost:4000/java/2018/04/17/square-root</id><content type="html" xml:base="http://localhost:4000/java/2018/04/17/square-root.html">&lt;p&gt;Реализуя метод проверки числа на простоту, по следам &lt;a href=&quot;/java/2018/04/15/prime-number.html&quot;&gt;нахождения простых чисел&lt;/a&gt;:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-18T11:33:12+03:00</updated><id>http://localhost:4000/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке приложений баз данных
+</subtitle><entry><title type="html">Github: синхронизируем форк с основным репозиторием.</title><link href="http://localhost:4000/github/2018/04/18/sync-github-fork.html" rel="alternate" type="text/html" title="Github: синхронизируем форк с основным репозиторием." /><published>2018-04-18T11:20:00+03:00</published><updated>2018-04-18T11:20:00+03:00</updated><id>http://localhost:4000/github/2018/04/18/sync-github-fork</id><content type="html" xml:base="http://localhost:4000/github/2018/04/18/sync-github-fork.html">&lt;p&gt;Git позволяет просто синхронизировать репозитории.
+В случае Github это можно сделать так:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git remote add upstream /url/to/original/repo
+git fetch upstream
+git checkout master
+git reset --hard upstream/master  
+git push origin master --force 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Взято со &lt;a href=&quot;https://stackoverflow.com/questions/9646167/clean-up-a-fork-and-restart-it-from-the-upstream&quot;&gt;Stackoverflow&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Мне пришлось это сделать, потому что в основном репозитории форс пушем были убраны часть коммитов и когда я мержил мастер, в моем форке оставались коммиты которых уже не было в основном репозитори.
+В целом форс пуш это зло, и поэтому по умолчанию в новых репозиториях отключен.&lt;/p&gt;</content><author><name></name></author><summary type="html">Git позволяет просто синхронизировать репозитории. В случае Github это можно сделать так:</summary></entry><entry><title type="html">Квадратный корень в Java</title><link href="http://localhost:4000/java/2018/04/17/square-root.html" rel="alternate" type="text/html" title="Квадратный корень в Java" /><published>2018-04-17T12:40:00+03:00</published><updated>2018-04-17T12:40:00+03:00</updated><id>http://localhost:4000/java/2018/04/17/square-root</id><content type="html" xml:base="http://localhost:4000/java/2018/04/17/square-root.html">&lt;p&gt;Реализуя метод проверки числа на простоту, по следам &lt;a href=&quot;/java/2018/04/15/prime-number.html&quot;&gt;нахождения простых чисел&lt;/a&gt;:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ru&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;yamakarov&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;prime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 
@@ -198,40 +211,4 @@ A когда надоело смотреть на подсветку в конс
   &lt;li&gt;&lt;strong&gt;z=&lt;/strong&gt; - варианты исправления&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Однозначно добавлю включение проверки в &lt;em&gt;.vimrc&lt;/em&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">При написании статей я допускаю ошибки правописания. Word хорошо справляется с этой задачей и подсвечивает неправильно написанные слова. Vim тоже это умеет:</summary></entry><entry><title type="html">Полезная информация по Java от Nitsan Wakart</title><link href="http://localhost:4000/java/2018/04/10/nitsan-wakart.html" rel="alternate" type="text/html" title="Полезная информация по Java от Nitsan Wakart" /><published>2018-04-10T15:34:00+03:00</published><updated>2018-04-10T15:34:00+03:00</updated><id>http://localhost:4000/java/2018/04/10/nitsan-wakart</id><content type="html" xml:base="http://localhost:4000/java/2018/04/10/nitsan-wakart.html">&lt;p&gt;&lt;a href=&quot;http://psy-lob-saw.blogspot.ru/&quot;&gt;Блог&lt;/a&gt; Nitsan Wakart - чумовый источник хардкора по Java.&lt;/p&gt;</content><author><name></name></author><summary type="html">Блог Nitsan Wakart - чумовый источник хардкора по Java.</summary></entry><entry><title type="html">Не читайте до обеда советских газет.</title><link href="http://localhost:4000/habr/2018/04/10/habr-vs-scholar.html" rel="alternate" type="text/html" title="Не читайте до обеда советских газет." /><published>2018-04-10T06:26:00+03:00</published><updated>2018-04-10T06:26:00+03:00</updated><id>http://localhost:4000/habr/2018/04/10/habr-vs-scholar</id><content type="html" xml:base="http://localhost:4000/habr/2018/04/10/habr-vs-scholar.html">&lt;p&gt;Первым кто обратил мое внимание на то, что не надо читать новости был &lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%A4%D0%B5%D1%80%D1%80%D0%B8%D1%81%D1%81,_%D0%A2%D0%B8%D0%BC%D0%BE%D1%82%D0%B8&quot;&gt;Тим Феррис&lt;/a&gt; в своей книге &lt;a href=&quot;https://www.ozon.ru/context/detail/id/4345001/&quot;&gt;Как работать по 4 часа в неделю&lt;/a&gt;.
-Но это не помогло мне избавиться от своей пагубной зависимости читать новости.&lt;/p&gt;
-
-&lt;p&gt;Очень интересную мысль на тему новостей высказал &lt;a href=&quot;https://reshanov.com/&quot;&gt;Денис Решанов&lt;/a&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Если новости не влияют на твои действия, зачем их читать?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;И действительно. Вот я читаю новости про большую политику, а потом еду домой покупаю продукты в магазине, играю с детьми и разговариваю с женой. Новости никак не влияют на то, что я буду делать и говорить. 
-Они могут только испортить настроение и &lt;a href=&quot;https://www.youtube.com/watch?v=LxHdzGDazXg&quot;&gt;ухудшить пищеварение&lt;/a&gt;. Вот цитата для тех кто не любит, как я, или кому неудобно смотреть видео:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Преображенский:&lt;/strong&gt; Если вы заботитесь о своём пищеварении, мой добрый совет — не говорите за обедом о большевизме и о медицине. И — боже вас сохрани — не читайте до обеда советских газет.&lt;/p&gt;
-
-  &lt;p&gt;&lt;strong&gt;Борменталь:&lt;/strong&gt; Гм… Да ведь других нет.&lt;/p&gt;
-
-  &lt;p&gt;&lt;strong&gt;Преображенский:&lt;/strong&gt; Вот никаких и не читайте. Вы знаете, я произвёл 30 наблюдений у себя в клинике. И что же вы думаете? Пациенты, не читающие газет, чувствуют себя превосходно. Те же, которых я специально заставлял читать «Правду», — теряли в весе. […] Мало этого. Пониженные коленные рефлексы, скверный аппетит, угнетённое состояние духа.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Да к тому же у новостей есть свойство настигать тебя и приходить независимо от твоего желания. Вот например, вчера я смог удержаться от чтения новостей и только вечером узнал от коллеги про 
-черный понедельник и олигархов, которым за счет населения возместят потерянные деньги. И теперь самое главное я знаю, причем я не потратил на получение этой информации не минуты своего времени.
-Да она не глубокая, но знаете выбор у меня небольшой, я в силу семейных обстоятельств и воспитания, даже не хочу уезжать из своего район Санкт-Петербурга. И значит мне жить здесь и правительство может делать довольно большие дела. А когда мне надоест терпеть, я пожалуй запущу таки свой проект по отказу от представительской формы демократии и переходу к подлинному народовластию через предоставление законотворческих возможностей всему населению. Я уверен, что это с развитием компьютерных технологий возможно.&lt;/p&gt;
-
-&lt;p&gt;Однако, это пост задумывался не как откровения капитана про новости. 
-Развить мысль можно дальше. Надо следить за качеством потребляемой информации. &lt;a href=&quot;https://scholar.google.ru/citations?user=8VDN5LcAAAAJ&amp;amp;hl=ru&quot;&gt;Кирилл Маслинский&lt;/a&gt; 
-каждый раз, когда я сообщаю ему очередной жареный факт, интересуется у меня откуда я его узнал. И часто говорит: “Яша, надо аккуратно работать с источниками”.&lt;/p&gt;
-
-&lt;p&gt;Так вот позавчера, возвращаясь с &lt;a href=&quot;https://jpoint.ru/&quot;&gt;JPoint&lt;/a&gt;, мне повезло беседовать с нашим ведущим разработчиком &lt;a href=&quot;https://incubos.org/&quot;&gt;Вадимом Цесько&lt;/a&gt;. 
-Он высказал определенную критику по поводу &lt;a href=&quot;https://habrahabr.ru/&quot;&gt;Хабра&lt;/a&gt;. Качество статей на Хабре оставляет желать лучшего. 
-Материал не рецензируется и очень тяжело найти хорошие проверенные данные. Да есть качественные статьи, но их мало по сравнению со шлаком.
-Если ты хочешь развиваться как специалист гораздо эффективнее читать рецензируемые статьи. Они пишутся не один вечер и качественно проверяются.
-С помощью &lt;a href=&quot;https://scholar.google.ru/&quot;&gt;Google Scholar&lt;/a&gt; их довольно легко найти.&lt;/p&gt;
-
-&lt;p&gt;Например &lt;a href=&quot;https://scholar.google.ru/scholar?as_ylo=2018&amp;amp;q=distributed+systems+principles&amp;amp;hl=ru&amp;amp;as_sdt=0,5&quot;&gt;статьи про распределенные системы за 2018 год&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Я хочу стать лучше и считаю качество информации ключом к развитию. Удачи всем на этом трудном пути!&lt;/p&gt;</content><author><name></name></author><summary type="html">Первым кто обратил мое внимание на то, что не надо читать новости был Тим Феррис в своей книге Как работать по 4 часа в неделю. Но это не помогло мне избавиться от своей пагубной зависимости читать новости.</summary></entry></feed>
+&lt;p&gt;Однозначно добавлю включение проверки в &lt;em&gt;.vimrc&lt;/em&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">При написании статей я допускаю ошибки правописания. Word хорошо справляется с этой задачей и подсвечивает неправильно написанные слова. Vim тоже это умеет:</summary></entry><entry><title type="html">Полезная информация по Java от Nitsan Wakart</title><link href="http://localhost:4000/java/2018/04/10/nitsan-wakart.html" rel="alternate" type="text/html" title="Полезная информация по Java от Nitsan Wakart" /><published>2018-04-10T15:34:00+03:00</published><updated>2018-04-10T15:34:00+03:00</updated><id>http://localhost:4000/java/2018/04/10/nitsan-wakart</id><content type="html" xml:base="http://localhost:4000/java/2018/04/10/nitsan-wakart.html">&lt;p&gt;&lt;a href=&quot;http://psy-lob-saw.blogspot.ru/&quot;&gt;Блог&lt;/a&gt; Nitsan Wakart - чумовый источник хардкора по Java.&lt;/p&gt;</content><author><name></name></author><summary type="html">Блог Nitsan Wakart - чумовый источник хардкора по Java.</summary></entry></feed>
