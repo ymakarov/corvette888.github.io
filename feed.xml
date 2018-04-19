@@ -1,5 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-18T15:29:31+03:00</updated><id>http://localhost:4000/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке приложений баз данных
-</subtitle><entry><title type="html">Исходники JMH</title><link href="http://localhost:4000/jmh/2018/04/18/jmh.html" rel="alternate" type="text/html" title="Исходники JMH" /><published>2018-04-18T15:27:00+03:00</published><updated>2018-04-18T15:27:00+03:00</updated><id>http://localhost:4000/jmh/2018/04/18/jmh</id><content type="html" xml:base="http://localhost:4000/jmh/2018/04/18/jmh.html">&lt;p&gt;Начинаю цикл статей про &lt;a href=&quot;http://openjdk.java.net/projects/code-tools/jmh/&quot;&gt;jmh&lt;/a&gt;.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-19T13:29:16+03:00</updated><id>http://localhost:4000/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке приложений баз данных
+</subtitle><entry><title type="html">Spring Security and Angular</title><link href="http://localhost:4000/spring/security/angular/2018/04/19/spring-security-angular.html" rel="alternate" type="text/html" title="Spring Security and Angular" /><published>2018-04-19T11:40:00+03:00</published><updated>2018-04-19T11:40:00+03:00</updated><id>http://localhost:4000/spring/security/angular/2018/04/19/spring-security-angular</id><content type="html" xml:base="http://localhost:4000/spring/security/angular/2018/04/19/spring-security-angular.html">&lt;p&gt;Большой &lt;a href=&quot;https://spring.io/guides/tutorials/spring-security-and-angular-js/&quot;&gt;тьюториал по использованию Spring Security и Angular&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Понадобилось установить &lt;a href=&quot;https://projects.spring.io/spring-boot/&quot;&gt;Spring boot&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ brew tap pivotal/tap
+$ brew install springboot
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Взял этот код &lt;a href=&quot;https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#getting-started-installing-the-cli&quot;&gt;отсюда&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Запустил:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;spring init --dependencies web,security ui/ &amp;amp;&amp;amp; cd ui
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;После магии с Idea что-то даже получилось. 
+Но все как-то не гладко, названия у проектов не понятные.
+Странные сообщения об ошибках.
+Делать тьюториал оказалось болью, а не хорошей прогулкой.&lt;/p&gt;</content><author><name></name></author><category term="spring" /><category term="security" /><category term="angular" /><category term="java" /><summary type="html">Большой тьюториал по использованию Spring Security и Angular</summary></entry><entry><title type="html">Исходники JMH</title><link href="http://localhost:4000/jmh/2018/04/18/jmh.html" rel="alternate" type="text/html" title="Исходники JMH" /><published>2018-04-18T15:27:00+03:00</published><updated>2018-04-18T15:27:00+03:00</updated><id>http://localhost:4000/jmh/2018/04/18/jmh</id><content type="html" xml:base="http://localhost:4000/jmh/2018/04/18/jmh.html">&lt;p&gt;Начинаю цикл статей про &lt;a href=&quot;http://openjdk.java.net/projects/code-tools/jmh/&quot;&gt;jmh&lt;/a&gt;.
 Ссылка на &lt;a href=&quot;http://hg.openjdk.java.net/code-tools/jmh/file/25d8b2695bac&quot;&gt;исходники&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Начинаю цикл статей про jmh. Ссылка на исходники.</summary></entry><entry><title type="html">Github: синхронизируем форк с основным репозиторием.</title><link href="http://localhost:4000/github/2018/04/18/sync-github-fork.html" rel="alternate" type="text/html" title="Github: синхронизируем форк с основным репозиторием." /><published>2018-04-18T11:20:00+03:00</published><updated>2018-04-18T11:20:00+03:00</updated><id>http://localhost:4000/github/2018/04/18/sync-github-fork</id><content type="html" xml:base="http://localhost:4000/github/2018/04/18/sync-github-fork.html">&lt;p&gt;Git позволяет просто синхронизировать репозитории.
 В случае Github это можно сделать так:&lt;/p&gt;
 
@@ -166,50 +184,4 @@ git push origin master --force
 Этот сервис помогает избегать &lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%B6%D1%81%D0%B0%D0%B9%D1%82%D0%BE%D0%B2%D1%8B%D0%B9_%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%B8%D0%BD%D0%B3&quot;&gt;XSS&lt;/a&gt; 
 и &lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%9A%D0%BB%D0%B8%D0%BA%D0%B4%D0%B6%D0%B5%D0%BA%D0%B8%D0%BD%D0%B3&quot;&gt;clickjacking&lt;/a&gt;  атак.&lt;/p&gt;
 
-&lt;p&gt;XSS входит в &lt;a href=&quot;https://www.owasp.org/index.php/Top_10-2017_Top_10&quot;&gt;Топ 10 Owasp угроз безопасности&lt;/a&gt; и Angular помогает разработчику защититься от этого.&lt;/p&gt;</content><author><name></name></author><summary type="html">Наткнулся на инжектирование $sce в AngularJS приложении. Этот сервис помогает избегать XSS и clickjacking атак.</summary></entry><entry><title type="html">Проверка правописания в vim</title><link href="http://localhost:4000/vim/2018/04/11/vim-spelling.html" rel="alternate" type="text/html" title="Проверка правописания в vim" /><published>2018-04-11T11:30:00+03:00</published><updated>2018-04-11T11:30:00+03:00</updated><id>http://localhost:4000/vim/2018/04/11/vim-spelling</id><content type="html" xml:base="http://localhost:4000/vim/2018/04/11/vim-spelling.html">&lt;p&gt;При написании статей я допускаю ошибки правописания. 
-Word хорошо справляется с этой задачей и подсвечивает неправильно написанные слова.
-Vim тоже &lt;a href=&quot;https://www.linux.com/learn/using-spell-checking-vim&quot;&gt;это умеет&lt;/a&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;:set spell &lt;span class=&quot;nv&quot;&gt;spelllang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;en_us,ru_ru&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Английский есть, а русский ему приходится скачивать и устанавливать:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;spellfile#LoadFile&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;: There is no writable spell directory.
-Shall I create /Users/yakov.makarov/.vim/spell
-
-Cannot find spell file &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;ru&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;utf-8
-Do you want me to try downloading it?
-
-Downloading ru.utf-8.spl...
-:!curl &lt;span class=&quot;s1&quot;&gt;'http://ftp.vim.org/pub/vim/runtime/spell/ru.utf-8.spl'&lt;/span&gt; -o &lt;span class=&quot;s1&quot;&gt;'/var/folders/m8/r3crydz15ygbg8y6q5fpw_xh0000gp/T/vun2CXm/0.spl'&lt;/span&gt;
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-&lt;span class=&quot;s2&quot;&gt;&quot;/var/folders/m8/r3crydz15ygbg8y6q5fpw_xh0000gp/T/vun2CXm/0.spl&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;noeol] 1280L, 837741C
-In which directory &lt;span class=&quot;k&quot;&gt;do &lt;/span&gt;you want to write the file:
-1. /Users/yakov.makarov/.vim/spell
-&lt;span class=&quot;s2&quot;&gt;&quot;~/.vim/spell/ru.utf-8.spl&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;New] 1280L, 837742C written
-Do you want me to try getting the .sug file?
-This will improve making suggestions &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;spelling mistakes,
-but it uses quite a bit of memory.
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;N]o, &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Y&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;es:
-Downloading ru.utf-8.sug...
-:!curl &lt;span class=&quot;s1&quot;&gt;'http://ftp.vim.org/pub/vim/runtime/spell/ru.utf-8.sug'&lt;/span&gt; -o &lt;span class=&quot;s1&quot;&gt;'/var/folders/m8/r3crydz15ygbg8y6q5fpw_xh0000gp/T/vPAIeQT/0.sug'&lt;/span&gt;
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-&lt;span class=&quot;s2&quot;&gt;&quot;~/.vim/spell/ru.utf-8.sug&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;New] 22937L, 3568429C written
-Press ENTER or &lt;span class=&quot;nb&quot;&gt;type command &lt;/span&gt;to &lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;И оно работает!
-A когда надоело смотреть на подсветку в консольном выводе, как в примере сверху, можно отключить подсветку:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;:set spell nospell&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Полезные команды:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;]s&lt;/strong&gt; - следующее неправильно написанное слово&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;[s&lt;/strong&gt; - предыдущее неправильно написанное слово&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;zg&lt;/strong&gt; - добавить в словарь&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;z=&lt;/strong&gt; - варианты исправления&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Однозначно добавлю включение проверки в &lt;em&gt;.vimrc&lt;/em&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">При написании статей я допускаю ошибки правописания. Word хорошо справляется с этой задачей и подсвечивает неправильно написанные слова. Vim тоже это умеет:</summary></entry></feed>
+&lt;p&gt;XSS входит в &lt;a href=&quot;https://www.owasp.org/index.php/Top_10-2017_Top_10&quot;&gt;Топ 10 Owasp угроз безопасности&lt;/a&gt; и Angular помогает разработчику защититься от этого.&lt;/p&gt;</content><author><name></name></author><summary type="html">Наткнулся на инжектирование $sce в AngularJS приложении. Этот сервис помогает избегать XSS и clickjacking атак.</summary></entry></feed>
