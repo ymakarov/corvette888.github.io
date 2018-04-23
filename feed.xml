@@ -1,5 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-22T09:12:00+03:00</updated><id>http://localhost:4000/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке приложений баз данных
-</subtitle><entry><title type="html">Вышла GraalVM</title><link href="http://localhost:4000/graal-vm/2018/04/22/graalvm.html" rel="alternate" type="text/html" title="Вышла GraalVM" /><published>2018-04-22T09:04:00+03:00</published><updated>2018-04-22T09:04:00+03:00</updated><id>http://localhost:4000/graal-vm/2018/04/22/graalvm</id><content type="html" xml:base="http://localhost:4000/graal-vm/2018/04/22/graalvm.html">&lt;p&gt;Вышла &lt;a href=&quot;https://blogs.oracle.com/developers/announcing-graalvm&quot;&gt;GraalVM&lt;/a&gt;. 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-23T12:43:18+03:00</updated><id>http://localhost:4000/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке приложений баз данных
+</subtitle><entry><title type="html">Устанавливаем ngx-bootstrap</title><link href="http://localhost:4000/angular/ts/ngx-bootstrap/2018/04/23/ngx-bootstrap.html" rel="alternate" type="text/html" title="Устанавливаем ngx-bootstrap" /><published>2018-04-23T12:33:00+03:00</published><updated>2018-04-23T12:33:00+03:00</updated><id>http://localhost:4000/angular/ts/ngx-bootstrap/2018/04/23/ngx-bootstrap</id><content type="html" xml:base="http://localhost:4000/angular/ts/ngx-bootstrap/2018/04/23/ngx-bootstrap.html">&lt;p&gt;После работы с Java, при использовании Angular поражает большое количество мелких багов в тьюториалах и сборке примеров.
+Вот и сейчас делаю я &lt;a href=&quot;https://github.com/valor-software/ngx-bootstrap/blob/development/docs/getting-started/ng-cli.md&quot;&gt;Getting started&lt;/a&gt;
+для ngx-bootstrap&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm i -g @angular/cli
+ng new my-app
+cd my-app
+ng serve
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;И при &lt;code class=&quot;highlighter-rouge&quot;&gt;ng serve&lt;/code&gt; вылетает:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;module.js:538
+    throw err;
+    ^
+
+Error: Cannot find module '@angular-devkit/core'
+    at Function.Module._resolveFilename (module.js:536:15)
+    at Function.Module._load (module.js:466:25)
+    at Module.require (module.js:579:17)
+    at require (internal/module.js:11:18)
+    at Object.&amp;lt;anonymous&amp;gt; (/Users/yakov.makarov/Projects/web-examples/angular-ts/node_modules/@angular-devkit/schematics/src/tree/virtual.js:10:16)
+    at Module._compile (module.js:635:30)
+    at Object.Module._extensions..js (module.js:646:10)
+    at Module.load (module.js:554:32)
+    at tryModuleLoad (module.js:497:12)
+    at Function.Module._load (module.js:489:3)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Спасибо &lt;a href=&quot;https://github.com/angular/devkit/issues/256&quot;&gt;https://github.com/angular/devkit/issues/256&lt;/a&gt; это удалось побороть с помощью:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install  @angular-devkit/core --save-dev
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Но в целом эти вещи жутко магические. 
+Я работаю на тем, чтобы больше разбираться, но это тяжело. 
+Не знаю в чем причина, но проще разыскивать ответ в гугл, чем разбираться самому.
+И в этом есть неприятный момент. 
+Приятно решить задачу самому, не очень приятно просто скопировать ответ.
+При этом приятно получать зарплату и по началу, когда копируешь ответ получаешь большую производительность.
+Последствия такого поведения, становятся видимыми довольно не скоро. 
+Но окружая себя магией, ты перестаешь управлять миром.&lt;/p&gt;
+
+&lt;p&gt;Чтобы бороться с магией нужно специализироваться. Это позволяет досконально знать работу системы. 
+Возможно ли достаточная специализация для fullstack разработчика остается под вопросом.&lt;/p&gt;</content><author><name></name></author><summary type="html">После работы с Java, при использовании Angular поражает большое количество мелких багов в тьюториалах и сборке примеров. Вот и сейчас делаю я Getting started для ngx-bootstrap</summary></entry><entry><title type="html">Вышла GraalVM</title><link href="http://localhost:4000/graal-vm/2018/04/22/graalvm.html" rel="alternate" type="text/html" title="Вышла GraalVM" /><published>2018-04-22T09:04:00+03:00</published><updated>2018-04-22T09:04:00+03:00</updated><id>http://localhost:4000/graal-vm/2018/04/22/graalvm</id><content type="html" xml:base="http://localhost:4000/graal-vm/2018/04/22/graalvm.html">&lt;p&gt;Вышла &lt;a href=&quot;https://blogs.oracle.com/developers/announcing-graalvm&quot;&gt;GraalVM&lt;/a&gt;. 
 Очень интересный проект. Виртуальная машина, которую смогут пилить даже простые смертные.
 GraalVM умеет выполнять:&lt;/p&gt;
 
@@ -146,18 +193,4 @@ git push origin master --force
   &lt;li&gt;посчитать все остатки от деления n на числа от 2 до &lt;script type=&quot;math/tex&quot;&gt;\sqrt{n}&lt;/script&gt;&lt;/li&gt;
   &lt;li&gt;решето Эратосфена&lt;/li&gt;
   &lt;li&gt;вероятностный тест Ферма&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Программирование для детей</title><link href="http://localhost:4000/scratch/2018/04/14/scratch.html" rel="alternate" type="text/html" title="Программирование для детей" /><published>2018-04-14T23:13:00+03:00</published><updated>2018-04-14T23:13:00+03:00</updated><id>http://localhost:4000/scratch/2018/04/14/scratch</id><content type="html" xml:base="http://localhost:4000/scratch/2018/04/14/scratch.html">&lt;p&gt;Я купил книжку &lt;a href=&quot;https://www.ozon.ru/context/detail/id/32092949/?gclid=Cj0KCQjwzcbWBRDmARIsAM6uChX7OJhfspFpjXqC_bmpNw3NaFNlBt5NPP14zlgDOgCTI6-no85Mu_IaAtYDEALw_wcB&amp;amp;gclsrc=aw.ds&amp;amp;dclid=COaMta_KutoCFQtLGQod35UHhg&quot;&gt;Программирование для детей&lt;/a&gt;.
-В ней в доступной форме рассказывается детям, как научиться программировать. 
-В качестве среды разработки в первой части используется &lt;a href=&quot;https://scratch.mit.edu&quot;&gt;Scratch&lt;/a&gt;, а во второй Python.
-Пока я разбираю с дочкой, ей 7 лет, первую часть и ей нравится.
-Особенно она в восторге от примера с драконом, котом и пончиком.
-Все упражнения делает с удовольствием, хотя думаю не до конца понимает что происходит, а просто копирует примеры из книги.&lt;/p&gt;
-
-&lt;p&gt;На Scratch программирование происходит с использованием подобия блок схем и программы из блоков набираются руками:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/img/scratch-code.png&quot; alt=&quot;Программа из блоков&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Можно создать довольно сложные программы, существует интересные примитивы для создания игры.
-Я все хочу придумать забавную анимацию, но все никак не доходят руки. 
-Когда же занимаешься с ребенком, главное не терять темп, чуть задумался и все фокус внимания потерян и ему скучно.
-У меня ни разу не получалось вернуть внимание и продолжить написание программы.&lt;/p&gt;</content><author><name></name></author><summary type="html">Я купил книжку Программирование для детей. В ней в доступной форме рассказывается детям, как научиться программировать. В качестве среды разработки в первой части используется Scratch, а во второй Python. Пока я разбираю с дочкой, ей 7 лет, первую часть и ей нравится. Особенно она в восторге от примера с драконом, котом и пончиком. Все упражнения делает с удовольствием, хотя думаю не до конца понимает что происходит, а просто копирует примеры из книги.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><summary type="html"></summary></entry></feed>
