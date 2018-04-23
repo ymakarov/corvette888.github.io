@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-23T13:31:34+03:00</updated><id>http://localhost:4000/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке приложений баз данных
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-23T13:33:20+03:00</updated><id>http://localhost:4000/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке приложений баз данных
 </subtitle><entry><title type="html">Мой выбор технологий для web админки</title><link href="http://localhost:4000/web-app/2018/04/23/web-app.html" rel="alternate" type="text/html" title="Мой выбор технологий для web админки" /><published>2018-04-23T13:24:00+03:00</published><updated>2018-04-23T13:24:00+03:00</updated><id>http://localhost:4000/web-app/2018/04/23/web-app</id><content type="html" xml:base="http://localhost:4000/web-app/2018/04/23/web-app.html">&lt;p&gt;Я занимаюсь разработкой приложений для внутреннего использования.
 Большая часть из них разного рода админки, доступные из браузера.
 Если бы я начинал делать новый проект и мог выбрать любые технологии, то я бы остановился на следующих:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Angular c Typescript + angular-cli на фронтенде&lt;/li&gt;
-  &lt;li&gt;Java + Spring на бекэнде&lt;/li&gt;
+  &lt;li&gt;Java + Spring на бекэнде, сборка c помощью Maven&lt;/li&gt;
   &lt;li&gt;Postgres в качестве базы данных&lt;/li&gt;
 &lt;/ul&gt;
 
