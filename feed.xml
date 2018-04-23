@@ -1,5 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-23T12:43:18+03:00</updated><id>http://localhost:4000/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке приложений баз данных
-</subtitle><entry><title type="html">Устанавливаем ngx-bootstrap</title><link href="http://localhost:4000/angular/ts/ngx-bootstrap/2018/04/23/ngx-bootstrap.html" rel="alternate" type="text/html" title="Устанавливаем ngx-bootstrap" /><published>2018-04-23T12:33:00+03:00</published><updated>2018-04-23T12:33:00+03:00</updated><id>http://localhost:4000/angular/ts/ngx-bootstrap/2018/04/23/ngx-bootstrap</id><content type="html" xml:base="http://localhost:4000/angular/ts/ngx-bootstrap/2018/04/23/ngx-bootstrap.html">&lt;p&gt;После работы с Java, при использовании Angular поражает большое количество мелких багов в тьюториалах и сборке примеров.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-23T13:30:31+03:00</updated><id>http://localhost:4000/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке приложений баз данных
+</subtitle><entry><title type="html">Мой выбор технологий для web админки</title><link href="http://localhost:4000/web-app/2018/04/23/web-app.html" rel="alternate" type="text/html" title="Мой выбор технологий для web админки" /><published>2018-04-23T13:24:00+03:00</published><updated>2018-04-23T13:24:00+03:00</updated><id>http://localhost:4000/web-app/2018/04/23/web-app</id><content type="html" xml:base="http://localhost:4000/web-app/2018/04/23/web-app.html">&lt;p&gt;Я занимаюсь разработкой приложений для внутреннего использования.
+Большая часть из них разного рода админки, доступные из браузера.
+Если бы я начинал делать новый проект и мог выбрать любые технологии, то я бы остановился на следующих:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Angular c Typescript + angular-cli на фронтенде&lt;/li&gt;
+  &lt;li&gt;Java на бекэнде&lt;/li&gt;
+  &lt;li&gt;Postgres в качестве базы данных&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;В каком-то будущем я планирую написать свою идеальную админку с карамболем и профурсетками, будет шаблон ReadMe и Docker.
+Но пока это будущее не наступило.&lt;/p&gt;</content><author><name></name></author><summary type="html">Я занимаюсь разработкой приложений для внутреннего использования. Большая часть из них разного рода админки, доступные из браузера. Если бы я начинал делать новый проект и мог выбрать любые технологии, то я бы остановился на следующих:</summary></entry><entry><title type="html">Устанавливаем ngx-bootstrap</title><link href="http://localhost:4000/angular/ts/ngx-bootstrap/2018/04/23/ngx-bootstrap.html" rel="alternate" type="text/html" title="Устанавливаем ngx-bootstrap" /><published>2018-04-23T12:33:00+03:00</published><updated>2018-04-23T12:33:00+03:00</updated><id>http://localhost:4000/angular/ts/ngx-bootstrap/2018/04/23/ngx-bootstrap</id><content type="html" xml:base="http://localhost:4000/angular/ts/ngx-bootstrap/2018/04/23/ngx-bootstrap.html">&lt;p&gt;После работы с Java, при использовании Angular поражает большое количество мелких багов в тьюториалах и сборке примеров.
 Вот и сейчас делаю я &lt;a href=&quot;https://github.com/valor-software/ngx-bootstrap/blob/development/docs/getting-started/ng-cli.md&quot;&gt;Getting started&lt;/a&gt;
 для ngx-bootstrap&lt;/p&gt;
 
@@ -184,13 +195,4 @@ git push origin master --force
   &lt;li&gt;&lt;a href=&quot;http://bytebuddy.net/&quot;&gt;ByteBuddy&lt;/a&gt; - для кодогенерации. Создает и модифицирует Java классы во время работы jvm, без помощи компилятора.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Поиграю с ними на досуге.&lt;/p&gt;</content><author><name></name></author><summary type="html">Сегодня узнал о двух полезных библиотеках: Objenesis - для инстанциирования объектов. Поддерживает много способов и удобна в сериализации, ремоутинги, проксировании и т.д. ByteBuddy - для кодогенерации. Создает и модифицирует Java классы во время работы jvm, без помощи компилятора.</summary></entry><entry><title type="html">Нахождение простых чисел в Java</title><link href="http://localhost:4000/java/2018/04/15/prime-number.html" rel="alternate" type="text/html" title="Нахождение простых чисел в Java" /><published>2018-04-15T00:03:00+03:00</published><updated>2018-04-15T00:03:00+03:00</updated><id>http://localhost:4000/java/2018/04/15/prime-number</id><content type="html" xml:base="http://localhost:4000/java/2018/04/15/prime-number.html">&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;Простое число – натуральное число имеющее ровно два различных натуральных делителя – единицу и самого себя.&lt;/p&gt;
-
-&lt;p&gt;Я знаю несколько способов проверить число &lt;em&gt;n&lt;/em&gt; на простоту:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;посчитать все остатки от деления n на числа от 2 до &lt;script type=&quot;math/tex&quot;&gt;\sqrt{n}&lt;/script&gt;&lt;/li&gt;
-  &lt;li&gt;решето Эратосфена&lt;/li&gt;
-  &lt;li&gt;вероятностный тест Ферма&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html"></summary></entry></feed>
+&lt;p&gt;Поиграю с ними на досуге.&lt;/p&gt;</content><author><name></name></author><summary type="html">Сегодня узнал о двух полезных библиотеках: Objenesis - для инстанциирования объектов. Поддерживает много способов и удобна в сериализации, ремоутинги, проксировании и т.д. ByteBuddy - для кодогенерации. Создает и модифицирует Java классы во время работы jvm, без помощи компилятора.</summary></entry></feed>
