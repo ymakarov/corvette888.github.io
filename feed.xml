@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-24T12:44:29+03:00</updated><id>http://localhost:4000/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, crm-ок и прочего. 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-24T12:46:41+03:00</updated><id>http://localhost:4000/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, crm-ок и прочего. 
 </subtitle><entry><title type="html">Прерывание потоков в Java</title><link href="http://localhost:4000/java/concurrency/2018/04/24/thread-interrupt.html" rel="alternate" type="text/html" title="Прерывание потоков в Java" /><published>2018-04-24T12:13:00+03:00</published><updated>2018-04-24T12:13:00+03:00</updated><id>http://localhost:4000/java/concurrency/2018/04/24/thread-interrupt</id><content type="html" xml:base="http://localhost:4000/java/concurrency/2018/04/24/thread-interrupt.html">&lt;p&gt;Решил поиграться немного с прерыванием потоков:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
@@ -142,13 +142,13 @@
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Я проверил 2 способа проверить прерывание потока.
+&lt;p&gt;Я проверил 2 способа прервать поток.
 С помощью &lt;code class=&quot;highlighter-rouge&quot;&gt;Thread.sleep(0)&lt;/code&gt; и ловлей исключения.
 И через проверку флага &lt;code class=&quot;highlighter-rouge&quot;&gt;Thread.currentThread().isInterrupted()&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Первый способ кажется более предпочтительным в случае работы нескольких потоков.
 Поток будет давать возможность работать другим потокам.
-Для того, чтобы реализовать такую возможность в потоке а надо использоваться &lt;code class=&quot;highlighter-rouge&quot;&gt;Thread.yield&lt;/code&gt; Хотя судя по документации&lt;/p&gt;
+Для того, чтобы реализовать такую возможность в потоке c проверкой флага, надо использоваться &lt;code class=&quot;highlighter-rouge&quot;&gt;Thread.yield&lt;/code&gt;. Хотя, судя по документации:&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Yield is a heuristic attempt to improve relative progression between threads that would otherwise over-utilise a CPU. Its use should be combined with detailed profiling and benchmarking to ensure that it actually has the desired effect.&lt;/em&gt;&lt;/p&gt;
 

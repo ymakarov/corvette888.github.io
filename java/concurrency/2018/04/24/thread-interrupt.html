@@ -190,13 +190,13 @@
 <span class="o">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-<p>Я проверил 2 способа проверить прерывание потока.
+<p>Я проверил 2 способа прервать поток.
 С помощью <code class="highlighter-rouge">Thread.sleep(0)</code> и ловлей исключения.
 И через проверку флага <code class="highlighter-rouge">Thread.currentThread().isInterrupted()</code>.</p>
 
 <p>Первый способ кажется более предпочтительным в случае работы нескольких потоков.
 Поток будет давать возможность работать другим потокам.
-Для того, чтобы реализовать такую возможность в потоке а надо использоваться <code class="highlighter-rouge">Thread.yield</code> Хотя судя по документации</p>
+Для того, чтобы реализовать такую возможность в потоке c проверкой флага, надо использоваться <code class="highlighter-rouge">Thread.yield</code>. Хотя, судя по документации:</p>
 
 <p><em>Yield is a heuristic attempt to improve relative progression between threads that would otherwise over-utilise a CPU. Its use should be combined with detailed profiling and benchmarking to ensure that it actually has the desired effect.</em></p>
 
