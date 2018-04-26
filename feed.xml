@@ -1,5 +1,50 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-25T14:52:17+03:00</updated><id>http://localhost:4000/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, crm-ок и прочего. 
-</subtitle><entry><title type="html">Матпрактика: генератор арифметических примеров для детей и взрослых</title><link href="http://localhost:4000/dart/angular/2018/04/25/matpraktika.html" rel="alternate" type="text/html" title="Матпрактика: генератор арифметических примеров для детей и взрослых" /><published>2018-04-25T14:43:00+03:00</published><updated>2018-04-25T14:43:00+03:00</updated><id>http://localhost:4000/dart/angular/2018/04/25/matpraktika</id><content type="html" xml:base="http://localhost:4000/dart/angular/2018/04/25/matpraktika.html">&lt;p&gt;Сделал для дочки генератор примеров, которые можно решать на телефоне и набирать очки.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-26T11:56:55+03:00</updated><id>http://localhost:4000/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, crm-ок и прочего. 
+</subtitle><entry><title type="html">Смотрим машинные инструкции Java</title><link href="http://localhost:4000/java/assembly/2018/04/26/printassembly.html" rel="alternate" type="text/html" title="Смотрим машинные инструкции Java" /><published>2018-04-26T11:37:00+03:00</published><updated>2018-04-26T11:37:00+03:00</updated><id>http://localhost:4000/java/assembly/2018/04/26/printassembly</id><content type="html" xml:base="http://localhost:4000/java/assembly/2018/04/26/printassembly.html">&lt;p&gt;В Java есть возможность смотреть сгенерированный машинный код с помощью опции &lt;a href=&quot;https://wiki.openjdk.java.net/display/HotSpot/PrintAssembly&quot;&gt;+PrintAssembly&lt;/a&gt;.
+Одна эта опции не работает надо добавить +UnlockDiagnosticVMOptions:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -XX:+PrintAssembly ru.yamakarov.App
+Error: VM option 'PrintAssembly' is diagnostic and must be enabled via -XX:+UnlockDiagnosticVMOptions.
+Error: Could not create the Java Virtual Machine.
+Error: A fatal exception has occurred. Program will exit.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Добавляем:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -XX:+UnlockDiagnosticVMOptions -XX:+PrintAssembly ru.yamakarov.App
+Java HotSpot(TM) 64-Bit Server VM warning: PrintAssembly is enabled; turning on DebugNonSafepoints to gain additional output
+Could not load hsdis-amd64.dylib; library not loadable; PrintAssembly is disabled
+Hello world
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Для меня сработала инструкция &lt;a href=&quot;https://github.com/a10y/hsdis-macos&quot;&gt;отсюда&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd $JAVA_HOME/jre/lib/server
+wget https://raw.githubusercontent.com/a10y/hsdis-macos/master/hsdis-amd64.dylib
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Viola!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -XX:+UnlockDiagnosticVMOptions -XX:+PrintAssembly ru.yamakarov.App
+Java HotSpot(TM) 64-Bit Server VM warning: PrintAssembly is enabled; turning on DebugNonSafepoints to gain additional output
+Loaded disassembler from /Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib/server/hsdis-amd64.dylib
+Decoding compiled method 0x000000010fc9c610:
+Code:
+[Disassembling for mach='i386:x86-64']
+[Entry Point]
+[Constants]
+  # {method} {0x000000010992b878} 'getSnapshotTransformerList' '()[Lsun/instrument/TransformerManager$TransformerInfo;' in 'sun/instrument/TransformerManager'
+  #           [sp+0x40]  (sp of caller)
+  0x000000010fc9c760: mov    0x8(%rsi),%r10d
+  0x000000010fc9c764: shl    $0x3,%r10
+  0x000000010fc9c768: cmp    %rax,%r10
+  0x000000010fc9c76b: jne    0x000000010fbdee20  ;   {runtime_call}
+  0x000000010fc9c771: data16 data16 nopw 0x0(%rax,%rax,1)
+...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Ох чего-то много непонятных ассемблерных буковок вывелось и метод &lt;code class=&quot;highlighter-rouge&quot;&gt;main&lt;/code&gt; не найти только &lt;strong&gt;“Hello world”&lt;/strong&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">В Java есть возможность смотреть сгенерированный машинный код с помощью опции +PrintAssembly. Одна эта опции не работает надо добавить +UnlockDiagnosticVMOptions: java -XX:+PrintAssembly ru.yamakarov.App Error: VM option 'PrintAssembly' is diagnostic and must be enabled via -XX:+UnlockDiagnosticVMOptions. Error: Could not create the Java Virtual Machine. Error: A fatal exception has occurred. Program will exit. Добавляем:</summary></entry><entry><title type="html">Матпрактика: генератор арифметических примеров для детей и взрослых</title><link href="http://localhost:4000/dart/angular/2018/04/25/matpraktika.html" rel="alternate" type="text/html" title="Матпрактика: генератор арифметических примеров для детей и взрослых" /><published>2018-04-25T14:43:00+03:00</published><updated>2018-04-25T14:43:00+03:00</updated><id>http://localhost:4000/dart/angular/2018/04/25/matpraktika</id><content type="html" xml:base="http://localhost:4000/dart/angular/2018/04/25/matpraktika.html">&lt;p&gt;Сделал для дочки генератор примеров, которые можно решать на телефоне и набирать очки.&lt;/p&gt;
 
 &lt;p&gt;Код лежит на &lt;a href=&quot;https://github.com/ymakarov/matpraktika&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
 
@@ -252,5 +297,4 @@ $ brew install springboot
 &lt;p&gt;После магии с Idea что-то даже получилось. 
 Но все как-то не гладко, названия у проектов не понятные.
 Странные сообщения об ошибках.
-Делать тьюториал оказалось болью, а не хорошей прогулкой.&lt;/p&gt;</content><author><name></name></author><category term="spring" /><category term="security" /><category term="angular" /><category term="java" /><summary type="html">Большой тьюториал по использованию Spring Security и Angular</summary></entry><entry><title type="html">Исходники JMH</title><link href="http://localhost:4000/jmh/2018/04/18/jmh.html" rel="alternate" type="text/html" title="Исходники JMH" /><published>2018-04-18T15:27:00+03:00</published><updated>2018-04-18T15:27:00+03:00</updated><id>http://localhost:4000/jmh/2018/04/18/jmh</id><content type="html" xml:base="http://localhost:4000/jmh/2018/04/18/jmh.html">&lt;p&gt;Начинаю цикл статей про &lt;a href=&quot;http://openjdk.java.net/projects/code-tools/jmh/&quot;&gt;jmh&lt;/a&gt;.
-Ссылка на &lt;a href=&quot;http://hg.openjdk.java.net/code-tools/jmh/file/25d8b2695bac&quot;&gt;исходники&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Начинаю цикл статей про jmh. Ссылка на исходники.</summary></entry></feed>
+Делать тьюториал оказалось болью, а не хорошей прогулкой.&lt;/p&gt;</content><author><name></name></author><category term="spring" /><category term="security" /><category term="angular" /><category term="java" /><summary type="html">Большой тьюториал по использованию Spring Security и Angular</summary></entry></feed>
