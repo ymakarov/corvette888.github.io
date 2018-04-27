@@ -1,5 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-26T11:56:55+03:00</updated><id>http://localhost:4000/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, crm-ок и прочего. 
-</subtitle><entry><title type="html">Смотрим машинные инструкции Java</title><link href="http://localhost:4000/java/assembly/2018/04/26/printassembly.html" rel="alternate" type="text/html" title="Смотрим машинные инструкции Java" /><published>2018-04-26T11:37:00+03:00</published><updated>2018-04-26T11:37:00+03:00</updated><id>http://localhost:4000/java/assembly/2018/04/26/printassembly</id><content type="html" xml:base="http://localhost:4000/java/assembly/2018/04/26/printassembly.html">&lt;p&gt;В Java есть возможность смотреть сгенерированный машинный код с помощью опции &lt;a href=&quot;https://wiki.openjdk.java.net/display/HotSpot/PrintAssembly&quot;&gt;+PrintAssembly&lt;/a&gt;.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-27T13:30:08+03:00</updated><id>http://localhost:4000/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, crm-ок и прочего. 
+</subtitle><entry><title type="html">10 фишек GraalVM</title><link href="http://localhost:4000/graalvm/2018/04/27/graalvm-ten-things.html" rel="alternate" type="text/html" title="10 фишек GraalVM" /><published>2018-04-27T13:13:00+03:00</published><updated>2018-04-27T13:13:00+03:00</updated><id>http://localhost:4000/graalvm/2018/04/27/graalvm-ten-things</id><content type="html" xml:base="http://localhost:4000/graalvm/2018/04/27/graalvm-ten-things.html">&lt;p&gt;&lt;a href=&quot;https://medium.com/@chrisgseaton&quot;&gt;Chris Seaton&lt;/a&gt; один из разработчиков &lt;a href=&quot;https://www.graalvm.org/&quot;&gt;GraalVM&lt;/a&gt; напиал отличную статью об 
+этой уникальной разработке &lt;a href=&quot;https://medium.com/graalvm/graalvm-ten-things-12d9111f307d&quot;&gt;Top 10 Things You Can Do With GraalVM&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Я решил перевести на русский эти 10 фишек, чтобы заинтересовать вас прочитать эту статью:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Высокопроизводительная современная Java(GraalVM шустрее JVM)&lt;/li&gt;
+  &lt;li&gt;Не требовательная к памяти, быстро стартующая Java(есть компиляция в нативный код)&lt;/li&gt;
+  &lt;li&gt;Можно сочетать JavaScript, Java, Ruby и R&lt;/li&gt;
+  &lt;li&gt;Запуск нативных языков на JVM(по ходу всего что может скомпилировать LLVM)&lt;/li&gt;
+  &lt;li&gt;Инструменты работают для всех языков(дебагер, профайлер, благодаря &lt;a href=&quot;https://github.com/oracle/graal/tree/master/truffle&quot;&gt;Truffle&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Расширение JVM приложений (использование в Java объектов из других языков, Javascript, Ruby)&lt;/li&gt;
+  &lt;li&gt;Расширение нативных приложений (c помощью одной библиотеки можно в приложение встроить кучу языков)&lt;/li&gt;
+  &lt;li&gt;Компиляция Java библиотек в нативные библиотеки (нужна дополнительная обвязка)&lt;/li&gt;
+  &lt;li&gt;Использование разных языков в базах данных (хранимки на Javascript)&lt;/li&gt;
+  &lt;li&gt;Создание своего языка программирования (У них интерн с Ruby справился за пару месяцев)&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">Chris Seaton один из разработчиков GraalVM напиал отличную статью об этой уникальной разработке Top 10 Things You Can Do With GraalVM.</summary></entry><entry><title type="html">Смотрим машинные инструкции Java</title><link href="http://localhost:4000/java/assembly/2018/04/26/printassembly.html" rel="alternate" type="text/html" title="Смотрим машинные инструкции Java" /><published>2018-04-26T11:37:00+03:00</published><updated>2018-04-26T11:37:00+03:00</updated><id>http://localhost:4000/java/assembly/2018/04/26/printassembly</id><content type="html" xml:base="http://localhost:4000/java/assembly/2018/04/26/printassembly.html">&lt;p&gt;В Java есть возможность смотреть сгенерированный машинный код с помощью опции &lt;a href=&quot;https://wiki.openjdk.java.net/display/HotSpot/PrintAssembly&quot;&gt;+PrintAssembly&lt;/a&gt;.
 Одна эта опции не работает надо добавить +UnlockDiagnosticVMOptions:&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -XX:+PrintAssembly ru.yamakarov.App
 Error: VM option 'PrintAssembly' is diagnostic and must be enabled via -XX:+UnlockDiagnosticVMOptions.
@@ -279,22 +295,4 @@ GraalVM умеет выполнять:&lt;/p&gt;
 
 &lt;p&gt;Пример использования &lt;a href=&quot;https://github.com/odnoklassniki/one-nio/blob/master/test/one/nio/http/HttpServerTest.java&quot;&gt;HttpServerTest&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Если, что не понятно пишите на &lt;a href=&quot;mailto:yakov_makarov@mail.ru&quot;&gt;мыло&lt;/a&gt; отвечу на вопросы.&lt;/p&gt;</content><author><name></name></author><summary type="html">Одноклассники палят тему для разработки высоконагруженных раздатчиков контента по http. HttpServer быстрый как ракета, с небольшим, но довольно сложным кодом. Стандарт http поддерживается не полностью, но “Вам шашечки или ехать?”</summary></entry><entry><title type="html">Spring Security and Angular</title><link href="http://localhost:4000/spring/security/angular/2018/04/19/spring-security-angular.html" rel="alternate" type="text/html" title="Spring Security and Angular" /><published>2018-04-19T11:40:00+03:00</published><updated>2018-04-19T11:40:00+03:00</updated><id>http://localhost:4000/spring/security/angular/2018/04/19/spring-security-angular</id><content type="html" xml:base="http://localhost:4000/spring/security/angular/2018/04/19/spring-security-angular.html">&lt;p&gt;Большой &lt;a href=&quot;https://spring.io/guides/tutorials/spring-security-and-angular-js/&quot;&gt;тьюториал по использованию Spring Security и Angular&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Понадобилось установить &lt;a href=&quot;https://projects.spring.io/spring-boot/&quot;&gt;Spring boot&lt;/a&gt;:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ brew tap pivotal/tap
-$ brew install springboot
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Взял этот код &lt;a href=&quot;https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#getting-started-installing-the-cli&quot;&gt;отсюда&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Запустил:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;spring init --dependencies web,security ui/ &amp;amp;&amp;amp; cd ui
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;После магии с Idea что-то даже получилось. 
-Но все как-то не гладко, названия у проектов не понятные.
-Странные сообщения об ошибках.
-Делать тьюториал оказалось болью, а не хорошей прогулкой.&lt;/p&gt;</content><author><name></name></author><category term="spring" /><category term="security" /><category term="angular" /><category term="java" /><summary type="html">Большой тьюториал по использованию Spring Security и Angular</summary></entry></feed>
+&lt;p&gt;Если, что не понятно пишите на &lt;a href=&quot;mailto:yakov_makarov@mail.ru&quot;&gt;мыло&lt;/a&gt; отвечу на вопросы.&lt;/p&gt;</content><author><name></name></author><summary type="html">Одноклассники палят тему для разработки высоконагруженных раздатчиков контента по http. HttpServer быстрый как ракета, с небольшим, но довольно сложным кодом. Стандарт http поддерживается не полностью, но “Вам шашечки или ехать?”</summary></entry></feed>
