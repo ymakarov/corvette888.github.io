@@ -49,9 +49,12 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Оказывается в Java есть <a href="http://wiki.c2.com/?DoubleBraceInitialization">double brace initialization</a></p>
 
-<p>И можно заполнять мапу на такое манер:</p>
+<p>И можно заполнять мапу на такой манер:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">map</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;()</span> <span class="o">;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">map</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;()</span>  <span class="o">{{</span> 
+            <span class="n">put</span><span class="o">(</span><span class="s">"one"</span><span class="o">,</span> <span class="s">"один"</span><span class="o">);</span>
+            <span class="n">put</span><span class="o">(</span><span class="s">"two"</span><span class="o">,</span> <span class="s">"два"</span><span class="o">);</span>
+        <span class="o">}};</span></code></pre></figure>
 
 <p>Это круто, но есть ньюансы. Оказывается при этом создается анонимный вложенный класс, держащий ссылку на объект внешнего класса. 
 Это надо учитывать при сборке мусора и сериализации.</p>
