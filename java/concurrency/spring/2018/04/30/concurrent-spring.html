@@ -7,15 +7,15 @@
 <meta name="generator" content="Jekyll v3.5.2" />
 <meta property="og:title" content="Многопоточность в Spring 5" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Я написал статью про wain-notify примитивы. Закончил я на том, что не стоит делать свои велосипеды, а лучше использовать более высокоуровневые абстракции. Давайте посмотрим, как этот вопрос решает Srping 5." />
-<meta property="og:description" content="Я написал статью про wain-notify примитивы. Закончил я на том, что не стоит делать свои велосипеды, а лучше использовать более высокоуровневые абстракции. Давайте посмотрим, как этот вопрос решает Srping 5." />
+<meta name="description" content="Я написал статью про wait-notify примитивы. Закончил я на том, что не стоит делать свои велосипеды, а лучше использовать более высокоуровневые абстракции. Давайте посмотрим, как этот вопрос решает Srping 5." />
+<meta property="og:description" content="Я написал статью про wait-notify примитивы. Закончил я на том, что не стоит делать свои велосипеды, а лучше использовать более высокоуровневые абстракции. Давайте посмотрим, как этот вопрос решает Srping 5." />
 <link rel="canonical" href="http://localhost:4000/java/concurrency/spring/2018/04/30/concurrent-spring.html" />
 <meta property="og:url" content="http://localhost:4000/java/concurrency/spring/2018/04/30/concurrent-spring.html" />
 <meta property="og:site_name" content="Записки Java программиста" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-04-30T07:17:00+03:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/java/concurrency/spring/2018/04/30/concurrent-spring.html","description":"Я написал статью про wain-notify примитивы. Закончил я на том, что не стоит делать свои велосипеды, а лучше использовать более высокоуровневые абстракции. Давайте посмотрим, как этот вопрос решает Srping 5.","headline":"Многопоточность в Spring 5","dateModified":"2018-04-30T07:17:00+03:00","datePublished":"2018-04-30T07:17:00+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/java/concurrency/spring/2018/04/30/concurrent-spring.html"},"@context":"http://schema.org"}</script>
+{"url":"http://localhost:4000/java/concurrency/spring/2018/04/30/concurrent-spring.html","description":"Я написал статью про wait-notify примитивы. Закончил я на том, что не стоит делать свои велосипеды, а лучше использовать более высокоуровневые абстракции. Давайте посмотрим, как этот вопрос решает Srping 5.","headline":"Многопоточность в Spring 5","dateModified":"2018-04-30T07:17:00+03:00","datePublished":"2018-04-30T07:17:00+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/java/concurrency/spring/2018/04/30/concurrent-spring.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Записки Java программиста" /></head>
 <body><header class="site-header" role="banner">
@@ -47,11 +47,11 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>Я написал <a href="/java/concurrency/2018/04/28/wait-notify.html">статью про wain-notify примитивы</a>. 
+    <p>Я написал <a href="/java/concurrency/2018/04/28/wait-notify.html">статью про wait-notify примитивы</a>. 
 Закончил я на том, что не стоит делать свои велосипеды, а лучше использовать более высокоуровневые абстракции.
 Давайте посмотрим, как этот вопрос решает <a href="https://spring.io/">Srping 5</a>.</p>
 
-<p>Скачаем исходники <a href="https://github.com/spring-projects/spring-framework">Spring</a> и поищем в них использование <code class="highlighter-rouge">wait</code>, <code class="highlighter-rouge">notify</code> или <code class="highlighter-rouge">java.util.concurrent</code></p>
+<p>Скачаем исходники <a href="https://github.com/spring-projects/spring-framework">Spring</a> и поищем в них использование <code class="highlighter-rouge">wait</code>, <code class="highlighter-rouge">notify</code>.</p>
 
 <p>В spring core я нашел только одно использование <code class="highlighter-rouge">wait</code> в <code class="highlighter-rouge">org.springframework.util.ConcurrencyThrottleSupport#beforeAccess</code>:</p>
 
@@ -90,10 +90,12 @@
     <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
 
-<p>Как на мой взгляд код прекрасен. Вместо <code class="highlighter-rouge">0</code> используется <code class="highlighter-rouge">NO_CONCURRENCY</code>. Мелочь, а улучшает читаемость кода.
+<p>На мой взгляд код прекрасен. Вместо <code class="highlighter-rouge">0</code> используется <code class="highlighter-rouge">NO_CONCURRENCY</code>. Мелочь, а улучшает читаемость кода.
 При этом в выражении <code class="highlighter-rouge">this.concurrrencyLimit &gt; 0</code> константа не используется. И это логично, странно иметь что-то большее отсутствия конкурентности.
 Метод <code class="highlighter-rouge">beforeAccess</code> ждет, когда уменьшится <code class="highlighter-rouge">concurrencyCount</code>, это происходит в методе <code class="highlighter-rouge">afterAccess</code>, а потом пропускает поток выполняться.
 Выполнение доступа к ресурсу может занимать очень долгое время и не стоит полить переменную зря.</p>
+
+<p>Сейчас хорошо бы рассмотреть другой throttler, например из Guava, но я это сделаю в другой раз.</p>
 
 
   </div><a class="u-url" href="/java/concurrency/spring/2018/04/30/concurrent-spring.html" hidden></a>
