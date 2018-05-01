@@ -71,9 +71,9 @@
 <span class="o">}</span></code></pre></figure>
 
 <p>Я не понял зачем нужно оборачивать делегата и иметь возможность отменять его.
-Я лишь могу предположиться, что делегат обрабатывается отдельно, но хочется иметь возможность отменять делегата вместе с какой-то еще выполняемой задачей.
+Я лишь могу предположить, что делегат обрабатывается отдельно, но хочется иметь возможность отменять делегата вместе с какой-то еще выполняемой задачей.
 Вот так выглядит <a href="http://hg.openjdk.java.net/jdk8/jdk8/jdk/file/687fd7c7986d/src/share/classes/java/util/concurrent/CompletableFuture.java">CompletableFuture</a>
-Читайте перед сном вы либо уснете, либо узнаете что-то интересное из хорошо написанного и документированного кода <a href="https://ru.wikipedia.org/wiki/%D0%9B%D0%B8,_%D0%94%D0%B0%D0%B3">Doug Lea</a>,
+Читайте перед сном: вы либо уснете, либо узнаете что-то интересное из хорошо написанного и документированного кода <a href="https://ru.wikipedia.org/wiki/%D0%9B%D0%B8,_%D0%94%D0%B0%D0%B3">Doug Lea</a>,
 специалиста в области многопоточного программирования. Он соавтор крутейшей книги по многопоточности в Java:<a href="https://www.amazon.com/Java-Concurrency-Practice-Brian-Goetz/dp/0321349601">Java Concurrency in Practice</a></p>
 
 <p>С <code class="highlighter-rouge">DelegatingCompletableFuture</code> я решил посмотрть коммиты на <a href="https://github.com/spring-projects/spring-framework/commit/87430f3cd30b401fbb10cf212cb437ff41b058f6#diff-1b9767595be1e0f92dcd51b83d657e47">github</a>.</p>
@@ -83,7 +83,7 @@
 Тем более, что никакие методы не переопределяются и делегата можно только отменять, а все остальные вызовы вернут какую-то ересь.
 Но <a href="https://spring.io/team/jhoeller">Juergen Hoeller</a> должно быть виднее, пожалуй спрошу его напрямую)
 Ну и конечно можно сделать свой пулл реквест и засабмитить в Spring. 
-Если примут будешь контрибьютором, если не примут объяснят в чем не прав и зачем нужен <code class="highlighter-rouge">DelegatingCompletableFuture</code>.</p>
+Если примут будешь контрибьютором, если не примут объяснят в чем неправ и зачем нужен <code class="highlighter-rouge">DelegatingCompletableFuture</code>.</p>
 
 
   </div><a class="u-url" href="/java/concurrent/spring/2018/05/01/spring-future.html" hidden></a>
