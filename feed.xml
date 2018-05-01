@@ -1,5 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-30T08:26:05+03:00</updated><id>http://localhost:4000/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
-</subtitle><entry><title type="html">Многопоточность в Spring 5</title><link href="http://localhost:4000/java/concurrency/spring/2018/04/30/concurrent-spring.html" rel="alternate" type="text/html" title="Многопоточность в Spring 5" /><published>2018-04-30T07:17:00+03:00</published><updated>2018-04-30T07:17:00+03:00</updated><id>http://localhost:4000/java/concurrency/spring/2018/04/30/concurrent-spring</id><content type="html" xml:base="http://localhost:4000/java/concurrency/spring/2018/04/30/concurrent-spring.html">&lt;p&gt;Я написал &lt;a href=&quot;/java/concurrency/2018/04/28/wait-notify.html&quot;&gt;статью про wait-notify примитивы&lt;/a&gt;. 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-05-01T12:21:20+03:00</updated><id>http://localhost:4000/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
+</subtitle><entry><title type="html">java.util.concurrent.CompletableFuture в Spring</title><link href="http://localhost:4000/java/concurrent/spring/2018/05/01/spring-future.html" rel="alternate" type="text/html" title="java.util.concurrent.CompletableFuture в Spring" /><published>2018-05-01T11:48:00+03:00</published><updated>2018-05-01T11:48:00+03:00</updated><id>http://localhost:4000/java/concurrent/spring/2018/05/01/spring-future</id><content type="html" xml:base="http://localhost:4000/java/concurrent/spring/2018/05/01/spring-future.html">&lt;p&gt;Продолжаю изучать &lt;a href=&quot;/java/concurrency/spring/2018/04/30/concurrent-spring.html&quot;&gt;многопоточность по исходникам&lt;/a&gt; spring-core.
+Искал по пакету &lt;code class=&quot;highlighter-rouge&quot;&gt;java.util.concurrent&lt;/code&gt; и &lt;a href=&quot;https://github.com/spring-projects/spring-framework/blob/master/spring-core/src/main/java/org/springframework/util/concurrent/DelegatingCompletableFuture.java&quot;&gt;нашел&lt;/a&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DelegatingCompletableFuture&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CompletableFuture&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Future&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;DelegatingCompletableFuture&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Future&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;Assert&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;notNull&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Delegate must not be null&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;delegate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+	&lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;cancel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mayInterruptIfRunning&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;delegate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cancel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mayInterruptIfRunning&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cancel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mayInterruptIfRunning&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Я не понял зачем нужно оборачивать делегата и иметь возможность отменять его.
+Я лишь могу предположиться, что делегат обрабатывается отдельно, но хочется иметь возможность отменять делегата вместе с какой-то еще выполняемой задачей.
+Вот так выглядит &lt;a href=&quot;http://hg.openjdk.java.net/jdk8/jdk8/jdk/file/687fd7c7986d/src/share/classes/java/util/concurrent/CompletableFuture.java&quot;&gt;CompletableFuture&lt;/a&gt;
+Читайте перед сном вы либо уснете, либо узнаете что-то интересное из хорошо написанного и документированного кода &lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%9B%D0%B8,_%D0%94%D0%B0%D0%B3&quot;&gt;Doug Lea&lt;/a&gt;,
+специалиста в области многопоточного программирования. Он соавтор крутейшей книги по многопоточности в Java:&lt;a href=&quot;https://www.amazon.com/Java-Concurrency-Practice-Brian-Goetz/dp/0321349601&quot;&gt;Java Concurrency in Practice&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;С &lt;code class=&quot;highlighter-rouge&quot;&gt;DelegatingCompletableFuture&lt;/code&gt; я решил посмотрть коммиты на &lt;a href=&quot;https://github.com/spring-projects/spring-framework/commit/87430f3cd30b401fbb10cf212cb437ff41b058f6#diff-1b9767595be1e0f92dcd51b83d657e47&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;И все равно не понял зачем он. 
+Почему нельзя отменять напрямую делегата, не создавая обертку.
+Тем более, что никакие методы не переопределяются и делегата можно только отменять, а все остальные вызовы вернут какую-то ересь.
+Но &lt;a href=&quot;https://spring.io/team/jhoeller&quot;&gt;Juergen Hoeller&lt;/a&gt; должно быть виднее, пожалуй спрошу его напрямую)
+Ну и конечно можно сделать свой пулл реквест и засабмитить в Spring. 
+Если примут будешь контрибьютором, если не примут объяснят в чем не прав и зачем нужен &lt;code class=&quot;highlighter-rouge&quot;&gt;DelegatingCompletableFuture&lt;/code&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Продолжаю изучать многопоточность по исходникам spring-core. Искал по пакету java.util.concurrent и нашел:</summary></entry><entry><title type="html">Многопоточность в Spring 5</title><link href="http://localhost:4000/java/concurrency/spring/2018/04/30/concurrent-spring.html" rel="alternate" type="text/html" title="Многопоточность в Spring 5" /><published>2018-04-30T07:17:00+03:00</published><updated>2018-04-30T07:17:00+03:00</updated><id>http://localhost:4000/java/concurrency/spring/2018/04/30/concurrent-spring</id><content type="html" xml:base="http://localhost:4000/java/concurrency/spring/2018/04/30/concurrent-spring.html">&lt;p&gt;Я написал &lt;a href=&quot;/java/concurrency/2018/04/28/wait-notify.html&quot;&gt;статью про wait-notify примитивы&lt;/a&gt;. 
 Закончил я на том, что не стоит делать свои велосипеды, а лучше использовать более высокоуровневые абстракции.
 Давайте посмотрим, как этот вопрос решает &lt;a href=&quot;https://spring.io/&quot;&gt;Srping 5&lt;/a&gt;.&lt;/p&gt;
 
@@ -540,51 +576,4 @@ Code:
 &lt;/ul&gt;
 
 &lt;p&gt;В каком-то будущем я планирую написать свою идеальную админку с карамболем и профурсетками, будет шаблон ReadMe и Docker.
-Но пока это будущее не наступило.&lt;/p&gt;</content><author><name></name></author><summary type="html">Я занимаюсь разработкой приложений для внутреннего использования. Большая часть из них разного рода админки, доступные из браузера. Если бы я начинал делать новый проект и мог выбрать любые технологии, то я бы остановился на следующих:</summary></entry><entry><title type="html">Устанавливаем ngx-bootstrap</title><link href="http://localhost:4000/angular/ts/ngx-bootstrap/2018/04/23/ngx-bootstrap.html" rel="alternate" type="text/html" title="Устанавливаем ngx-bootstrap" /><published>2018-04-23T12:33:00+03:00</published><updated>2018-04-23T12:33:00+03:00</updated><id>http://localhost:4000/angular/ts/ngx-bootstrap/2018/04/23/ngx-bootstrap</id><content type="html" xml:base="http://localhost:4000/angular/ts/ngx-bootstrap/2018/04/23/ngx-bootstrap.html">&lt;p&gt;После работы с Java, при использовании Angular поражает большое количество мелких багов в тьюториалах и сборке примеров.
-Вот и сейчас делаю я &lt;a href=&quot;https://github.com/valor-software/ngx-bootstrap/blob/development/docs/getting-started/ng-cli.md&quot;&gt;Getting started&lt;/a&gt;
-для ngx-bootstrap&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm i -g @angular/cli
-ng new my-app
-cd my-app
-ng serve
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;И при &lt;code class=&quot;highlighter-rouge&quot;&gt;ng serve&lt;/code&gt; вылетает:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;module.js:538
-    throw err;
-    ^
-
-Error: Cannot find module '@angular-devkit/core'
-    at Function.Module._resolveFilename (module.js:536:15)
-    at Function.Module._load (module.js:466:25)
-    at Module.require (module.js:579:17)
-    at require (internal/module.js:11:18)
-    at Object.&amp;lt;anonymous&amp;gt; (/Users/yakov.makarov/Projects/web-examples/angular-ts/node_modules/@angular-devkit/schematics/src/tree/virtual.js:10:16)
-    at Module._compile (module.js:635:30)
-    at Object.Module._extensions..js (module.js:646:10)
-    at Module.load (module.js:554:32)
-    at tryModuleLoad (module.js:497:12)
-    at Function.Module._load (module.js:489:3)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Спасибо &lt;a href=&quot;https://github.com/angular/devkit/issues/256&quot;&gt;https://github.com/angular/devkit/issues/256&lt;/a&gt; это удалось побороть с помощью:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install  @angular-devkit/core --save-dev
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Но в целом эти вещи жутко магические. 
-Я работаю на тем, чтобы больше разбираться, но это тяжело. 
-Не знаю в чем причина, но проще разыскивать ответ в гугл, чем разбираться самому.
-И в этом есть неприятный момент. 
-Приятно решить задачу самому, не очень приятно просто скопировать ответ.
-При этом приятно получать зарплату и по началу, когда копируешь ответ получаешь большую производительность.
-Последствия такого поведения, становятся видимыми довольно не скоро. 
-Но окружая себя магией, ты перестаешь управлять миром.&lt;/p&gt;
-
-&lt;p&gt;Чтобы бороться с магией нужно специализироваться. Это позволяет досконально знать работу системы. 
-Возможно ли достаточная специализация для fullstack разработчика остается под вопросом.&lt;/p&gt;</content><author><name></name></author><summary type="html">После работы с Java, при использовании Angular поражает большое количество мелких багов в тьюториалах и сборке примеров. Вот и сейчас делаю я Getting started для ngx-bootstrap</summary></entry></feed>
+Но пока это будущее не наступило.&lt;/p&gt;</content><author><name></name></author><summary type="html">Я занимаюсь разработкой приложений для внутреннего использования. Большая часть из них разного рода админки, доступные из браузера. Если бы я начинал делать новый проект и мог выбрать любые технологии, то я бы остановился на следующих:</summary></entry></feed>
