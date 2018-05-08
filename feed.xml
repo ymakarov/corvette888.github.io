@@ -1,5 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-05-07T12:48:56+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
-</subtitle><entry><title type="html">Заметка о Redux</title><link href="http://yamakarov.ru/angular/reactive/redux/2018/05/07/redux.html" rel="alternate" type="text/html" title="Заметка о Redux" /><published>2018-05-07T10:43:00+03:00</published><updated>2018-05-07T10:43:00+03:00</updated><id>http://yamakarov.ru/angular/reactive/redux/2018/05/07/redux</id><content type="html" xml:base="http://yamakarov.ru/angular/reactive/redux/2018/05/07/redux.html">&lt;p&gt;Последнее время все говорят о реактивном программировании, я попытаюсь провести цепочку связей от абстрактной концепции к конкретной реализации, которую можно использовать в своем приложении на Angular.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-05-08T13:01:57+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
+</subtitle><entry><title type="html">Компилируем typescript в консоли</title><link href="http://yamakarov.ru/ts/2018/05/08/ts.html" rel="alternate" type="text/html" title="Компилируем typescript в консоли" /><published>2018-05-08T12:50:00+03:00</published><updated>2018-05-08T12:50:00+03:00</updated><id>http://yamakarov.ru/ts/2018/05/08/ts</id><content type="html" xml:base="http://yamakarov.ru/ts/2018/05/08/ts.html">&lt;p&gt;Создадим директорию:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir ts-rxjs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Инициализируем npm:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm init
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Установим typescript:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install typescript
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Напишем простой скрипт на Typescript &lt;em&gt;greeter.ts&lt;/em&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-typescript&quot; data-lang=&quot;typescript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;greeter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hello, &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Jane User&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;innerHTML&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;greeter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Скомпилируем:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;node_modules/typescript/bin/tsc greeter.ts
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Получим &lt;em&gt;greeter.js&lt;/em&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;greeter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hello, &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Jane User&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;innerHTML&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;greeter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Его можно вставлять в свой &lt;em&gt;index.html&lt;/em&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&amp;lt;title&amp;gt;&lt;/span&gt;TypeScript Greeter&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;greeter.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name></name></author><summary type="html">Создадим директорию: mkdir ts-rxjs</summary></entry><entry><title type="html">Заметка о Redux</title><link href="http://yamakarov.ru/angular/reactive/redux/2018/05/07/redux.html" rel="alternate" type="text/html" title="Заметка о Redux" /><published>2018-05-07T10:43:00+03:00</published><updated>2018-05-07T10:43:00+03:00</updated><id>http://yamakarov.ru/angular/reactive/redux/2018/05/07/redux</id><content type="html" xml:base="http://yamakarov.ru/angular/reactive/redux/2018/05/07/redux.html">&lt;p&gt;Последнее время все говорят о реактивном программировании, я попытаюсь провести цепочку связей от абстрактной концепции к конкретной реализации, которую можно использовать в своем приложении на Angular.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%B0%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5&quot;&gt;Реактивное программирование&lt;/a&gt; парадигма программирования.
 В реактивном программировании есть потоки асинхронных событий, которые можно комбинировать. Реактивность заключается в том, что весь код &lt;em&gt;реагирует&lt;/em&gt; на входящие события. 
@@ -472,49 +518,4 @@ consumer
   &lt;li&gt;Компиляция Java библиотек в нативные библиотеки (нужна дополнительная обвязка)&lt;/li&gt;
   &lt;li&gt;Использование разных языков в базах данных (хранимки на Javascript)&lt;/li&gt;
   &lt;li&gt;Создание своего языка программирования (У них интерн с Ruby справился за пару месяцев)&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">Chris Seaton один из разработчиков GraalVM напиал отличную статью об этой уникальной разработке Top 10 Things You Can Do With GraalVM.</summary></entry><entry><title type="html">Смотрим машинные инструкции Java</title><link href="http://yamakarov.ru/java/assembly/2018/04/26/printassembly.html" rel="alternate" type="text/html" title="Смотрим машинные инструкции Java" /><published>2018-04-26T11:37:00+03:00</published><updated>2018-04-26T11:37:00+03:00</updated><id>http://yamakarov.ru/java/assembly/2018/04/26/printassembly</id><content type="html" xml:base="http://yamakarov.ru/java/assembly/2018/04/26/printassembly.html">&lt;p&gt;В Java есть возможность смотреть сгенерированный машинный код с помощью опции &lt;a href=&quot;https://wiki.openjdk.java.net/display/HotSpot/PrintAssembly&quot;&gt;+PrintAssembly&lt;/a&gt;.
-Одна эта опции не работает надо добавить +UnlockDiagnosticVMOptions:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -XX:+PrintAssembly ru.yamakarov.App
-Error: VM option 'PrintAssembly' is diagnostic and must be enabled via -XX:+UnlockDiagnosticVMOptions.
-Error: Could not create the Java Virtual Machine.
-Error: A fatal exception has occurred. Program will exit.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Добавляем:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -XX:+UnlockDiagnosticVMOptions -XX:+PrintAssembly ru.yamakarov.App
-Java HotSpot(TM) 64-Bit Server VM warning: PrintAssembly is enabled; turning on DebugNonSafepoints to gain additional output
-Could not load hsdis-amd64.dylib; library not loadable; PrintAssembly is disabled
-Hello world
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Для меня сработала инструкция &lt;a href=&quot;https://github.com/a10y/hsdis-macos&quot;&gt;отсюда&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd $JAVA_HOME/jre/lib/server
-wget https://raw.githubusercontent.com/a10y/hsdis-macos/master/hsdis-amd64.dylib
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Viola!&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -XX:+UnlockDiagnosticVMOptions -XX:+PrintAssembly ru.yamakarov.App
-Java HotSpot(TM) 64-Bit Server VM warning: PrintAssembly is enabled; turning on DebugNonSafepoints to gain additional output
-Loaded disassembler from /Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib/server/hsdis-amd64.dylib
-Decoding compiled method 0x000000010fc9c610:
-Code:
-[Disassembling for mach='i386:x86-64']
-[Entry Point]
-[Constants]
-  # {method} {0x000000010992b878} 'getSnapshotTransformerList' '()[Lsun/instrument/TransformerManager$TransformerInfo;' in 'sun/instrument/TransformerManager'
-  #           [sp+0x40]  (sp of caller)
-  0x000000010fc9c760: mov    0x8(%rsi),%r10d
-  0x000000010fc9c764: shl    $0x3,%r10
-  0x000000010fc9c768: cmp    %rax,%r10
-  0x000000010fc9c76b: jne    0x000000010fbdee20  ;   {runtime_call}
-  0x000000010fc9c771: data16 data16 nopw 0x0(%rax,%rax,1)
-...
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Ох чего-то много непонятных ассемблерных буковок вывелось и метод &lt;code class=&quot;highlighter-rouge&quot;&gt;main&lt;/code&gt; не найти только &lt;strong&gt;“Hello world”&lt;/strong&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">В Java есть возможность смотреть сгенерированный машинный код с помощью опции +PrintAssembly. Одна эта опции не работает надо добавить +UnlockDiagnosticVMOptions: java -XX:+PrintAssembly ru.yamakarov.App Error: VM option 'PrintAssembly' is diagnostic and must be enabled via -XX:+UnlockDiagnosticVMOptions. Error: Could not create the Java Virtual Machine. Error: A fatal exception has occurred. Program will exit. Добавляем:</summary></entry></feed>
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">Chris Seaton один из разработчиков GraalVM напиал отличную статью об этой уникальной разработке Top 10 Things You Can Do With GraalVM.</summary></entry></feed>
