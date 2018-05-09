@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>Собираем модули в TypeScript | Записки Java программиста</title>
+<meta name="generator" content="Jekyll v3.5.2" />
+<meta property="og:title" content="Собираем модули в TypeScript" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="В посте про компиляцию TypeScript я не стал писать про компиляцию модулей. И как видите код примеров не содержит импортов. Я думаю, что на эту хитрость пошел не только я, но и писатели руководства по TypeScript. С модулями все становится интереснее, особенно для человека не имевшего дела с Javscript модулями. Давайте попытаемся заюзать модули. Установим RxJS: npm install rxjs Скопируем пример greeter.ts:" />
+<meta property="og:description" content="В посте про компиляцию TypeScript я не стал писать про компиляцию модулей. И как видите код примеров не содержит импортов. Я думаю, что на эту хитрость пошел не только я, но и писатели руководства по TypeScript. С модулями все становится интереснее, особенно для человека не имевшего дела с Javscript модулями. Давайте попытаемся заюзать модули. Установим RxJS: npm install rxjs Скопируем пример greeter.ts:" />
+<link rel="canonical" href="http://yamakarov.ru/typescript/commonjs/2018/05/09/ts-modules.html" />
+<meta property="og:url" content="http://yamakarov.ru/typescript/commonjs/2018/05/09/ts-modules.html" />
+<meta property="og:site_name" content="Записки Java программиста" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-05-09T10:06:00+03:00" />
+<script type="application/ld+json">
+{"url":"http://yamakarov.ru/typescript/commonjs/2018/05/09/ts-modules.html","description":"В посте про компиляцию TypeScript я не стал писать про компиляцию модулей. И как видите код примеров не содержит импортов. Я думаю, что на эту хитрость пошел не только я, но и писатели руководства по TypeScript. С модулями все становится интереснее, особенно для человека не имевшего дела с Javscript модулями. Давайте попытаемся заюзать модули. Установим RxJS: npm install rxjs Скопируем пример greeter.ts:","headline":"Собираем модули в TypeScript","dateModified":"2018-05-09T10:06:00+03:00","datePublished":"2018-05-09T10:06:00+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://yamakarov.ru/typescript/commonjs/2018/05/09/ts-modules.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://yamakarov.ru/feed.xml" title="Записки Java программиста" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Записки Java программиста</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">Обо мне</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Собираем модули в TypeScript</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-05-09T10:06:00+03:00" itemprop="datePublished">May 9, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>В <a href="/ts/2018/05/08/ts.html">посте</a> про компиляцию TypeScript я не стал писать про компиляцию модулей.
+И как видите код примеров не содержит импортов. 
+Я думаю, что на эту хитрость пошел не только я, но и писатели <a href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html">руководства по TypeScript</a>.
+С <a href="https://www.typescriptlang.org/docs/handbook/modules.html">модулями</a> все становится интереснее, особенно для человека не имевшего дела с <a href="https://learn.javascript.ru/modules">Javscript модулями</a>.
+Давайте попытаемся заюзать модули.
+Установим <a href="http://reactivex.io/rxjs/manual/installation.html">RxJS</a>:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>npm install rxjs
+</code></pre>
+</div>
+<p>Скопируем пример <em>greeter.ts</em>:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Observable</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">'rxjs/Observable'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="s1">'rxjs/add/observable/of'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="s1">'rxjs/add/operator/map'</span><span class="p">;</span>
+
+<span class="nx">Observable</span><span class="p">.</span><span class="nx">of</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">).</span><span class="nx">map</span><span class="p">(</span><span class="nx">x</span> <span class="o">=&gt;</span> <span class="nx">x</span> <span class="o">+</span> <span class="s1">'!!!'</span><span class="p">).</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">x</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">));</span> <span class="c1">// etc</span></code></pre></figure>
+
+<p>И скопилируем:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ node_modules/.bin/tsc greeter.ts 
+node_modules/rxjs/Observable.d.ts(1,15): error TS2307: Cannot find module 'rxjs-compat/Observable'.
+</code></pre>
+</div>
+
+<p>Это можно поправить установив <em>rxjs-compat</em>:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>npm install rxjs-compat
+</code></pre>
+</div>
+
+<p>Но дальше летят еще странные ошибки:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ node_modules/.bin/tsc greeter.ts 
+node_modules/rxjs/internal/Observable.d.ts(83,59): error TS2693: 'Promise' only refers to a type, but is being used as a value here.
+node_modules/rxjs/internal/types.d.ts(34,84): error TS2304: Cannot find name 'Iterable'.
+node_modules/rxjs/internal/types.d.ts(38,6): error TS2304: Cannot find name 'Symbol'.
+</code></pre>
+</div>
+
+<p>Их я поправил с помощью <a href="https://github.com/ReactiveX/rxjs/issues/2422">google</a>:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>npm i --save-dev @types/bluebird @types/core-js@0.9.36
+</code></pre>
+</div>
+
+<p>Отлично компилируется в greeter.js:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s2">"use strict"</span><span class="p">;</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">__esModule</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">Observable_1</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"rxjs/Observable"</span><span class="p">);</span>
+<span class="nx">require</span><span class="p">(</span><span class="s2">"rxjs/add/observable/of"</span><span class="p">);</span>
+<span class="nx">require</span><span class="p">(</span><span class="s2">"rxjs/add/operator/map"</span><span class="p">);</span>
+<span class="nx">Observable_1</span><span class="p">.</span><span class="nx">Observable</span><span class="p">.</span><span class="nx">of</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">).</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="s1">'!!!'</span><span class="p">;</span> <span class="p">}).</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span> <span class="p">});</span></code></pre></figure>
+
+<p>И это работает в <a href="https://nodejs.org/en/">NodeJS</a>:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ node greeter.js
+1!!!
+2!!!
+3!!!
+</code></pre>
+</div>
+
+<p>Но мне хочется засунуть это в браузер. 
+А там нет <code class="highlighter-rouge">require</code>.
+И на помощь приходит <a href="http://browserify.org/">Browserify</a>:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>npm install --save-dev browserify
+node_modules/.bin/browserify greeter.js -o bundle.js
+</code></pre>
+</div>
+
+<p>И на выходе я получаю <em>bundle.js</em>, который могу вставить в свой <em>index.html</em>:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;&lt;title&gt;</span>TypeScript Greeter<span class="nt">&lt;/title&gt;&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"bundle.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></figure>
+
+<p><strong>Viola!</strong></p>
+
+<hr />
+<ul>
+  <li>Не раскрыта тема динамической загрузки модулей</li>
+  <li>И совсем не понятно почему выбран модуль RxJS</li>
+</ul>
+
+<p>Однако, я надеюсь, это не просто так.</p>
+
+
+  </div><a class="u-url" href="/typescript/commonjs/2018/05/09/ts-modules.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Записки Java программиста</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Записки Java программиста</li><li><a class="u-email" href="mailto:yakov_makarov@mail.ru">yakov_makarov@mail.ru</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/ymakarov"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">ymakarov</span></a></li><li><a href="https://www.twitter.com/iamakarov"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">iamakarov</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Блог о разработке web админок, CRM-ок и прочего. 
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

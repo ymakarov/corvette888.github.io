@@ -1,5 +1,89 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-05-08T13:01:57+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
-</subtitle><entry><title type="html">Компилируем typescript в консоли</title><link href="http://yamakarov.ru/ts/2018/05/08/ts.html" rel="alternate" type="text/html" title="Компилируем typescript в консоли" /><published>2018-05-08T12:50:00+03:00</published><updated>2018-05-08T12:50:00+03:00</updated><id>http://yamakarov.ru/ts/2018/05/08/ts</id><content type="html" xml:base="http://yamakarov.ru/ts/2018/05/08/ts.html">&lt;p&gt;Создадим директорию:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-05-09T11:08:06+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
+</subtitle><entry><title type="html">Собираем модули в TypeScript</title><link href="http://yamakarov.ru/typescript/commonjs/2018/05/09/ts-modules.html" rel="alternate" type="text/html" title="Собираем модули в TypeScript" /><published>2018-05-09T10:06:00+03:00</published><updated>2018-05-09T10:06:00+03:00</updated><id>http://yamakarov.ru/typescript/commonjs/2018/05/09/ts-modules</id><content type="html" xml:base="http://yamakarov.ru/typescript/commonjs/2018/05/09/ts-modules.html">&lt;p&gt;В &lt;a href=&quot;/ts/2018/05/08/ts.html&quot;&gt;посте&lt;/a&gt; про компиляцию TypeScript я не стал писать про компиляцию модулей.
+И как видите код примеров не содержит импортов. 
+Я думаю, что на эту хитрость пошел не только я, но и писатели &lt;a href=&quot;https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html&quot;&gt;руководства по TypeScript&lt;/a&gt;.
+С &lt;a href=&quot;https://www.typescriptlang.org/docs/handbook/modules.html&quot;&gt;модулями&lt;/a&gt; все становится интереснее, особенно для человека не имевшего дела с &lt;a href=&quot;https://learn.javascript.ru/modules&quot;&gt;Javscript модулями&lt;/a&gt;.
+Давайте попытаемся заюзать модули.
+Установим &lt;a href=&quot;http://reactivex.io/rxjs/manual/installation.html&quot;&gt;RxJS&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install rxjs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Скопируем пример &lt;em&gt;greeter.ts&lt;/em&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Observable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'rxjs/Observable'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'rxjs/add/observable/of'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'rxjs/add/operator/map'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;Observable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'!!!'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// etc&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;И скопилируем:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ node_modules/.bin/tsc greeter.ts 
+node_modules/rxjs/Observable.d.ts(1,15): error TS2307: Cannot find module 'rxjs-compat/Observable'.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Это можно поправить установив &lt;em&gt;rxjs-compat&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install rxjs-compat
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Но дальше летят еще странные ошибки:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ node_modules/.bin/tsc greeter.ts 
+node_modules/rxjs/internal/Observable.d.ts(83,59): error TS2693: 'Promise' only refers to a type, but is being used as a value here.
+node_modules/rxjs/internal/types.d.ts(34,84): error TS2304: Cannot find name 'Iterable'.
+node_modules/rxjs/internal/types.d.ts(38,6): error TS2304: Cannot find name 'Symbol'.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Их я поправил с помощью &lt;a href=&quot;https://github.com/ReactiveX/rxjs/issues/2422&quot;&gt;google&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm i --save-dev @types/bluebird @types/core-js@0.9.36
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Отлично компилируется в greeter.js:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;s2&quot;&gt;&quot;use strict&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;__esModule&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Observable_1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;rxjs/Observable&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;rxjs/add/observable/of&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;rxjs/add/operator/map&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;Observable_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Observable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'!!!'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;И это работает в &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;NodeJS&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ node greeter.js
+1!!!
+2!!!
+3!!!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Но мне хочется засунуть это в браузер. 
+А там нет &lt;code class=&quot;highlighter-rouge&quot;&gt;require&lt;/code&gt;.
+И на помощь приходит &lt;a href=&quot;http://browserify.org/&quot;&gt;Browserify&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install --save-dev browserify
+node_modules/.bin/browserify greeter.js -o bundle.js
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;И на выходе я получаю &lt;em&gt;bundle.js&lt;/em&gt;, который могу вставить в свой &lt;em&gt;index.html&lt;/em&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&amp;lt;title&amp;gt;&lt;/span&gt;TypeScript Greeter&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bundle.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Viola!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;ul&gt;
+  &lt;li&gt;Не раскрыта тема динамической загрузки модулей&lt;/li&gt;
+  &lt;li&gt;И совсем не понятно почему выбран модуль RxJS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Однако, я надеюсь, это не просто так.&lt;/p&gt;</content><author><name></name></author><summary type="html">В посте про компиляцию TypeScript я не стал писать про компиляцию модулей. И как видите код примеров не содержит импортов. Я думаю, что на эту хитрость пошел не только я, но и писатели руководства по TypeScript. С модулями все становится интереснее, особенно для человека не имевшего дела с Javscript модулями. Давайте попытаемся заюзать модули. Установим RxJS: npm install rxjs Скопируем пример greeter.ts:</summary></entry><entry><title type="html">Компилируем typescript в консоли</title><link href="http://yamakarov.ru/ts/2018/05/08/ts.html" rel="alternate" type="text/html" title="Компилируем typescript в консоли" /><published>2018-05-08T12:50:00+03:00</published><updated>2018-05-08T12:50:00+03:00</updated><id>http://yamakarov.ru/ts/2018/05/08/ts</id><content type="html" xml:base="http://yamakarov.ru/ts/2018/05/08/ts.html">&lt;p&gt;Создадим директорию:&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir ts-rxjs
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -502,20 +586,4 @@ consumer
         &lt;span class=&quot;o&quot;&gt;}};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Это круто, но есть ньюансы. Оказывается при этом создается анонимный вложенный класс, держащий ссылку на объект внешнего класса. 
-Это надо учитывать при сборке мусора и сериализации.&lt;/p&gt;</content><author><name></name></author><summary type="html">Оказывается в Java есть double brace initialization</summary></entry><entry><title type="html">10 фишек GraalVM</title><link href="http://yamakarov.ru/graalvm/2018/04/27/graalvm-ten-things.html" rel="alternate" type="text/html" title="10 фишек GraalVM" /><published>2018-04-27T13:13:00+03:00</published><updated>2018-04-27T13:13:00+03:00</updated><id>http://yamakarov.ru/graalvm/2018/04/27/graalvm-ten-things</id><content type="html" xml:base="http://yamakarov.ru/graalvm/2018/04/27/graalvm-ten-things.html">&lt;p&gt;&lt;a href=&quot;https://medium.com/@chrisgseaton&quot;&gt;Chris Seaton&lt;/a&gt; один из разработчиков &lt;a href=&quot;https://www.graalvm.org/&quot;&gt;GraalVM&lt;/a&gt; напиал отличную статью об 
-этой уникальной разработке &lt;a href=&quot;https://medium.com/graalvm/graalvm-ten-things-12d9111f307d&quot;&gt;Top 10 Things You Can Do With GraalVM&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Я решил перевести на русский эти 10 фишек, чтобы заинтересовать вас прочитать эту статью:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Высокопроизводительная современная Java(GraalVM шустрее JVM)&lt;/li&gt;
-  &lt;li&gt;Не требовательная к памяти, быстро стартующая Java(есть компиляция в нативный код)&lt;/li&gt;
-  &lt;li&gt;Можно сочетать JavaScript, Java, Ruby и R&lt;/li&gt;
-  &lt;li&gt;Запуск нативных языков на JVM(по ходу всего что может скомпилировать LLVM)&lt;/li&gt;
-  &lt;li&gt;Инструменты работают для всех языков(дебагер, профайлер, благодаря &lt;a href=&quot;https://github.com/oracle/graal/tree/master/truffle&quot;&gt;Truffle&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;Расширение JVM приложений (использование в Java объектов из других языков, Javascript, Ruby)&lt;/li&gt;
-  &lt;li&gt;Расширение нативных приложений (c помощью одной библиотеки можно в приложение встроить кучу языков)&lt;/li&gt;
-  &lt;li&gt;Компиляция Java библиотек в нативные библиотеки (нужна дополнительная обвязка)&lt;/li&gt;
-  &lt;li&gt;Использование разных языков в базах данных (хранимки на Javascript)&lt;/li&gt;
-  &lt;li&gt;Создание своего языка программирования (У них интерн с Ruby справился за пару месяцев)&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">Chris Seaton один из разработчиков GraalVM напиал отличную статью об этой уникальной разработке Top 10 Things You Can Do With GraalVM.</summary></entry></feed>
+Это надо учитывать при сборке мусора и сериализации.&lt;/p&gt;</content><author><name></name></author><summary type="html">Оказывается в Java есть double brace initialization</summary></entry></feed>
