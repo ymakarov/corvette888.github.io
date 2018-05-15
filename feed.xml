@@ -1,5 +1,57 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-05-14T10:32:15+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
-</subtitle><entry><title type="html">Docker для воспроизводимости окружения</title><link href="http://yamakarov.ru/docker/2018/05/14/docker.html" rel="alternate" type="text/html" title="Docker для воспроизводимости окружения" /><published>2018-05-14T10:23:00+03:00</published><updated>2018-05-14T10:23:00+03:00</updated><id>http://yamakarov.ru/docker/2018/05/14/docker</id><content type="html" xml:base="http://yamakarov.ru/docker/2018/05/14/docker.html">&lt;p&gt;&lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt; очень удобно использовать для воспроизведения одинакового окружения на разных компьютерах.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-05-15T09:52:52+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
+</subtitle><entry><title type="html">Hello, Docker!</title><link href="http://yamakarov.ru/docker/2018/05/15/hello-docker.html" rel="alternate" type="text/html" title="Hello, Docker!" /><published>2018-05-15T09:39:00+03:00</published><updated>2018-05-15T09:39:00+03:00</updated><id>http://yamakarov.ru/docker/2018/05/15/hello-docker</id><content type="html" xml:base="http://yamakarov.ru/docker/2018/05/15/hello-docker.html">&lt;p&gt;Я толком уже не помню, но как-то docker появился на моей машине.
+Я даже помню его было не очень трудно установить.
+Теперь я решил запустить какой-нибудь контейнер.
+Это должно было быть просто судя по &lt;a href=&quot;https://docs.docker.com/get-started/#test-docker-installation&quot;&gt;гайду&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run hello-world
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Но оказалось, что не все так просто:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker: Error response from daemon: Get https://registry-1.docker.io/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers).
+See 'docker run --help'.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Сначала я думал, что виноваты &lt;a href=&quot;https://stackoverflow.com/questions/23111631/cannot-download-docker-images-behind-a-proxy&quot;&gt;proxy&lt;/a&gt;.
+Но оказалось, все проще.
+Нужно было &lt;a href=&quot;https://forums.docker.com/t/error-response-from-daemon-get-https-registry-1-docker-io-v2/23741/29&quot;&gt;залогиниться&lt;/a&gt;.
+Причем в docker надо логиниться под логином.
+Можно зайти и под email, но тогда будет:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker: Error response from daemon: Get https://registry-1.docker.io/v2/library/hello-world/manifests/latest: unauthorized: incorrect username or password.
+See 'docker run --help'.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Когда правильно залогинился и рестартанул docker daemon:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the &quot;hello-world&quot; image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/engine/userguide/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Интересные открытия продолжаются!&lt;/p&gt;</content><author><name></name></author><summary type="html">Я толком уже не помню, но как-то docker появился на моей машине. Я даже помню его было не очень трудно установить. Теперь я решил запустить какой-нибудь контейнер. Это должно было быть просто судя по гайду:</summary></entry><entry><title type="html">Docker для воспроизводимости окружения</title><link href="http://yamakarov.ru/docker/2018/05/14/docker.html" rel="alternate" type="text/html" title="Docker для воспроизводимости окружения" /><published>2018-05-14T10:23:00+03:00</published><updated>2018-05-14T10:23:00+03:00</updated><id>http://yamakarov.ru/docker/2018/05/14/docker</id><content type="html" xml:base="http://yamakarov.ru/docker/2018/05/14/docker.html">&lt;p&gt;&lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt; очень удобно использовать для воспроизведения одинакового окружения на разных компьютерах.
 Вам достаточно настроить Docker, и вы сможете запускать любые image, не сильно заботясь о том, какие версии библиотек установлены на вашей машине.
 Это очень удобно и работает на Linux, Windows и Macos.
 И не важно на каком языке вы разрабатываете Python, Javascript или Java.
@@ -288,40 +340,4 @@ View можно использовать любой понравившийся, 
 &lt;p&gt;C его помощью можно передавать информацию асинхронно между потоками исполнения.
 В примере выше создается обещание выдать строку и запускается таск в сервисе выполнения.
 В потоке выполняющем работу через некоторое время появляется результат, а поток ждущий исполнения получает его по появлению.
-Это достаточно высокоуровневая абстракция, обходящаяся без локов и &lt;code class=&quot;highlighter-rouge&quot;&gt;wait, notify&lt;/code&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Накидал маленький пример работы с CompletableFuture</summary></entry><entry><title type="html">java.util.concurrent.CompletableFuture в Spring</title><link href="http://yamakarov.ru/java/concurrent/spring/2018/05/01/spring-future.html" rel="alternate" type="text/html" title="java.util.concurrent.CompletableFuture в Spring" /><published>2018-05-01T11:48:00+03:00</published><updated>2018-05-01T11:48:00+03:00</updated><id>http://yamakarov.ru/java/concurrent/spring/2018/05/01/spring-future</id><content type="html" xml:base="http://yamakarov.ru/java/concurrent/spring/2018/05/01/spring-future.html">&lt;p&gt;Продолжаю изучать &lt;a href=&quot;/java/concurrency/spring/2018/04/30/concurrent-spring.html&quot;&gt;многопоточность по исходникам&lt;/a&gt; spring-core.
-Искал по пакету &lt;code class=&quot;highlighter-rouge&quot;&gt;java.util.concurrent&lt;/code&gt; и &lt;a href=&quot;https://github.com/spring-projects/spring-framework/blob/master/spring-core/src/main/java/org/springframework/util/concurrent/DelegatingCompletableFuture.java&quot;&gt;нашел&lt;/a&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DelegatingCompletableFuture&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CompletableFuture&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-	&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Future&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-
-	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;DelegatingCompletableFuture&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Future&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;Assert&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;notNull&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Delegate must not be null&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;delegate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-
-	&lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;cancel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mayInterruptIfRunning&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;delegate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cancel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mayInterruptIfRunning&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-		&lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cancel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mayInterruptIfRunning&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Я не понял зачем нужно оборачивать делегата и иметь возможность отменять его.
-Я лишь могу предположить, что делегат обрабатывается отдельно, но хочется иметь возможность отменять делегата вместе с какой-то еще выполняемой задачей.
-Вот так выглядит &lt;a href=&quot;http://hg.openjdk.java.net/jdk8/jdk8/jdk/file/687fd7c7986d/src/share/classes/java/util/concurrent/CompletableFuture.java&quot;&gt;CompletableFuture&lt;/a&gt;
-Читайте перед сном: вы либо уснете, либо узнаете что-то интересное из хорошо написанного и документированного кода &lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%9B%D0%B8,_%D0%94%D0%B0%D0%B3&quot;&gt;Doug Lea&lt;/a&gt;,
-специалиста в области многопоточного программирования. Он соавтор крутейшей книги по многопоточности в Java:&lt;a href=&quot;https://www.amazon.com/Java-Concurrency-Practice-Brian-Goetz/dp/0321349601&quot;&gt;Java Concurrency in Practice&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;С &lt;code class=&quot;highlighter-rouge&quot;&gt;DelegatingCompletableFuture&lt;/code&gt; я решил посмотрть коммиты на &lt;a href=&quot;https://github.com/spring-projects/spring-framework/commit/87430f3cd30b401fbb10cf212cb437ff41b058f6#diff-1b9767595be1e0f92dcd51b83d657e47&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;И все равно не понял зачем он. 
-Почему нельзя отменять напрямую делегата, не создавая обертку.
-Тем более, что никакие методы не переопределяются и делегата можно только отменять, а все остальные вызовы вернут какую-то ересь.
-Но &lt;a href=&quot;https://spring.io/team/jhoeller&quot;&gt;Juergen Hoeller&lt;/a&gt; должно быть виднее, пожалуй спрошу его напрямую)
-Ну и конечно можно сделать свой пулл реквест и засабмитить в Spring. 
-Если примут будешь контрибьютором, если не примут объяснят в чем неправ и зачем нужен &lt;code class=&quot;highlighter-rouge&quot;&gt;DelegatingCompletableFuture&lt;/code&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Продолжаю изучать многопоточность по исходникам spring-core. Искал по пакету java.util.concurrent и нашел:</summary></entry></feed>
+Это достаточно высокоуровневая абстракция, обходящаяся без локов и &lt;code class=&quot;highlighter-rouge&quot;&gt;wait, notify&lt;/code&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Накидал маленький пример работы с CompletableFuture</summary></entry></feed>
