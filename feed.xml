@@ -1,5 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-05-16T11:45:18+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
-</subtitle><entry><title type="html">Компилируем и запускаем Java код с помощью Docker</title><link href="http://yamakarov.ru/java/docker/2018/05/16/docker-java.html" rel="alternate" type="text/html" title="Компилируем и запускаем Java код с помощью Docker" /><published>2018-05-16T08:56:00+03:00</published><updated>2018-05-16T08:56:00+03:00</updated><id>http://yamakarov.ru/java/docker/2018/05/16/docker-java</id><content type="html" xml:base="http://yamakarov.ru/java/docker/2018/05/16/docker-java.html">&lt;p&gt;Возьмем просто Java класс:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-05-17T10:59:33+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
+</subtitle><entry><title type="html">Angular CLI</title><link href="http://yamakarov.ru/angular/angular-cli/2018/05/17/square-click.html" rel="alternate" type="text/html" title="Angular CLI" /><published>2018-05-17T09:54:00+03:00</published><updated>2018-05-17T09:54:00+03:00</updated><id>http://yamakarov.ru/angular/angular-cli/2018/05/17/square-click</id><content type="html" xml:base="http://yamakarov.ru/angular/angular-cli/2018/05/17/square-click.html">&lt;p&gt;&lt;a href=&quot;https://cli.angular.io/&quot;&gt;Angular CLI&lt;/a&gt; очень удобный инструмент для разработки на angular.
+Для создания нового проекта достаточно:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ng new square-click
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Для запуска:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ng serve
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Можно разрабатывать.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Viola!&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Angular CLI очень удобный инструмент для разработки на angular. Для создания нового проекта достаточно:</summary></entry><entry><title type="html">Компилируем и запускаем Java код с помощью Docker</title><link href="http://yamakarov.ru/java/docker/2018/05/16/docker-java.html" rel="alternate" type="text/html" title="Компилируем и запускаем Java код с помощью Docker" /><published>2018-05-16T08:56:00+03:00</published><updated>2018-05-16T08:56:00+03:00</updated><id>http://yamakarov.ru/java/docker/2018/05/16/docker-java</id><content type="html" xml:base="http://yamakarov.ru/java/docker/2018/05/16/docker-java.html">&lt;p&gt;Возьмем просто Java класс:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -289,47 +304,4 @@ View можно использовать любой понравившийся, 
 &lt;p&gt;Выглядит это все очень необычно. Высокий порог входа и трудно писать программы в таком стиле. 
 Но в этом определенно что-то есть.&lt;/p&gt;</content><author><name></name></author><summary type="html">Последнее время все говорят о реактивном программировании, я попытаюсь провести цепочку связей от абстрактной концепции к конкретной реализации, которую можно использовать в своем приложении на Angular.</summary></entry><entry><title type="html">@ngrx: Реактивные дополнения к Angular</title><link href="http://yamakarov.ru/typescript/angular/ngrx/2018/05/04/ngrx.html" rel="alternate" type="text/html" title="@ngrx: Реактивные дополнения к Angular" /><published>2018-05-04T17:28:00+03:00</published><updated>2018-05-04T17:28:00+03:00</updated><id>http://yamakarov.ru/typescript/angular/ngrx/2018/05/04/ngrx</id><content type="html" xml:base="http://yamakarov.ru/typescript/angular/ngrx/2018/05/04/ngrx.html">&lt;p&gt;Нашел интересную библиотеку для реактивного программирования в Angular &lt;a href=&quot;https://github.com/ngrx&quot;&gt;@ngrx&lt;/a&gt;.
 Есть интересный &lt;a href=&quot;https://github.com/ngrx/platform/tree/master/example-app&quot;&gt;пример с логином&lt;/a&gt;.
-&lt;a href=&quot;https://stackblitz.com/github/ngrx/platform/tree/61cbfe537f9df8cef3dd4a6ee0b8f483e49653f4&quot;&gt;Демка&lt;/a&gt; тоже работает, user &lt;code class=&quot;highlighter-rouge&quot;&gt;test&lt;/code&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Нашел интересную библиотеку для реактивного программирования в Angular @ngrx. Есть интересный пример с логином. Демка тоже работает, user test.</summary></entry><entry><title type="html">Подключаем one-nio</title><link href="http://yamakarov.ru/java/highload/one-nio/2018/05/04/maven-one-nio.html" rel="alternate" type="text/html" title="Подключаем one-nio" /><published>2018-05-04T11:56:00+03:00</published><updated>2018-05-04T11:56:00+03:00</updated><id>http://yamakarov.ru/java/highload/one-nio/2018/05/04/maven-one-nio</id><content type="html" xml:base="http://yamakarov.ru/java/highload/one-nio/2018/05/04/maven-one-nio.html">&lt;p&gt;Подключить &lt;a href=&quot;https://github.com/odnoklassniki/one-nio&quot;&gt;one-nio&lt;/a&gt; к своему проекту очень просто. 
-Достаточно прописать библиотеку для &lt;a href=&quot;https://mvnrepository.com/artifact/ru.odnoklassniki/one-nio/1.0.2&quot;&gt;maven или gradle&lt;/a&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;!-- https://mvnrepository.com/artifact/ru.odnoklassniki/one-nio --&amp;gt;
-&amp;lt;dependency&amp;gt;
-    &amp;lt;groupId&amp;gt;ru.odnoklassniki&amp;lt;/groupId&amp;gt;
-    &amp;lt;artifactId&amp;gt;one-nio&amp;lt;/artifactId&amp;gt;
-    &amp;lt;version&amp;gt;1.0.2&amp;lt;/version&amp;gt;
-&amp;lt;/dependency&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Вот так можно использовать:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ru&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;yamakarov&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.IOException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;one.nio.http.HttpClient&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;one.nio.http.HttpException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;one.nio.http.Response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;one.nio.net.ConnectionString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;one.nio.pool.PoolException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HttpClientExample&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HttpClient&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;client&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpClient&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ConnectionString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://yamakarov.ru&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;Response&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/about/&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getBodyUtf8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;InterruptedException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PoolException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Должно быть быстро, потому что используются возможности линуксовых сокетов, не доступные напрямую из Java.&lt;/p&gt;
-
-&lt;p&gt;Другой пример можно посмотреть в &lt;a href=&quot;https://github.com/odnoklassniki/one-nio/blob/master/test/one/nio/http/HttpClientTest.java&quot;&gt;репозитории one-nio&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Подключить one-nio к своему проекту очень просто. Достаточно прописать библиотеку для maven или gradle.</summary></entry></feed>
+&lt;a href=&quot;https://stackblitz.com/github/ngrx/platform/tree/61cbfe537f9df8cef3dd4a6ee0b8f483e49653f4&quot;&gt;Демка&lt;/a&gt; тоже работает, user &lt;code class=&quot;highlighter-rouge&quot;&gt;test&lt;/code&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Нашел интересную библиотеку для реактивного программирования в Angular @ngrx. Есть интересный пример с логином. Демка тоже работает, user test.</summary></entry></feed>
