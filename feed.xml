@@ -1,5 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-05-21T12:32:59+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
-</subtitle><entry><title type="html">Важно правильно читать из памяти</title><link href="http://yamakarov.ru/java/memory/2018/05/21/memory-access-patterns.html" rel="alternate" type="text/html" title="Важно правильно читать из памяти" /><published>2018-05-21T12:27:00+03:00</published><updated>2018-05-21T12:27:00+03:00</updated><id>http://yamakarov.ru/java/memory/2018/05/21/memory-access-patterns</id><content type="html" xml:base="http://yamakarov.ru/java/memory/2018/05/21/memory-access-patterns.html">&lt;p&gt;Интересная статья о том, как важно правильно &lt;a href=&quot;https://mechanical-sympathy.blogspot.ru/2012/08/memory-access-patterns-are-important.html&quot;&gt;обращаться к памяти&lt;/a&gt;.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-05-22T09:57:58+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
+</subtitle><entry><title type="html">Highload минимум от Мартина Томпсона</title><link href="http://yamakarov.ru/highload/2018/05/22/martin-know-how.html" rel="alternate" type="text/html" title="Highload минимум от Мартина Томпсона" /><published>2018-05-22T09:53:00+03:00</published><updated>2018-05-22T09:53:00+03:00</updated><id>http://yamakarov.ru/highload/2018/05/22/martin-know-how</id><content type="html" xml:base="http://yamakarov.ru/highload/2018/05/22/martin-know-how.html">&lt;p&gt;&lt;a href=&quot;https://www.real-logic.co.uk/training.html&quot;&gt;Темы и вопросы&lt;/a&gt; для подготовки к собеседованию на должность старшего программиста в проект с высокой нагрузкой.&lt;/p&gt;
+
+&lt;p&gt;Наверно, можно и тренинг пройти у Мартина, я не пробовал.&lt;/p&gt;</content><author><name></name></author><summary type="html">Темы и вопросы для подготовки к собеседованию на должность старшего программиста в проект с высокой нагрузкой.</summary></entry><entry><title type="html">Важно правильно читать из памяти</title><link href="http://yamakarov.ru/java/memory/2018/05/21/memory-access-patterns.html" rel="alternate" type="text/html" title="Важно правильно читать из памяти" /><published>2018-05-21T12:27:00+03:00</published><updated>2018-05-21T12:27:00+03:00</updated><id>http://yamakarov.ru/java/memory/2018/05/21/memory-access-patterns</id><content type="html" xml:base="http://yamakarov.ru/java/memory/2018/05/21/memory-access-patterns.html">&lt;p&gt;Интересная статья о том, как важно правильно &lt;a href=&quot;https://mechanical-sympathy.blogspot.ru/2012/08/memory-access-patterns-are-important.html&quot;&gt;обращаться к памяти&lt;/a&gt;.
 Необходимо учитывать железные особенности, кэши различных уровней для того, чтобы добиться действительно быстрой работы алгоритмов.
 В эпоху многопроцессорности, становится важным не только количество операций в алгоритме, но и количество попаданий в кэш.&lt;/p&gt;</content><author><name></name></author><summary type="html">Интересная статья о том, как важно правильно обращаться к памяти. Необходимо учитывать железные особенности, кэши различных уровней для того, чтобы добиться действительно быстрой работы алгоритмов. В эпоху многопроцессорности, становится важным не только количество операций в алгоритме, но и количество попаданий в кэш.</summary></entry><entry><title type="html">Angular: работа с элементами объявленными в шаблоне</title><link href="http://yamakarov.ru/angular/2018/05/18/angular-element-ref.html" rel="alternate" type="text/html" title="Angular: работа с элементами объявленными в шаблоне" /><published>2018-05-18T10:57:00+03:00</published><updated>2018-05-18T10:57:00+03:00</updated><id>http://yamakarov.ru/angular/2018/05/18/angular-element-ref</id><content type="html" xml:base="http://yamakarov.ru/angular/2018/05/18/angular-element-ref.html">&lt;p&gt;В Angular можно объявить переменную в шаблоне:&lt;/p&gt;
 
@@ -242,50 +244,4 @@ node_modules/.bin/browserify greeter.js -o bundle.js
   &lt;li&gt;И совсем не понятно почему выбран модуль RxJS&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Однако, я надеюсь, это не просто так.&lt;/p&gt;</content><author><name></name></author><summary type="html">В посте про компиляцию TypeScript я не стал писать про компиляцию модулей. И как видите код примеров не содержит импортов. Я думаю, что на эту хитрость пошел не только я, но и писатели руководства по TypeScript. С модулями все становится интереснее, особенно для человека не имевшего дела с Javscript модулями. Давайте попытаемся заюзать модули. Установим RxJS: npm install rxjs Скопируем пример greeter.ts:</summary></entry><entry><title type="html">Компилируем typescript в консоли</title><link href="http://yamakarov.ru/ts/2018/05/08/ts.html" rel="alternate" type="text/html" title="Компилируем typescript в консоли" /><published>2018-05-08T12:50:00+03:00</published><updated>2018-05-08T12:50:00+03:00</updated><id>http://yamakarov.ru/ts/2018/05/08/ts</id><content type="html" xml:base="http://yamakarov.ru/ts/2018/05/08/ts.html">&lt;p&gt;Создадим директорию:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir ts-rxjs
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Инициализируем npm:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm init
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Установим typescript:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install typescript
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Напишем простой скрипт на Typescript &lt;em&gt;greeter.ts&lt;/em&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-typescript&quot; data-lang=&quot;typescript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;greeter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hello, &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Jane User&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;innerHTML&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;greeter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Скомпилируем:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;node_modules/typescript/bin/tsc greeter.ts
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Получим &lt;em&gt;greeter.js&lt;/em&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;greeter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hello, &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Jane User&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;innerHTML&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;greeter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Его можно вставлять в свой &lt;em&gt;index.html&lt;/em&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&amp;lt;title&amp;gt;&lt;/span&gt;TypeScript Greeter&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;greeter.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name></name></author><summary type="html">Создадим директорию: mkdir ts-rxjs</summary></entry></feed>
+&lt;p&gt;Однако, я надеюсь, это не просто так.&lt;/p&gt;</content><author><name></name></author><summary type="html">В посте про компиляцию TypeScript я не стал писать про компиляцию модулей. И как видите код примеров не содержит импортов. Я думаю, что на эту хитрость пошел не только я, но и писатели руководства по TypeScript. С модулями все становится интереснее, особенно для человека не имевшего дела с Javscript модулями. Давайте попытаемся заюзать модули. Установим RxJS: npm install rxjs Скопируем пример greeter.ts:</summary></entry></feed>
