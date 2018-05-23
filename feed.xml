@@ -1,5 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-05-22T09:57:58+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
-</subtitle><entry><title type="html">Highload минимум от Мартина Томпсона</title><link href="http://yamakarov.ru/highload/2018/05/22/martin-know-how.html" rel="alternate" type="text/html" title="Highload минимум от Мартина Томпсона" /><published>2018-05-22T09:53:00+03:00</published><updated>2018-05-22T09:53:00+03:00</updated><id>http://yamakarov.ru/highload/2018/05/22/martin-know-how</id><content type="html" xml:base="http://yamakarov.ru/highload/2018/05/22/martin-know-how.html">&lt;p&gt;&lt;a href=&quot;https://www.real-logic.co.uk/training.html&quot;&gt;Темы и вопросы&lt;/a&gt; для подготовки к собеседованию на должность старшего программиста в проект с высокой нагрузкой.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-05-23T12:57:37+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
+</subtitle><entry><title type="html">Иерархия памяти</title><link href="http://yamakarov.ru/memory/2018/05/23/memory-hierarchy.html" rel="alternate" type="text/html" title="Иерархия памяти" /><published>2018-05-23T12:45:00+03:00</published><updated>2018-05-23T12:45:00+03:00</updated><id>http://yamakarov.ru/memory/2018/05/23/memory-hierarchy</id><content type="html" xml:base="http://yamakarov.ru/memory/2018/05/23/memory-hierarchy.html">&lt;p&gt;Память компьютера организована иерархически. 
+Самые верхние уровни обеспечивают самый быстрый доступ.
+Однако существуют физические ограничения на объем непосредственно доступной памяти.
+Грубо говоря, вы просто не можете понатыкать столько пинов к процессору чтобы в регистры помещались мегабайты или гигабайты.
+Принято выделять следующие уровни в иерархии:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Регистры процессора&lt;/li&gt;
+  &lt;li&gt;Кэш процессора (L1, L2, L3)&lt;/li&gt;
+  &lt;li&gt;Оперативная память&lt;/li&gt;
+  &lt;li&gt;Дисковая память&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Прикладные программисты обычно не работают с регистрами, это дело компилятора.
+Кэшем мы тоже плохо управляем.
+Мы только можем помочь компилятору и процессору предсказать что класть в кэш, используя правильные алгоритмы.
+Эти алгоритмы работают с последовательными участками памяти.&lt;/p&gt;
+
+&lt;p&gt;Оперативная память уже под полным нашим контролем и в высоконагруженных приложениях все держится в памяти.
+Дисковая память настолько медленная, что обращения к ней могут происходить только в аналитике данных.
+Высокой нагрузки дисковая память не выдерживает и служит главным образом для архивирования информации.&lt;/p&gt;
+
+&lt;p&gt;Рекомендую прочитать:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Интересный образ &lt;a href=&quot;https://www.quora.com/Why-does-memory-hierarchy-exist&quot;&gt;магазинов поблизости&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Статья на вики, как отправная точка для знакомства с &lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%98%D0%B5%D1%80%D0%B0%D1%80%D1%85%D0%B8%D1%8F_%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8&quot;&gt;иерархией памяти&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Память компьютера организована иерархически. Самые верхние уровни обеспечивают самый быстрый доступ. Однако существуют физические ограничения на объем непосредственно доступной памяти. Грубо говоря, вы просто не можете понатыкать столько пинов к процессору чтобы в регистры помещались мегабайты или гигабайты. Принято выделять следующие уровни в иерархии:</summary></entry><entry><title type="html">Highload минимум от Мартина Томпсона</title><link href="http://yamakarov.ru/highload/2018/05/22/martin-know-how.html" rel="alternate" type="text/html" title="Highload минимум от Мартина Томпсона" /><published>2018-05-22T09:53:00+03:00</published><updated>2018-05-22T09:53:00+03:00</updated><id>http://yamakarov.ru/highload/2018/05/22/martin-know-how</id><content type="html" xml:base="http://yamakarov.ru/highload/2018/05/22/martin-know-how.html">&lt;p&gt;&lt;a href=&quot;https://www.real-logic.co.uk/training.html&quot;&gt;Темы и вопросы&lt;/a&gt; для подготовки к собеседованию на должность старшего программиста в проект с высокой нагрузкой.&lt;/p&gt;
 
 &lt;p&gt;Наверно, можно и тренинг пройти у Мартина, я не пробовал.&lt;/p&gt;</content><author><name></name></author><summary type="html">Темы и вопросы для подготовки к собеседованию на должность старшего программиста в проект с высокой нагрузкой.</summary></entry><entry><title type="html">Важно правильно читать из памяти</title><link href="http://yamakarov.ru/java/memory/2018/05/21/memory-access-patterns.html" rel="alternate" type="text/html" title="Важно правильно читать из памяти" /><published>2018-05-21T12:27:00+03:00</published><updated>2018-05-21T12:27:00+03:00</updated><id>http://yamakarov.ru/java/memory/2018/05/21/memory-access-patterns</id><content type="html" xml:base="http://yamakarov.ru/java/memory/2018/05/21/memory-access-patterns.html">&lt;p&gt;Интересная статья о том, как важно правильно &lt;a href=&quot;https://mechanical-sympathy.blogspot.ru/2012/08/memory-access-patterns-are-important.html&quot;&gt;обращаться к памяти&lt;/a&gt;.
 Необходимо учитывать железные особенности, кэши различных уровней для того, чтобы добиться действительно быстрой работы алгоритмов.
@@ -160,88 +186,4 @@ For more examples and ideas, visit:
 
 &lt;p&gt;В консоль будет выведено значение для &lt;em&gt;c$&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Вот так, не используя никаких примитивов синхронизации мы получили, что-то похожее на &lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%91%D0%B0%D1%80%D1%8C%D0%B5%D1%80%D0%BD%D0%B0%D1%8F_%D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F&quot;&gt;барьер&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">RxJS построена вокруг работы с Observable. Там огромное количество методов, потому что потоки значений можно создавать из очень разных источников и способов комбинирования этих потоков также много.</summary></entry><entry><title type="html">Собираем модули в TypeScript</title><link href="http://yamakarov.ru/typescript/commonjs/2018/05/09/ts-modules.html" rel="alternate" type="text/html" title="Собираем модули в TypeScript" /><published>2018-05-09T10:06:00+03:00</published><updated>2018-05-09T10:06:00+03:00</updated><id>http://yamakarov.ru/typescript/commonjs/2018/05/09/ts-modules</id><content type="html" xml:base="http://yamakarov.ru/typescript/commonjs/2018/05/09/ts-modules.html">&lt;p&gt;В &lt;a href=&quot;/ts/2018/05/08/ts.html&quot;&gt;посте&lt;/a&gt; про компиляцию TypeScript я не стал писать про компиляцию модулей.
-И как видите код примеров не содержит импортов. 
-Я думаю, что на эту хитрость пошел не только я, но и писатели &lt;a href=&quot;https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html&quot;&gt;руководства по TypeScript&lt;/a&gt;.
-С &lt;a href=&quot;https://www.typescriptlang.org/docs/handbook/modules.html&quot;&gt;модулями&lt;/a&gt; все становится интереснее, особенно для человека не имевшего дела с &lt;a href=&quot;https://learn.javascript.ru/modules&quot;&gt;Javscript модулями&lt;/a&gt;.
-Давайте попытаемся заюзать модули.
-Установим &lt;a href=&quot;http://reactivex.io/rxjs/manual/installation.html&quot;&gt;RxJS&lt;/a&gt;:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install rxjs
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Скопируем пример &lt;em&gt;greeter.ts&lt;/em&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Observable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'rxjs/Observable'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'rxjs/add/observable/of'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'rxjs/add/operator/map'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;Observable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'!!!'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// etc&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;И скопилируем:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ node_modules/.bin/tsc greeter.ts 
-node_modules/rxjs/Observable.d.ts(1,15): error TS2307: Cannot find module 'rxjs-compat/Observable'.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Это можно поправить установив &lt;em&gt;rxjs-compat&lt;/em&gt;:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install rxjs-compat
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Но дальше летят еще странные ошибки:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ node_modules/.bin/tsc greeter.ts 
-node_modules/rxjs/internal/Observable.d.ts(83,59): error TS2693: 'Promise' only refers to a type, but is being used as a value here.
-node_modules/rxjs/internal/types.d.ts(34,84): error TS2304: Cannot find name 'Iterable'.
-node_modules/rxjs/internal/types.d.ts(38,6): error TS2304: Cannot find name 'Symbol'.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Их я поправил с помощью &lt;a href=&quot;https://github.com/ReactiveX/rxjs/issues/2422&quot;&gt;google&lt;/a&gt;:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm i --save-dev @types/bluebird @types/core-js@0.9.36
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Отлично компилируется в greeter.js:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;s2&quot;&gt;&quot;use strict&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;__esModule&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Observable_1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;rxjs/Observable&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;rxjs/add/observable/of&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;rxjs/add/operator/map&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;Observable_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Observable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'!!!'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;И это работает в &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;NodeJS&lt;/a&gt;:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ node greeter.js
-1!!!
-2!!!
-3!!!
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Но мне хочется засунуть это в браузер. 
-А там нет &lt;code class=&quot;highlighter-rouge&quot;&gt;require&lt;/code&gt;.
-И на помощь приходит &lt;a href=&quot;http://browserify.org/&quot;&gt;Browserify&lt;/a&gt;:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install --save-dev browserify
-node_modules/.bin/browserify greeter.js -o bundle.js
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;И на выходе я получаю &lt;em&gt;bundle.js&lt;/em&gt;, который могу вставить в свой &lt;em&gt;index.html&lt;/em&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&amp;lt;title&amp;gt;&lt;/span&gt;TypeScript Greeter&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bundle.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;strong&gt;Viola!&lt;/strong&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;ul&gt;
-  &lt;li&gt;Не раскрыта тема динамической загрузки модулей&lt;/li&gt;
-  &lt;li&gt;И совсем не понятно почему выбран модуль RxJS&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Однако, я надеюсь, это не просто так.&lt;/p&gt;</content><author><name></name></author><summary type="html">В посте про компиляцию TypeScript я не стал писать про компиляцию модулей. И как видите код примеров не содержит импортов. Я думаю, что на эту хитрость пошел не только я, но и писатели руководства по TypeScript. С модулями все становится интереснее, особенно для человека не имевшего дела с Javscript модулями. Давайте попытаемся заюзать модули. Установим RxJS: npm install rxjs Скопируем пример greeter.ts:</summary></entry></feed>
+&lt;p&gt;Вот так, не используя никаких примитивов синхронизации мы получили, что-то похожее на &lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%91%D0%B0%D1%80%D1%8C%D0%B5%D1%80%D0%BD%D0%B0%D1%8F_%D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F&quot;&gt;барьер&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">RxJS построена вокруг работы с Observable. Там огромное количество методов, потому что потоки значений можно создавать из очень разных источников и способов комбинирования этих потоков также много.</summary></entry></feed>
