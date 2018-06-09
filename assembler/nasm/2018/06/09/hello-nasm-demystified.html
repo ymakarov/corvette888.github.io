@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>Разбор Hello nasm | Записки Java программиста</title>
+<meta name="generator" content="Jekyll v3.5.2" />
+<meta property="og:title" content="Разбор Hello nasm" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="В посте “Hello nasm assembler” я привел пример программы на ассемблере nasm для Mac OS, но совершенно не рассказал как она работает. Повторю её ещё раз код программы:" />
+<meta property="og:description" content="В посте “Hello nasm assembler” я привел пример программы на ассемблере nasm для Mac OS, но совершенно не рассказал как она работает. Повторю её ещё раз код программы:" />
+<link rel="canonical" href="http://yamakarov.ru/assembler/nasm/2018/06/09/hello-nasm-demystified.html" />
+<meta property="og:url" content="http://yamakarov.ru/assembler/nasm/2018/06/09/hello-nasm-demystified.html" />
+<meta property="og:site_name" content="Записки Java программиста" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-06-09T10:29:00+03:00" />
+<script type="application/ld+json">
+{"url":"http://yamakarov.ru/assembler/nasm/2018/06/09/hello-nasm-demystified.html","description":"В посте “Hello nasm assembler” я привел пример программы на ассемблере nasm для Mac OS, но совершенно не рассказал как она работает. Повторю её ещё раз код программы:","headline":"Разбор Hello nasm","dateModified":"2018-06-09T10:29:00+03:00","datePublished":"2018-06-09T10:29:00+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://yamakarov.ru/assembler/nasm/2018/06/09/hello-nasm-demystified.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://yamakarov.ru/feed.xml" title="Записки Java программиста" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Записки Java программиста</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">Обо мне</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Разбор Hello nasm</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-06-09T10:29:00+03:00" itemprop="datePublished">Jun 9, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>В посте <a href="/assembler/nasm/2018/06/08/nasm.html">“Hello nasm assembler”</a> я привел пример программы на ассемблере <a href="https://www.nasm.us">nasm</a> для Mac OS, но совершенно не рассказал как она работает.
+Повторю её ещё раз код программы:</p>
+
+<figure class="highlight"><pre><code class="language-nasm" data-lang="nasm"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></td><td class="code"><pre><span class="c">; /usr/local/bin/nasm -f macho64 64.asm &amp;&amp; ld -macosx_version_min 10.7.0 -lSystem -o 64 64.o &amp;&amp; ./64</span>
+  
+<span class="kr">global</span> <span class="n">start</span>
+   
+<span class="kr">section</span> <span class="p">.</span><span class="n">text</span>
+  
+<span class="n">start</span><span class="o">:</span>
+    <span class="k">mov</span>     <span class="n">rax</span><span class="p">,</span> <span class="mh">0x2000004</span> <span class="c">; write</span>
+    <span class="k">mov</span>     <span class="n">rdi</span><span class="p">,</span> <span class="mi">1</span> <span class="c">; stdout</span>
+    <span class="k">mov</span>     <span class="n">rsi</span><span class="p">,</span> <span class="n">msg</span>
+    <span class="k">mov</span>     <span class="n">rdx</span><span class="p">,</span> <span class="n">msg</span><span class="p">.</span><span class="n">len</span>
+    <span class="k">syscall</span>
+ 
+    <span class="k">mov</span>     <span class="n">rax</span><span class="p">,</span> <span class="mh">0x2000001</span> <span class="c">; exit</span>
+    <span class="k">mov</span>     <span class="n">rdi</span><span class="p">,</span> <span class="mi">0</span>
+    <span class="k">syscall</span>
+  
+  
+<span class="kr">section</span> <span class="p">.</span><span class="n">data</span>
+  
+<span class="n">msg</span><span class="o">:</span>    <span class="kt">db</span>      <span class="s">"Hello, world!"</span><span class="p">,</span> <span class="mi">10</span>
+<span class="p">.</span><span class="n">len</span><span class="o">:</span>   <span class="k">equ</span>     <span class="err">$</span> <span class="o">-</span> <span class="n">msg</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Комментарии к коду программы:</p>
+
+<ul>
+  <li>В <a href="https://www.nasm.us/doc/nasmdoc3.html">языке nasm</a> <code class="highlighter-rouge">;</code> обозначает комментарии. Строчка 1.</li>
+  <li>В строчке 3 <code class="highlighter-rouge">global start</code> для <a href="https://stackoverflow.com/a/17899048/6677530">линкера указывается</a> с какого места начинать выполнение программы</li>
+  <li>Директива <code class="highlighter-rouge">section</code> задает секции для <a href="https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%BD%D1%8B%D0%B9_%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8C">объектных файлов</a>
+    <ul>
+      <li>.text (строка 5) - для кода, стандартный в Linux
+        <ul>
+          <li><code class="highlighter-rouge">start:</code> в 7 строчке метка, она отмечает место в коде на которое можно переходить</li>
+          <li><code class="highlighter-rouge">mov</code> и <code class="highlighter-rouge">syscall</code> <a href="https://software.intel.com/sites/default/files/managed/39/c5/325462-sdm-vol-1-2abcd-3abcd.pdf">x86 операторы</a>
+            <ul>
+              <li><code class="highlighter-rouge">mov</code> помещает данные в регистры</li>
+              <li><code class="highlighter-rouge">syscall</code> осуществляет системный вызов и передает управление ядру операционной системы</li>
+            </ul>
+          </li>
+          <li><code class="highlighter-rouge">rax, rdi, rsi, rdx</code> регистры общего назначения в которые кладутся данные, имеют стандартные способы использования
+            <ul>
+              <li><code class="highlighter-rouge">rax</code> - аккумулятор</li>
+              <li><code class="highlighter-rouge">rdi</code> - указатель на получатель для строк</li>
+              <li><code class="highlighter-rouge">rsi</code> - указатель на источник для строк</li>
+              <li><code class="highlighter-rouge">rdx</code> - указатель Ввода/Вывода</li>
+            </ul>
+          </li>
+          <li><code class="highlighter-rouge">0x2000004, 0x2000001</code> константы для идентификации системных вызовов на Windows и Linux будут другие</li>
+        </ul>
+      </li>
+      <li>.data (строка 19) - для констант, тоже стандартный
+        <ul>
+          <li>с помощью меток строки 21, 22 можно объявлять переменные, причем <code class="highlighter-rouge">.</code> значит что переменная локальная и относится к ближайшей сверху метке. Точке может быть несколько.</li>
+          <li><code class="highlighter-rouge">db "Hello, world!", 10</code> инициализирует данные в выходном файле, объектном <a href="https://www.nasm.us/doc/nasmdoc3.html#section-3.2.1">section 3.2.1</a></li>
+          <li><code class="highlighter-rouge">equ    $ - msg</code> присваивает метке константное значение. В данном случае из отступа начала данной метки вычитается отступ msg и мы получаем длину msg в байтах <a href="https://www.nasm.us/doc/nasmdoc3.html#section-3.2.4">section 3.2.4</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+  </div><a class="u-url" href="/assembler/nasm/2018/06/09/hello-nasm-demystified.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Записки Java программиста</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Записки Java программиста</li><li><a class="u-email" href="mailto:yakov_makarov@mail.ru">yakov_makarov@mail.ru</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/ymakarov"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">ymakarov</span></a></li><li><a href="https://www.twitter.com/iamakarov"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">iamakarov</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Блог о разработке web админок, CRM-ок и прочего. 
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
