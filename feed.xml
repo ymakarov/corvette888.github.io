@@ -1,5 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-06-13T12:59:07+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
-</subtitle><entry><title type="html">Отимизация ассемблерного кода</title><link href="http://yamakarov.ru/assembler/2018/06/13/assembler-optimisations.html" rel="alternate" type="text/html" title="Отимизация ассемблерного кода" /><published>2018-06-13T12:46:00+03:00</published><updated>2018-06-13T12:46:00+03:00</updated><id>http://yamakarov.ru/assembler/2018/06/13/assembler-optimisations</id><content type="html" xml:base="http://yamakarov.ru/assembler/2018/06/13/assembler-optimisations.html">&lt;p&gt;Хочу поделиться ресурсами, которые мне понравились в процессе изучения ассемблера:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-06-14T10:33:33+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
+</subtitle><entry><title type="html">Регистры в архитектуре x86-64</title><link href="http://yamakarov.ru/x86_64/2018/06/14/registers.html" rel="alternate" type="text/html" title="Регистры в архитектуре x86-64" /><published>2018-06-14T09:56:00+03:00</published><updated>2018-06-14T09:56:00+03:00</updated><id>http://yamakarov.ru/x86_64/2018/06/14/registers</id><content type="html" xml:base="http://yamakarov.ru/x86_64/2018/06/14/registers.html">&lt;p&gt;В архитектуре &lt;a href=&quot;https://ru.wikipedia.org/wiki/X86-64&quot;&gt;x86-64&lt;/a&gt; существуют следующие &lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80_%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%BE%D1%80%D0%B0&quot;&gt;регистры&lt;/a&gt; общего назначения:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;RAX - аккумулятор, потому что в него часть инструкций складывает результат выполнения&lt;/li&gt;
+  &lt;li&gt;RBX - инструкции используют как адрес начала данных&lt;/li&gt;
+  &lt;li&gt;RCX - используется в качестве счетчика цикла и автоматически уменьшается рядом команд&lt;/li&gt;
+  &lt;li&gt;RDX - регистр данных, по-видимому можно использовать для чего угодно и специального назначения не имеет&lt;/li&gt;
+  &lt;li&gt;RSI - источник, адрес в памяти для получения данных&lt;/li&gt;
+  &lt;li&gt;RDI - получатель, адрес в памяти куда записываются данные&lt;/li&gt;
+  &lt;li&gt;RBP - регистр базы кадра стека для организации вызова функций&lt;/li&gt;
+  &lt;li&gt;RSP - регистр указателя стека для определения места в памяти где начинается стек&lt;/li&gt;
+  &lt;li&gt;R8-R15 - неименованные и могут использоваться для различных операций&lt;/li&gt;
+  &lt;li&gt;RFLAGS - регистр флагов с разными полезными битами&lt;/li&gt;
+  &lt;li&gt;RIP - содержит адрес текущий выполняемой команды, и данные сюда заносить не надо, это делает сам процессор при выполнении операций перехода&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">В архитектуре x86-64 существуют следующие регистры общего назначения:</summary></entry><entry><title type="html">Отимизация ассемблерного кода</title><link href="http://yamakarov.ru/assembler/2018/06/13/assembler-optimisations.html" rel="alternate" type="text/html" title="Отимизация ассемблерного кода" /><published>2018-06-13T12:46:00+03:00</published><updated>2018-06-13T12:46:00+03:00</updated><id>http://yamakarov.ru/assembler/2018/06/13/assembler-optimisations</id><content type="html" xml:base="http://yamakarov.ru/assembler/2018/06/13/assembler-optimisations.html">&lt;p&gt;Хочу поделиться ресурсами, которые мне понравились в процессе изучения ассемблера:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.stolyarov.info/books/asm_unix&quot;&gt;Программирование на языке ассемблера NASM для ОС Unix&lt;/a&gt; - доступным языком описаны основы программирования на ассемблере под Linux. 
 Это пособие. Автор также выпустил серию книг &lt;a href=&quot;http://www.stolyarov.info/books/programming_intro&quot;&gt;Программирование: Введение в профессию&lt;/a&gt;, в которую входит материал из пособия.&lt;/li&gt;
@@ -218,56 +232,4 @@ Hello, Docker!
 &lt;/div&gt;
 
 &lt;p&gt;В openjdk много разных тагов и я могу экспериментировать со всеми поддерживаемыми версиями jdk и jre.
-Очень удобно!&lt;/p&gt;</content><author><name></name></author><summary type="html">Возьмем просто Java класс:</summary></entry><entry><title type="html">Hello, Docker!</title><link href="http://yamakarov.ru/docker/2018/05/15/hello-docker.html" rel="alternate" type="text/html" title="Hello, Docker!" /><published>2018-05-15T09:39:00+03:00</published><updated>2018-05-15T09:39:00+03:00</updated><id>http://yamakarov.ru/docker/2018/05/15/hello-docker</id><content type="html" xml:base="http://yamakarov.ru/docker/2018/05/15/hello-docker.html">&lt;p&gt;Я толком уже не помню, но как-то docker появился на моей машине.
-Я даже помню его было не очень трудно установить.
-Теперь я решил запустить какой-нибудь контейнер.
-Это должно было быть просто судя по &lt;a href=&quot;https://docs.docker.com/get-started/#test-docker-installation&quot;&gt;гайду&lt;/a&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run hello-world
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Но оказалось, что не все так просто:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker: Error response from daemon: Get https://registry-1.docker.io/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers).
-See 'docker run --help'.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Сначала я думал, что виноваты &lt;a href=&quot;https://stackoverflow.com/questions/23111631/cannot-download-docker-images-behind-a-proxy&quot;&gt;proxy&lt;/a&gt;.
-Но оказалось, все проще.
-Нужно было &lt;a href=&quot;https://forums.docker.com/t/error-response-from-daemon-get-https-registry-1-docker-io-v2/23741/29&quot;&gt;залогиниться&lt;/a&gt;.
-Причем в docker надо логиниться под логином.
-Можно зайти и под email, но тогда будет:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker: Error response from daemon: Get https://registry-1.docker.io/v2/library/hello-world/manifests/latest: unauthorized: incorrect username or password.
-See 'docker run --help'.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Когда правильно залогинился и рестартанул docker daemon:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Hello from Docker!
-This message shows that your installation appears to be working correctly.
-
-To generate this message, Docker took the following steps:
- 1. The Docker client contacted the Docker daemon.
- 2. The Docker daemon pulled the &quot;hello-world&quot; image from the Docker Hub.
-    (amd64)
- 3. The Docker daemon created a new container from that image which runs the
-    executable that produces the output you are currently reading.
- 4. The Docker daemon streamed that output to the Docker client, which sent it
-    to your terminal.
-
-To try something more ambitious, you can run an Ubuntu container with:
- $ docker run -it ubuntu bash
-
-Share images, automate workflows, and more with a free Docker ID:
- https://hub.docker.com/
-
-For more examples and ideas, visit:
- https://docs.docker.com/engine/userguide/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Интересные открытия продолжаются!&lt;/p&gt;</content><author><name></name></author><summary type="html">Я толком уже не помню, но как-то docker появился на моей машине. Я даже помню его было не очень трудно установить. Теперь я решил запустить какой-нибудь контейнер. Это должно было быть просто судя по гайду:</summary></entry></feed>
+Очень удобно!&lt;/p&gt;</content><author><name></name></author><summary type="html">Возьмем просто Java класс:</summary></entry></feed>
