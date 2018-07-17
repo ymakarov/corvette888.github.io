@@ -1,5 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-07-16T14:57:56+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
-</subtitle><entry><title type="html">Интересная статья про барьеры памяти</title><link href="http://yamakarov.ru/processors/2018/07/16/memory-barrier.html" rel="alternate" type="text/html" title="Интересная статья про барьеры памяти" /><published>2018-07-16T14:47:00+03:00</published><updated>2018-07-16T14:47:00+03:00</updated><id>http://yamakarov.ru/processors/2018/07/16/memory-barrier</id><content type="html" xml:base="http://yamakarov.ru/processors/2018/07/16/memory-barrier.html">&lt;p&gt;Очень понравилась статья &lt;a href=&quot;https://paulmck.livejournal.com/&quot;&gt;Paul E. McKenney&lt;/a&gt; про &lt;a href=&quot;http://www.puppetmastertrading.com/images/hwViewForSwHackers.pdf&quot;&gt;барьеры памяти&lt;/a&gt; (Memory Barriers: a Hardware View for Software Hackers).&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-07-17T16:30:41+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
+</subtitle><entry><title type="html">Основные проблемы программирования</title><link href="http://yamakarov.ru/programming/2018/07/17/multi-processing.html" rel="alternate" type="text/html" title="Основные проблемы программирования" /><published>2018-07-17T16:14:00+03:00</published><updated>2018-07-17T16:14:00+03:00</updated><id>http://yamakarov.ru/programming/2018/07/17/multi-processing</id><content type="html" xml:base="http://yamakarov.ru/programming/2018/07/17/multi-processing.html">&lt;p&gt;Как известно, существует две проблемы программирования:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Именование переменных&lt;/li&gt;
+  &lt;li&gt;Инвалидация кэшей&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;По поводу именования переменных мне нечего сказать, каждый начинал с того, что писал программу называл первыми попавшимися словами переменные и через месяц уже не мог понять, что в ней происходит.&lt;/p&gt;
+
+&lt;p&gt;В этом плане сильно доставляют Handler, Service, Factory, Process, Task в конце классов. 
+Сразу понятно, что экземпляр этого класса делает.&lt;/p&gt;
+
+&lt;p&gt;Но с кэшами все гораздо интереснее. 
+В моей практики они творили такие чудеса:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;показывали давно удаленные записи&lt;/li&gt;
+  &lt;li&gt;чаще не показывали недавно добавленные&lt;/li&gt;
+  &lt;li&gt;не давали закрывать баннер&lt;/li&gt;
+  &lt;li&gt;иногда открывали его через час снова и снова и снова&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Но самое интересное, что в современных процессорах пары буферов и кэша достаточно для того, чтобы у пользователя создалось впечатление что операции присваивания переставлены местами:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;    &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Достаточно &lt;code class=&quot;highlighter-rouge&quot;&gt;a = 1&lt;/code&gt; положить в буффер записи в кэш, чтобы assert в многопоточной программе не выполнился. 
+Я вообще вру, такого безобразия нет, но простейшая реализация такое допускает.&lt;/p&gt;</content><author><name></name></author><summary type="html">Как известно, существует две проблемы программирования: Именование переменных Инвалидация кэшей</summary></entry><entry><title type="html">Интересная статья про барьеры памяти</title><link href="http://yamakarov.ru/processors/2018/07/16/memory-barrier.html" rel="alternate" type="text/html" title="Интересная статья про барьеры памяти" /><published>2018-07-16T14:47:00+03:00</published><updated>2018-07-16T14:47:00+03:00</updated><id>http://yamakarov.ru/processors/2018/07/16/memory-barrier</id><content type="html" xml:base="http://yamakarov.ru/processors/2018/07/16/memory-barrier.html">&lt;p&gt;Очень понравилась статья &lt;a href=&quot;https://paulmck.livejournal.com/&quot;&gt;Paul E. McKenney&lt;/a&gt; про &lt;a href=&quot;http://www.puppetmastertrading.com/images/hwViewForSwHackers.pdf&quot;&gt;барьеры памяти&lt;/a&gt; (Memory Barriers: a Hardware View for Software Hackers).&lt;/p&gt;
 
 &lt;p&gt;Нашел ее по ссылке из видео &lt;a href=&quot;https://shipilev.net/&quot;&gt;Шипилева&lt;/a&gt; про JMM.&lt;/p&gt;
 
@@ -50,9 +77,4 @@ JMM описана в главе 17 &lt;a href=&quot;https://docs.oracle.com/jav
   &lt;li&gt;&lt;a href=&quot;https://software.intel.com/sites/default/files/22/30/25602&quot;&gt;Using Spin-Loops on Intel® Pentium® 4 Processor and Intel® Xeon® Processor&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://software.intel.com/file/30388&quot;&gt;Performance Monitoring Unit Sharing Guide&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://software.intel.com/en-us/isa-extensions&quot;&gt;Intel® Architecture Instruction Set Extensions Programming Reference&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Изучая Intel® 64 and IA-32 Architectures Software Developer’s Manual нашел ссылки на интересные материалы и хочу зафиксировать их здесь:</summary></entry><entry><title type="html">Хороший способ научиться новому, посмотреть как что-то сделали другие</title><link href="http://yamakarov.ru/postresql/higload/2018/07/03/hardiscs.html" rel="alternate" type="text/html" title="Хороший способ научиться новому, посмотреть как что-то сделали другие" /><published>2018-07-03T15:03:00+03:00</published><updated>2018-07-03T15:03:00+03:00</updated><id>http://yamakarov.ru/postresql/higload/2018/07/03/hardiscs</id><content type="html" xml:base="http://yamakarov.ru/postresql/higload/2018/07/03/hardiscs.html">&lt;p&gt;Оказывается &lt;a href=&quot;https://wiki.postgresql.org/wiki/Main_Page&quot;&gt;Postgresql wiki&lt;/a&gt; не только возможность научиться пользоваться базой данных, но и источник способов оптимизации приложений на железе, интересных данных о дисках, работе операционных систем, анализе нагрузок на CPU. 
-В целом это удивительный кладезь информации о выжимании из систем максимума. 
-При этом необязательно пользоваться Postgresql для того, чтобы эти знания были полезны. 
-Способы понять во что упирается Postgres база и ваше приложение на Java более менее одинаковые.
-Единственный недостаток этой вики в том, что много битых ссылок и ссылок на платные ресурсы. 
-А хочется качественной халявы)&lt;/p&gt;</content><author><name></name></author><summary type="html">Оказывается Postgresql wiki не только возможность научиться пользоваться базой данных, но и источник способов оптимизации приложений на железе, интересных данных о дисках, работе операционных систем, анализе нагрузок на CPU. В целом это удивительный кладезь информации о выжимании из систем максимума. При этом необязательно пользоваться Postgresql для того, чтобы эти знания были полезны. Способы понять во что упирается Postgres база и ваше приложение на Java более менее одинаковые. Единственный недостаток этой вики в том, что много битых ссылок и ссылок на платные ресурсы. А хочется качественной халявы)</summary></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Изучая Intel® 64 and IA-32 Architectures Software Developer’s Manual нашел ссылки на интересные материалы и хочу зафиксировать их здесь:</summary></entry></feed>
