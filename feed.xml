@@ -1,5 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-07-30T17:48:31+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
-</subtitle><entry><title type="html">Java Annotated: полезный блог от JetBrains</title><link href="http://yamakarov.ru/java/2018/07/30/java-annotated.html" rel="alternate" type="text/html" title="Java Annotated: полезный блог от JetBrains" /><published>2018-07-30T17:42:00+03:00</published><updated>2018-07-30T17:42:00+03:00</updated><id>http://yamakarov.ru/java/2018/07/30/java-annotated</id><content type="html" xml:base="http://yamakarov.ru/java/2018/07/30/java-annotated.html">&lt;p&gt;Разбираясь с &lt;a href=&quot;https://blog.acolyer.org/2015/11/27/hamt/&quot;&gt;хеш-мапами&lt;/a&gt;, наткнулся на замечательный блог от JetBrains &lt;a href=&quot;https://blog.jetbrains.com/idea/tag/java-annotated/&quot;&gt;Java Annotated&lt;/a&gt;.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-07-31T17:38:30+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
+</subtitle><entry><title type="html">Процессор: предсказание ветвления</title><link href="http://yamakarov.ru/processors/2018/07/31/branch-prediction.html" rel="alternate" type="text/html" title="Процессор: предсказание ветвления" /><published>2018-07-31T12:24:00+03:00</published><updated>2018-07-31T12:24:00+03:00</updated><id>http://yamakarov.ru/processors/2018/07/31/branch-prediction</id><content type="html" xml:base="http://yamakarov.ru/processors/2018/07/31/branch-prediction.html">&lt;p&gt;Современные процессоры обладают конвейерной архитектурой.
+Это означает, что каждая ассемблерная операция разбивается на несколько микроопераций.
+В свою очередь микрооперации последовательно выполняются на разных устройствах процессора.
+Одновременно процессор может выполнять несколько операций.
+Лишь бы только они не зависели друг от друга.
+Зависимость заключается в том, что для выполнения следующей операции требуются данные предыдущей операции.
+С этой зависимостью ничего нельзя сделать на уровне процессора, можно только распаралелить программу.
+Но можно попытаться начать заранее выполнять ветви исполнения.
+Для этого, предсказывается результат ветвления и процессор исполняет код по ветви.
+Если предсказание оказывается неправильным, результаты вычислений отбрасываются и мы теряем в производительности.&lt;/p&gt;
+
+&lt;p&gt;О том как различные процессоры предсказывают ветвления можно прочитать у &lt;a href=&quot;https://www.agner.org/optimize/microarchitecture.pdf&quot;&gt;Агнера Фога&lt;/a&gt;. 
+Этот материал предназначен для писателей компиляторов, для общего ознакомления читать мануал довольно скучно, много повторяющихся моментов для разных процессоров.
+Материал изложен очень кратко и сжато.&lt;/p&gt;
+
+&lt;p&gt;Гораздо более захватывающим мне показался &lt;a href=&quot;https://stackoverflow.com/questions/11227809/why-is-it-faster-to-process-a-sorted-array-than-an-unsorted-array&quot;&gt;вопрос про массивы&lt;/a&gt; на stackoverflow.
+В ветке обсуждения много хаков, которые можно использовать для уменьшения ветвления в программе. 
+Присутствуют ссылки на интересненые материалы и статьи. 
+Основной посыл в том, что заботиться о сбросе конвейера нужно только в критических секциях кода.
+Эти секции лучше не искать на глазок, а пользоваться инструментами, профилировщиками.&lt;/p&gt;</content><author><name></name></author><summary type="html">Современные процессоры обладают конвейерной архитектурой. Это означает, что каждая ассемблерная операция разбивается на несколько микроопераций. В свою очередь микрооперации последовательно выполняются на разных устройствах процессора. Одновременно процессор может выполнять несколько операций. Лишь бы только они не зависели друг от друга. Зависимость заключается в том, что для выполнения следующей операции требуются данные предыдущей операции. С этой зависимостью ничего нельзя сделать на уровне процессора, можно только распаралелить программу. Но можно попытаться начать заранее выполнять ветви исполнения. Для этого, предсказывается результат ветвления и процессор исполняет код по ветви. Если предсказание оказывается неправильным, результаты вычислений отбрасываются и мы теряем в производительности.</summary></entry><entry><title type="html">Java Annotated: полезный блог от JetBrains</title><link href="http://yamakarov.ru/java/2018/07/30/java-annotated.html" rel="alternate" type="text/html" title="Java Annotated: полезный блог от JetBrains" /><published>2018-07-30T17:42:00+03:00</published><updated>2018-07-30T17:42:00+03:00</updated><id>http://yamakarov.ru/java/2018/07/30/java-annotated</id><content type="html" xml:base="http://yamakarov.ru/java/2018/07/30/java-annotated.html">&lt;p&gt;Разбираясь с &lt;a href=&quot;https://blog.acolyer.org/2015/11/27/hamt/&quot;&gt;хеш-мапами&lt;/a&gt;, наткнулся на замечательный блог от JetBrains &lt;a href=&quot;https://blog.jetbrains.com/idea/tag/java-annotated/&quot;&gt;Java Annotated&lt;/a&gt;.
 Очень много ссылок на полезные статьи в мире Java.
 Хорошая возможность познакомиться с качественными прикладными материалами.
 А также возможность оставаться в курсе новостей.&lt;/p&gt;</content><author><name></name></author><summary type="html">Разбираясь с хеш-мапами, наткнулся на замечательный блог от JetBrains Java Annotated. Очень много ссылок на полезные статьи в мире Java. Хорошая возможность познакомиться с качественными прикладными материалами. А также возможность оставаться в курсе новостей.</summary></entry><entry><title type="html">Статьи об информатике от уважающих себя компаний</title><link href="http://yamakarov.ru/cs/2018/07/27/company-papers.html" rel="alternate" type="text/html" title="Статьи об информатике от уважающих себя компаний" /><published>2018-07-27T17:47:00+03:00</published><updated>2018-07-27T17:47:00+03:00</updated><id>http://yamakarov.ru/cs/2018/07/27/company-papers</id><content type="html" xml:base="http://yamakarov.ru/cs/2018/07/27/company-papers.html">&lt;p&gt;Очень полезно читать хорошие статьи и к &lt;a href=&quot;/highload/2018/07/24/ok-blogs.html&quot;&gt;списку блогов&lt;/a&gt; я хочу добавить список ресурсов со ссылками на хорошие статьи. 
@@ -160,31 +179,4 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Взял &lt;a href=&quot;https://stackoverflow.com/questions/27583623/is-there-an-elegant-way-to-process-a-stream-in-chunks&quot;&gt;отсюда&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Нашел простой способ разбивать поток элементов на группы с помощью StreamEx:</summary></entry><entry><title type="html">Основные проблемы программирования</title><link href="http://yamakarov.ru/programming/2018/07/17/multi-processing.html" rel="alternate" type="text/html" title="Основные проблемы программирования" /><published>2018-07-17T16:14:00+03:00</published><updated>2018-07-17T16:14:00+03:00</updated><id>http://yamakarov.ru/programming/2018/07/17/multi-processing</id><content type="html" xml:base="http://yamakarov.ru/programming/2018/07/17/multi-processing.html">&lt;p&gt;Как известно, существует две проблемы программирования:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Именование переменных&lt;/li&gt;
-  &lt;li&gt;Инвалидация кэшей&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;По поводу именования переменных мне нечего сказать, каждый начинал с того, что писал программу называл первыми попавшимися словами переменные и через месяц уже не мог понять, что в ней происходит.&lt;/p&gt;
-
-&lt;p&gt;В этом плане сильно доставляют Handler, Service, Factory, Process, Task в конце классов. 
-Сразу понятно, что экземпляр этого класса делает.&lt;/p&gt;
-
-&lt;p&gt;Но с кэшами все гораздо интереснее. 
-В моей практики они творили такие чудеса:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;показывали давно удаленные записи&lt;/li&gt;
-  &lt;li&gt;чаще не показывали недавно добавленные&lt;/li&gt;
-  &lt;li&gt;не давали закрывать баннер&lt;/li&gt;
-  &lt;li&gt;иногда открывали его через час снова и снова и снова&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Но самое интересное, что в современных процессорах пары буферов и кэша достаточно для того, чтобы у пользователя создалось впечатление что операции присваивания переставлены местами:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;    &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Достаточно &lt;code class=&quot;highlighter-rouge&quot;&gt;a = 1&lt;/code&gt; положить в буффер записи в кэш, чтобы assert в многопоточной программе не выполнился. 
-Я вообще вру, такого безобразия нет, но простейшая реализация такое допускает.&lt;/p&gt;</content><author><name></name></author><summary type="html">Как известно, существует две проблемы программирования: Именование переменных Инвалидация кэшей</summary></entry></feed>
+&lt;p&gt;Взял &lt;a href=&quot;https://stackoverflow.com/questions/27583623/is-there-an-elegant-way-to-process-a-stream-in-chunks&quot;&gt;отсюда&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Нашел простой способ разбивать поток элементов на группы с помощью StreamEx:</summary></entry></feed>
