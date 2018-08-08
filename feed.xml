@@ -1,5 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-08-07T16:16:22+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
-</subtitle><entry><title type="html">utf-8</title><link href="http://yamakarov.ru/utf8/2018/08/07/utf8.html" rel="alternate" type="text/html" title="utf-8" /><published>2018-08-07T16:04:00+03:00</published><updated>2018-08-07T16:04:00+03:00</updated><id>http://yamakarov.ru/utf8/2018/08/07/utf8</id><content type="html" xml:base="http://yamakarov.ru/utf8/2018/08/07/utf8.html">&lt;p&gt;Вчера за ужином обсуждали переход Казахстана, Узбекистана и Киргизии на латиницу.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-08-08T17:11:03+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
+</subtitle><entry><title type="html">Работа со временем в программах</title><link href="http://yamakarov.ru/time/2018/08/08/time.html" rel="alternate" type="text/html" title="Работа со временем в программах" /><published>2018-08-08T16:53:00+03:00</published><updated>2018-08-08T16:53:00+03:00</updated><id>http://yamakarov.ru/time/2018/08/08/time</id><content type="html" xml:base="http://yamakarov.ru/time/2018/08/08/time.html">&lt;p&gt;Работая программистом я много провозился с разбирательством, почему то или иное время показывается не так, как надо.
+И это при том, что я никогда не работал с программным обеспечением, которое должно поддерживать несколько временных зон.
+Зона всегда одна, московская.&lt;/p&gt;
+
+&lt;p&gt;Сегодня надо было опять разобраться в том, какое время в заливаемых данных, какое хранится в базе, какое используется в северной обработке и какое отображается в клиентском графике.&lt;/p&gt;
+
+&lt;p&gt;Сначала я определился, что время оно более менее одно, если не учитывать вращение земли и атомные часы.
+Наверно, это важно в космических приложениях, но для меня достаточно, что есть универсальное время &lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%92%D1%81%D0%B5%D0%BC%D0%B8%D1%80%D0%BD%D0%BE%D0%B5_%D0%BA%D0%BE%D0%BE%D1%80%D0%B4%D0%B8%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B5_%D0%B2%D1%80%D0%B5%D0%BC%D1%8F&quot;&gt;UTC&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Грубо говоря, это количество секунд с начала 1970 года в определенной точке Земли, так как год наступает в разное время в разных точках.
+Владивосток празднует Новый Год на 9 часов раньше Москвы.
+Количество пройденных секунд с той секунды, когда 1970 год на Гринвическом Меридиане наступил во всем мире одинаковое.
+С ним легко работать и никаких разночтений быть не может.
+Правда, для других временных зон его не удобно читать, поэтому при отображении универсального времени пользователю его надо конвертировать в локальное время.
+Поняв это я довольно быстро согласовал время в моей программе:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;При заливке московского локального времени, я удостоверился что оно корректно конвертируется в универсальное время&lt;/li&gt;
+  &lt;li&gt;Проверил, что в базе хранится универсальное время&lt;/li&gt;
+  &lt;li&gt;Серверную обработку настроил на работу с универсальным временем, так как отступы от начала дня задавались часами по Москве, поменял вычисление представлений локального времени&lt;/li&gt;
+  &lt;li&gt;Поправил клиент, чтобы он отрисовывал Московское время&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Чтобы не путаться, нужно помнить что есть одно универсальное время. 
+А путаница с временами проистекает исключительно из разных представлений универсального времени.&lt;/p&gt;</content><author><name></name></author><summary type="html">Работая программистом я много провозился с разбирательством, почему то или иное время показывается не так, как надо. И это при том, что я никогда не работал с программным обеспечением, которое должно поддерживать несколько временных зон. Зона всегда одна, московская.</summary></entry><entry><title type="html">utf-8</title><link href="http://yamakarov.ru/utf8/2018/08/07/utf8.html" rel="alternate" type="text/html" title="utf-8" /><published>2018-08-07T16:04:00+03:00</published><updated>2018-08-07T16:04:00+03:00</updated><id>http://yamakarov.ru/utf8/2018/08/07/utf8</id><content type="html" xml:base="http://yamakarov.ru/utf8/2018/08/07/utf8.html">&lt;p&gt;Вчера за ужином обсуждали переход Казахстана, Узбекистана и Киргизии на латиницу.
 Я высказал мысль, что если бы все перешли на латиницу, то мир бы сэкономил много электричества, потому что латиница требует для хранения один байт, а для хранения всякий других, например кириллических символов требуется два байта.
 Я к своему стыду считал, что из-за того, что пользуюсь кодировкой &lt;a href=&quot;https://ru.wikipedia.org/wiki/UTF-8&quot;&gt;utf-8&lt;/a&gt;, трачу на хранение html в 2 раза больше байтов.
 Однако если пойти по ссылке, можно узнать что utf-8 совсем не так прост и английские символы занимают в нем всего один байт, а под кириллицу уходит два.
@@ -222,9 +246,4 @@ JavaMapBenchmark.testTreeMap  thrpt    5   6345125.655 ± 335465.052  ops/s
 
 &lt;p&gt;Статья очень много &lt;a href=&quot;https://scholar.google.ru/scholar?cites=9133631523567191205&amp;amp;as_sdt=2005&amp;amp;sciodt=0,5&amp;amp;hl=ru&quot;&gt;цитируется&lt;/a&gt; и по ней можно найти огромное количество материалов, связанных с формальным описанием языков и программ на них.&lt;/p&gt;
 
-&lt;p&gt;Хоар является автором множества других интересных статей.&lt;/p&gt;</content><author><name></name></author><summary type="html">Хоар, Чарльз Энтони Ричард - великий ученый, внесший большой вклад в информатику.</summary></entry><entry><title type="html">Самые влиятельные Java люди</title><link href="http://yamakarov.ru/java/2018/07/25/java-influencers.html" rel="alternate" type="text/html" title="Самые влиятельные Java люди" /><published>2018-07-25T17:00:00+03:00</published><updated>2018-07-25T17:00:00+03:00</updated><id>http://yamakarov.ru/java/2018/07/25/java-influencers</id><content type="html" xml:base="http://yamakarov.ru/java/2018/07/25/java-influencers.html">&lt;p&gt;&lt;a href=&quot;https://jaxlondon.com/blog/java-core-languages/top-20-java-influencers-of-2018/?utm_content=buffer8fc42&amp;amp;utm_medium=social&amp;amp;utm_source=twitter.com&amp;amp;utm_campaign=buffer&quot;&gt;Список влиятельные людей в сообществе Java&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;К моему стыду оказалось, что &lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%A4%D0%B0%D1%83%D0%BB%D0%B5%D1%80,_%D0%9C%D0%B0%D1%80%D1%82%D0%B8%D0%BD&quot;&gt;Мартин Фаулер&lt;/a&gt; и
-&lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%80%D1%82%D0%B8%D0%BD,_%D0%A0%D0%BE%D0%B1%D0%B5%D1%80%D1%82&quot;&gt;Роберт Мартин&lt;/a&gt; разные люди, а не один Дядя Боб.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://yamakarov.ru/img/JAX_London_2018_Infografik_Influencer_600x1200_47308_v3.jpg&quot; alt=&quot;Влиятельные Java люди&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Список влиятельные людей в сообществе Java</summary></entry></feed>
+&lt;p&gt;Хоар является автором множества других интересных статей.&lt;/p&gt;</content><author><name></name></author><summary type="html">Хоар, Чарльз Энтони Ричард - великий ученый, внесший большой вклад в информатику.</summary></entry></feed>
