@@ -1,5 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-08-21T18:54:23+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
-</subtitle><entry><title type="html">Даты в Java</title><link href="http://yamakarov.ru/java/2018/08/21/date.html" rel="alternate" type="text/html" title="Даты в Java" /><published>2018-08-21T18:50:00+03:00</published><updated>2018-08-21T18:50:00+03:00</updated><id>http://yamakarov.ru/java/2018/08/21/date</id><content type="html" xml:base="http://yamakarov.ru/java/2018/08/21/date.html">&lt;p&gt;Оказывается два &lt;code class=&quot;highlighter-rouge&quot;&gt;java.util.Date&lt;/code&gt; могут быть:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-08-22T15:28:05+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
+</subtitle><entry><title type="html">Когда код меняет тебя</title><link href="http://yamakarov.ru/code/2018/08/22/refactoring.html" rel="alternate" type="text/html" title="Когда код меняет тебя" /><published>2018-08-22T15:20:00+03:00</published><updated>2018-08-22T15:20:00+03:00</updated><id>http://yamakarov.ru/code/2018/08/22/refactoring</id><content type="html" xml:base="http://yamakarov.ru/code/2018/08/22/refactoring.html">&lt;p&gt;Заметил такую слабость за собой:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Во время ревью кода я понимаю, что код написан не идеально у этой задачи есть другое лучшее решение&lt;/li&gt;
+  &lt;li&gt;Сажусь разбираться с чужим решением, чтобы понять где нужно подправить чтобы получилось мое решение&lt;/li&gt;
+  &lt;li&gt;По ходу разбирательства понимаю, что можно подправить и пофиксить баг не воплощая свое лучшее решение&lt;/li&gt;
+  &lt;li&gt;Исправляю чужое решение, баг фиксится, но технический долг растет&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;После такой итерации свое решение внедрить становится сложнее, и этот ком растет и растет, пока не начинает влиять на скорость добаления новой функциональности.
+Этого никто не замечает, потому что существующее решение не только накладывает ограничения на то, что можно сделать, но она также не дает и помыслить о том что можно сделать.&lt;/p&gt;
+
+&lt;p&gt;Стоит ли всегда внедрять прорывные, порой рискованные решения. Наверное, нет. Стоит ли всегда фиксить плохое решение, ну тоже наверное нет.
+Люди выступающие за фиксы, оправдывают это бизнес составляющей, но при этом если бизнес от этого не выигрывает в постоянной конкурентной гонке, что становится очевидно не сразу, то это оправдание не работает.&lt;/p&gt;</content><author><name></name></author><summary type="html">Заметил такую слабость за собой: Во время ревью кода я понимаю, что код написан не идеально у этой задачи есть другое лучшее решение Сажусь разбираться с чужим решением, чтобы понять где нужно подправить чтобы получилось мое решение По ходу разбирательства понимаю, что можно подправить и пофиксить баг не воплощая свое лучшее решение Исправляю чужое решение, баг фиксится, но технический долг растет</summary></entry><entry><title type="html">Даты в Java</title><link href="http://yamakarov.ru/java/2018/08/21/date.html" rel="alternate" type="text/html" title="Даты в Java" /><published>2018-08-21T18:50:00+03:00</published><updated>2018-08-21T18:50:00+03:00</updated><id>http://yamakarov.ru/java/2018/08/21/date</id><content type="html" xml:base="http://yamakarov.ru/java/2018/08/21/date.html">&lt;p&gt;Оказывается два &lt;code class=&quot;highlighter-rouge&quot;&gt;java.util.Date&lt;/code&gt; могут быть:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;before&lt;/li&gt;
   &lt;li&gt;after&lt;/li&gt;
@@ -259,28 +271,4 @@
 
 &lt;p&gt;К примеру, скачаем данные о &lt;a href=&quot;http://www.gks.ru/wps/wcm/connect/rosstat_main/rosstat/ru/statistics/ftrade/#&quot;&gt;внешней торговле РФ&lt;/a&gt; с сайта Росстата и вот какой график у нас получится:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://yamakarov.ru/img/rf_trade_balance.png&quot; alt=&quot;Внешняя торговля РФ&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Сегодня по дороге на работу в голову пришла мысль, которой я захотел поделиться. С помощью библиотеки Highcharts можно строить красивые графики. Кроме этого эта библиотека умеет сохранять графики в файл, которые потом можно вставлять на свою страницу. Я хотел сделать свой конструктор, но вовремя нашел, что есть Highcharts Cloud и туда можно заливать свои данные и строить графики.</summary></entry><entry><title type="html">Работа со временем в программах</title><link href="http://yamakarov.ru/time/2018/08/08/time.html" rel="alternate" type="text/html" title="Работа со временем в программах" /><published>2018-08-08T16:53:00+03:00</published><updated>2018-08-08T16:53:00+03:00</updated><id>http://yamakarov.ru/time/2018/08/08/time</id><content type="html" xml:base="http://yamakarov.ru/time/2018/08/08/time.html">&lt;p&gt;Работая программистом я много провозился с разбирательством, почему то или иное время показывается не так, как надо.
-И это при том, что я никогда не работал с программным обеспечением, которое должно поддерживать несколько временных зон.
-Зона всегда одна, московская.&lt;/p&gt;
-
-&lt;p&gt;Сегодня надо было опять разобраться в том, какое время в заливаемых данных, какое хранится в базе, какое используется в северной обработке и какое отображается в клиентском графике.&lt;/p&gt;
-
-&lt;p&gt;Сначала я определился, что время оно более менее одно, если не учитывать вращение земли и атомные часы.
-Наверно, это важно в космических приложениях, но для меня достаточно, что есть универсальное время &lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%92%D1%81%D0%B5%D0%BC%D0%B8%D1%80%D0%BD%D0%BE%D0%B5_%D0%BA%D0%BE%D0%BE%D1%80%D0%B4%D0%B8%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B5_%D0%B2%D1%80%D0%B5%D0%BC%D1%8F&quot;&gt;UTC&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Грубо говоря, это количество секунд с начала 1970 года в определенной точке Земли, так как год наступает в разное время в разных точках.
-Владивосток празднует Новый Год на 9 часов раньше Москвы.
-Количество пройденных секунд с той секунды, когда 1970 год на Гринвическом Меридиане наступил во всем мире одинаковое.
-С ним легко работать и никаких разночтений быть не может.
-Правда, для других временных зон его не удобно читать, поэтому при отображении универсального времени пользователю его надо конвертировать в локальное время.
-Поняв это я довольно быстро согласовал время в моей программе:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;При заливке московского локального времени, я удостоверился что оно корректно конвертируется в универсальное время&lt;/li&gt;
-  &lt;li&gt;Проверил, что в базе хранится универсальное время&lt;/li&gt;
-  &lt;li&gt;Серверную обработку настроил на работу с универсальным временем, так как отступы от начала дня задавались часами по Москве, поменял вычисление представлений локального времени&lt;/li&gt;
-  &lt;li&gt;Поправил клиент, чтобы он отрисовывал Московское время&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Чтобы не путаться, нужно помнить что есть одно универсальное время. 
-А путаница с временами проистекает исключительно из разных представлений универсального времени.&lt;/p&gt;</content><author><name></name></author><summary type="html">Работая программистом я много провозился с разбирательством, почему то или иное время показывается не так, как надо. И это при том, что я никогда не работал с программным обеспечением, которое должно поддерживать несколько временных зон. Зона всегда одна, московская.</summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;http://yamakarov.ru/img/rf_trade_balance.png&quot; alt=&quot;Внешняя торговля РФ&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Сегодня по дороге на работу в голову пришла мысль, которой я захотел поделиться. С помощью библиотеки Highcharts можно строить красивые графики. Кроме этого эта библиотека умеет сохранять графики в файл, которые потом можно вставлять на свою страницу. Я хотел сделать свой конструктор, но вовремя нашел, что есть Highcharts Cloud и туда можно заливать свои данные и строить графики.</summary></entry></feed>
