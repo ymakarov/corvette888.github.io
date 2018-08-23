@@ -1,5 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-08-22T15:28:05+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
-</subtitle><entry><title type="html">Когда код меняет тебя</title><link href="http://yamakarov.ru/code/2018/08/22/refactoring.html" rel="alternate" type="text/html" title="Когда код меняет тебя" /><published>2018-08-22T15:20:00+03:00</published><updated>2018-08-22T15:20:00+03:00</updated><id>http://yamakarov.ru/code/2018/08/22/refactoring</id><content type="html" xml:base="http://yamakarov.ru/code/2018/08/22/refactoring.html">&lt;p&gt;Заметил такую слабость за собой:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-08-23T12:39:46+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
+</subtitle><entry><title type="html">Острые инструменты</title><link href="http://yamakarov.ru/code/2018/08/23/sharp-tools.html" rel="alternate" type="text/html" title="Острые инструменты" /><published>2018-08-23T12:09:00+03:00</published><updated>2018-08-23T12:09:00+03:00</updated><id>http://yamakarov.ru/code/2018/08/23/sharp-tools</id><content type="html" xml:base="http://yamakarov.ru/code/2018/08/23/sharp-tools.html">&lt;p&gt;Twitter оказался интересным источником новостей о разработке ПО.
+Сегодня в нем я нашел интересную статью про языки программирования.
+И хотя обычно проскакивают ссылки на новые статьи и сообщения в этот раз новость совсем не новая, 2009 года.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://vanderburg.org/blog/2009/07/13/sharp_and_blunt.html&quot;&gt;Sharp vs. Blunt Instruments&lt;/a&gt; содержит мнение автора о мощных и ограничивающих языках программирования.&lt;/p&gt;
+
+&lt;p&gt;Автор сравнивает Ruby и Java.
+Он приходит к выводу, что плохие программисты могут очень сильно извратить ограниченный язык и запустить очень кривую архитектуру.
+И на выходе получается, что одинаковые средние программисты на Ruby пишут сносные решения, а на Java отвратительные. 
+И пример автора показывает, что бессмысленно ограничивать язык.&lt;/p&gt;
+
+&lt;p&gt;В какой-то мере я согласен с автором.
+Я не знаю Ruby, поэтому могу только немного сравнить Clojure и Java.
+В целом несмотря на количество разнообразных средств в Clojure для запутывания кода, одни только макросы чего стоят, программы на Clojure у меня получались проще для понимания чем на Java.
+Бонусом в Java идет очень серьезная поддержка со стороны IDE и благодаря строгой типизации устранение некоторых багов.
+При этом типизацию надо использовать аккуратно и ну путать с наследованием. 
+Наследование часто очень сильно запутывает и усложняет код. Функции второго порядка, не идут ни в какое сравнение по сложности с плохо структурированной иерархией классов.&lt;/p&gt;
+
+&lt;p&gt;И в целом я заметил интересную вещь, что язык всегда, но и архитектура приложения влияет на то, что может быть помыслено.
+Не помысленное никогда не будет реализовано.&lt;/p&gt;</content><author><name></name></author><summary type="html">Twitter оказался интересным источником новостей о разработке ПО. Сегодня в нем я нашел интересную статью про языки программирования. И хотя обычно проскакивают ссылки на новые статьи и сообщения в этот раз новость совсем не новая, 2009 года.</summary></entry><entry><title type="html">Когда код меняет тебя</title><link href="http://yamakarov.ru/code/2018/08/22/refactoring.html" rel="alternate" type="text/html" title="Когда код меняет тебя" /><published>2018-08-22T15:20:00+03:00</published><updated>2018-08-22T15:20:00+03:00</updated><id>http://yamakarov.ru/code/2018/08/22/refactoring</id><content type="html" xml:base="http://yamakarov.ru/code/2018/08/22/refactoring.html">&lt;p&gt;Заметил такую слабость за собой:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Во время ревью кода я понимаю, что код написан не идеально у этой задачи есть другое лучшее решение&lt;/li&gt;
   &lt;li&gt;Сажусь разбираться с чужим решением, чтобы понять где нужно подправить чтобы получилось мое решение&lt;/li&gt;
@@ -264,11 +283,4 @@
 Во всяком случае, средний студент по моему опыту этим не владеет. 
 В строго доказанной программе могут быть ошибки, но они довольно быстро находятся. 
 Я верю Дейкстре, который смог полностью доказать даже такую большую программу, как операционная система.
-Дейкстра утверждал, что в его ос, ошибки были либо простыми опечатками, либо очень быстро фиксились из-за того, что явно противоречили ходу доказательства.&lt;/p&gt;</content><author><name></name></author><summary type="html">Я знаю несколько способов убедиться в корректности программы: Провести тестирование Провести мысленный эксперимент с целью понять как программа работает Строго доказать корректность программы, на основе теорем выведенных из аксиом</summary></entry><entry><title type="html">Онлайн конструктор графиков</title><link href="http://yamakarov.ru/idea/2018/08/09/graph-creator.html" rel="alternate" type="text/html" title="Онлайн конструктор графиков" /><published>2018-08-09T17:49:00+03:00</published><updated>2018-08-09T17:49:00+03:00</updated><id>http://yamakarov.ru/idea/2018/08/09/graph-creator</id><content type="html" xml:base="http://yamakarov.ru/idea/2018/08/09/graph-creator.html">&lt;p&gt;Сегодня по дороге на работу в голову пришла мысль, которой я захотел поделиться.
-С помощью библиотеки &lt;a href=&quot;https://www.highcharts.com/&quot;&gt;Highcharts&lt;/a&gt; можно строить &lt;a href=&quot;https://www.highcharts.com/demo&quot;&gt;красивые графики&lt;/a&gt;.
-Кроме этого эта библиотека умеет сохранять графики в файл, которые потом можно вставлять на свою страницу.
-Я хотел сделать свой конструктор, но вовремя нашел, что есть &lt;a href=&quot;https://cloud.highcharts.com/&quot;&gt;Highcharts Cloud&lt;/a&gt; и туда можно заливать свои данные и строить графики.&lt;/p&gt;
-
-&lt;p&gt;К примеру, скачаем данные о &lt;a href=&quot;http://www.gks.ru/wps/wcm/connect/rosstat_main/rosstat/ru/statistics/ftrade/#&quot;&gt;внешней торговле РФ&lt;/a&gt; с сайта Росстата и вот какой график у нас получится:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://yamakarov.ru/img/rf_trade_balance.png&quot; alt=&quot;Внешняя торговля РФ&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Сегодня по дороге на работу в голову пришла мысль, которой я захотел поделиться. С помощью библиотеки Highcharts можно строить красивые графики. Кроме этого эта библиотека умеет сохранять графики в файл, которые потом можно вставлять на свою страницу. Я хотел сделать свой конструктор, но вовремя нашел, что есть Highcharts Cloud и туда можно заливать свои данные и строить графики.</summary></entry></feed>
+Дейкстра утверждал, что в его ос, ошибки были либо простыми опечатками, либо очень быстро фиксились из-за того, что явно противоречили ходу доказательства.&lt;/p&gt;</content><author><name></name></author><summary type="html">Я знаю несколько способов убедиться в корректности программы: Провести тестирование Провести мысленный эксперимент с целью понять как программа работает Строго доказать корректность программы, на основе теорем выведенных из аксиом</summary></entry></feed>
