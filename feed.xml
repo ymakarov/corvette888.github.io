@@ -1,5 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-09-10T17:36:25+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
-</subtitle><entry><title type="html">Серверная генерация html страниц</title><link href="http://yamakarov.ru/web-development/2018/09/10/ssr.html" rel="alternate" type="text/html" title="Серверная генерация html страниц" /><published>2018-09-10T17:19:00+03:00</published><updated>2018-09-10T17:19:00+03:00</updated><id>http://yamakarov.ru/web-development/2018/09/10/ssr</id><content type="html" xml:base="http://yamakarov.ru/web-development/2018/09/10/ssr.html">&lt;p&gt;В последнее время большую популярность в web разработке приобрело создание одностраничных приложений.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-09-11T18:23:28+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
+</subtitle><entry><title type="html">Kotlin: Функции</title><link href="http://yamakarov.ru/kotlin/2018/09/11/kotlin-functions.html" rel="alternate" type="text/html" title="Kotlin: Функции" /><published>2018-09-11T17:37:00+03:00</published><updated>2018-09-11T17:37:00+03:00</updated><id>http://yamakarov.ru/kotlin/2018/09/11/kotlin-functions</id><content type="html" xml:base="http://yamakarov.ru/kotlin/2018/09/11/kotlin-functions.html">&lt;p&gt;Kotlin - набирающий популярность язык от компании JetBrains.&lt;/p&gt;
+
+&lt;p&gt;Я слышал много положительных отзывов об этом языке.&lt;/p&gt;
+
+&lt;p&gt;Пару дней для развлечения пишу маленькие задачки на &lt;a href=&quot;https://try.kotlinlang.org/&quot;&gt;try.kotlinlang.org&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Сначала было очень непривычно и казалось, что в Kotlin нет ничего такого, ради чего надо было бы учить этот язык.
+Нет мощной системы типов как в Haskell, нет макросов как в Lisp, нет полных по Тьюрингу шаблонов как в C++.
+К тому же язык выполняется на JVM и ему еще надо доказывать чем он лучше Java и других сильных конкурентов, Scala и Clojure.&lt;/p&gt;
+
+&lt;p&gt;Немного поизучав Kotlin я нашел следующие очень интересные моменты из-за которых складывается впечатления, что язык достоин внимания:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Data классы очень удобно использовать в ентерпрайзе и разного рода админках&lt;/li&gt;
+  &lt;li&gt;Properties всевозможных видов, позволяющие легко задавать поведение полей и кастомизировать&lt;/li&gt;
+  &lt;li&gt;Очень удобное переопределение операторов полезное для написания разного рода dsl,&lt;/li&gt;
+  &lt;li&gt;Множестов способов задать функцию, приятные средства для задания анонимных и лямбда функций, а так же специальные кейсы для функций, которые  имеют один аргумент или являются единственным выражением&lt;/li&gt;
+  &lt;li&gt;Destructuring параметров&lt;/li&gt;
+  &lt;li&gt;Возможно добавлять методы к уже существующим классам&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Это то, что с чем я столкнулся за час изучения Kotlin и те вещи которые мне очень понравились, действительно складывается впечатления, что его писали люди, желающие значительно ускорить промышленную разработку. 
+Кажется, что с его помощью можно делать жестко оптимизированные решения заточенные на скорость, благодаря системе типов и плотной интеграции с JVM.
+А тем кто хочет сделать гибкое решение для многих пользователей или написать прототип, должна быть полезна выразительность и динамичность языка, для этого есть поддержка.&lt;/p&gt;
+
+&lt;p&gt;Также надо смотреть на нативный и браузерный варианты, которые позволяют переиспользовать код вне JVM окружения.&lt;/p&gt;</content><author><name></name></author><summary type="html">Kotlin - набирающий популярность язык от компании JetBrains.</summary></entry><entry><title type="html">Серверная генерация html страниц</title><link href="http://yamakarov.ru/web-development/2018/09/10/ssr.html" rel="alternate" type="text/html" title="Серверная генерация html страниц" /><published>2018-09-10T17:19:00+03:00</published><updated>2018-09-10T17:19:00+03:00</updated><id>http://yamakarov.ru/web-development/2018/09/10/ssr</id><content type="html" xml:base="http://yamakarov.ru/web-development/2018/09/10/ssr.html">&lt;p&gt;В последнее время большую популярность в web разработке приобрело создание одностраничных приложений.
 На Javascript пишется весь пользовательский интерфейс, который отправляет http запросы на сервер и получает данные в формате json.
 Такая технология позволяет отделить разработку клиентской части от разработки серверной части и этим я объясняю успех подобных приложений в больших компаниях.
 Когда я сам разрабатываю одностраничные приложения меня не покидает мысль, что я что-то делаю не так.
@@ -179,17 +204,4 @@ Http в моем случае.
   &lt;li&gt;equals&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Если подумать то логично, но я сегодня наступил на грабли.&lt;/p&gt;</content><author><name></name></author><summary type="html">Оказывается два java.util.Date могут быть: before after equals</summary></entry><entry><title type="html">Послойная архитектура</title><link href="http://yamakarov.ru/architecture/2018/08/20/layer-architecture.html" rel="alternate" type="text/html" title="Послойная архитектура" /><published>2018-08-20T16:22:00+03:00</published><updated>2018-08-20T16:22:00+03:00</updated><id>http://yamakarov.ru/architecture/2018/08/20/layer-architecture</id><content type="html" xml:base="http://yamakarov.ru/architecture/2018/08/20/layer-architecture.html">&lt;p&gt;Современные web-приложения пишутся в архитектуре клиент-сервер.
-В моем случае, в качестве клиента выступает браузер, а в качестве сервера Java приложение работающее на Tomcat с использованием Spring.
-Клиентская часть довольно запутана, но можно сказать что она представляет Angular приложение в архитектуре MVC.
-Серверная часть проще, это послойная архитектура.
-Я обычно выделяю такие слои:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Контроллеры - принимают http запросы, парсят параметры и преобразуют результат в текстовое представление, json или html&lt;/li&gt;
-  &lt;li&gt;Сервисы - контроллеры не должны выполнять никакой логики, так как их не очень удобно тестировать, хотя Spring представляет средства и для этого;
-сервисы выполняют всю работу и содержат бизнес логику программы&lt;/li&gt;
-  &lt;li&gt;Репозитории - в репозиториях строится отображение объектов на таблицы базы данных, объекты разбираются для сохранения и собираются для обработки в сервисах&lt;/li&gt;
-  &lt;li&gt;DAO - непосредственно работают с базой данных, в них инкапсулирована логика хранения данных в таблицах, работа с соединениями и другой рутиной доступа к данным&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;В целом послойная архитектура упрощает работу.&lt;/p&gt;</content><author><name></name></author><summary type="html">Современные web-приложения пишутся в архитектуре клиент-сервер. В моем случае, в качестве клиента выступает браузер, а в качестве сервера Java приложение работающее на Tomcat с использованием Spring. Клиентская часть довольно запутана, но можно сказать что она представляет Angular приложение в архитектуре MVC. Серверная часть проще, это послойная архитектура. Я обычно выделяю такие слои: Контроллеры - принимают http запросы, парсят параметры и преобразуют результат в текстовое представление, json или html Сервисы - контроллеры не должны выполнять никакой логики, так как их не очень удобно тестировать, хотя Spring представляет средства и для этого; сервисы выполняют всю работу и содержат бизнес логику программы Репозитории - в репозиториях строится отображение объектов на таблицы базы данных, объекты разбираются для сохранения и собираются для обработки в сервисах DAO - непосредственно работают с базой данных, в них инкапсулирована логика хранения данных в таблицах, работа с соединениями и другой рутиной доступа к данным</summary></entry></feed>
+&lt;p&gt;Если подумать то логично, но я сегодня наступил на грабли.&lt;/p&gt;</content><author><name></name></author><summary type="html">Оказывается два java.util.Date могут быть: before after equals</summary></entry></feed>
