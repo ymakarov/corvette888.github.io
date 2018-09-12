@@ -1,5 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-09-11T18:23:28+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
-</subtitle><entry><title type="html">Kotlin: Функции</title><link href="http://yamakarov.ru/kotlin/2018/09/11/kotlin-functions.html" rel="alternate" type="text/html" title="Kotlin: Функции" /><published>2018-09-11T17:37:00+03:00</published><updated>2018-09-11T17:37:00+03:00</updated><id>http://yamakarov.ru/kotlin/2018/09/11/kotlin-functions</id><content type="html" xml:base="http://yamakarov.ru/kotlin/2018/09/11/kotlin-functions.html">&lt;p&gt;Kotlin - набирающий популярность язык от компании JetBrains.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-09-12T18:35:55+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
+</subtitle><entry><title type="html">Хипстерские технологии</title><link href="http://yamakarov.ru/software/2018/09/12/hipster-tech.html" rel="alternate" type="text/html" title="Хипстерские технологии" /><published>2018-09-12T18:12:00+03:00</published><updated>2018-09-12T18:12:00+03:00</updated><id>http://yamakarov.ru/software/2018/09/12/hipster-tech</id><content type="html" xml:base="http://yamakarov.ru/software/2018/09/12/hipster-tech.html">&lt;p&gt;Сложно выбрать технологии для нового проекта.
+Если смотреть на типичную админку, то надо выбрать:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Базу данных, где вы будете хранить данные&lt;/li&gt;
+  &lt;li&gt;Сервер приложений, то как вы будете обрабатывать данные на сервере&lt;/li&gt;
+  &lt;li&gt;Браузерные технологии, Angular там или React, или все отрендарите на сервере&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Я хочу отметить два момента.
+Нельзя постоянно пользоваться проверенными технологиями. 
+Они имеют свойство устаревать и в какой-то момент ты понимаешь, что твоя технология безнадежно устарела, считай стала дорогой в эксплуатации.
+Чтобы развивать приложение дальше, трудно найти разработчиков, от этого они дороже.
+А трудно найти, потому что производительность на другой технологии выше и там платят больше, и тому подобное.&lt;/p&gt;
+
+&lt;p&gt;Есть и другая крайность, когда в проект берется все самое новое.
+Часто это все непроверенное без должной поддержки программное обеспечение, которое может быть в любой момент заброшено авторами.
+Я бы брал новое, только когда очевидно, что оно приносит пользу в конкретных условиях проекта.
+Можно также брать в рамках эксперимента с новой технологией.
+Ни в коем случае нельзя основывать новый большой проект на новых и плохо изученных технологиях.
+Иначе придется доделывать эти технологии самому.&lt;/p&gt;
+
+&lt;p&gt;Новые непроверенные технологии я называю хипстерские. 
+Именно молодые люди в виду неопытности и плохого знакомства со старыми решениями, тащат в проект новое неопробованное, плохо понимая в чем преимущество нового, кроме удовольствия от новизны.&lt;/p&gt;</content><author><name></name></author><summary type="html">Сложно выбрать технологии для нового проекта. Если смотреть на типичную админку, то надо выбрать: Базу данных, где вы будете хранить данные Сервер приложений, то как вы будете обрабатывать данные на сервере Браузерные технологии, Angular там или React, или все отрендарите на сервере</summary></entry><entry><title type="html">Kotlin: Функции</title><link href="http://yamakarov.ru/kotlin/2018/09/11/kotlin-functions.html" rel="alternate" type="text/html" title="Kotlin: Функции" /><published>2018-09-11T17:37:00+03:00</published><updated>2018-09-11T17:37:00+03:00</updated><id>http://yamakarov.ru/kotlin/2018/09/11/kotlin-functions</id><content type="html" xml:base="http://yamakarov.ru/kotlin/2018/09/11/kotlin-functions.html">&lt;p&gt;Kotlin - набирающий популярность язык от компании JetBrains.&lt;/p&gt;
 
 &lt;p&gt;Я слышал много положительных отзывов об этом языке.&lt;/p&gt;
 
@@ -197,11 +219,4 @@ Http в моем случае.
 Этого никто не замечает, потому что существующее решение не только накладывает ограничения на то, что можно сделать, но она также не дает и помыслить о том что можно сделать.&lt;/p&gt;
 
 &lt;p&gt;Стоит ли всегда внедрять прорывные, порой рискованные решения. Наверное, нет. Стоит ли всегда фиксить плохое решение, ну тоже наверное нет.
-Люди выступающие за фиксы, оправдывают это бизнес составляющей, но при этом если бизнес от этого не выигрывает в постоянной конкурентной гонке, что становится очевидно не сразу, то это оправдание не работает.&lt;/p&gt;</content><author><name></name></author><summary type="html">Заметил такую слабость за собой: Во время ревью кода я понимаю, что код написан не идеально у этой задачи есть другое лучшее решение Сажусь разбираться с чужим решением, чтобы понять где нужно подправить чтобы получилось мое решение По ходу разбирательства понимаю, что можно подправить и пофиксить баг не воплощая свое лучшее решение Исправляю чужое решение, баг фиксится, но технический долг растет</summary></entry><entry><title type="html">Даты в Java</title><link href="http://yamakarov.ru/java/2018/08/21/date.html" rel="alternate" type="text/html" title="Даты в Java" /><published>2018-08-21T18:50:00+03:00</published><updated>2018-08-21T18:50:00+03:00</updated><id>http://yamakarov.ru/java/2018/08/21/date</id><content type="html" xml:base="http://yamakarov.ru/java/2018/08/21/date.html">&lt;p&gt;Оказывается два &lt;code class=&quot;highlighter-rouge&quot;&gt;java.util.Date&lt;/code&gt; могут быть:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;before&lt;/li&gt;
-  &lt;li&gt;after&lt;/li&gt;
-  &lt;li&gt;equals&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Если подумать то логично, но я сегодня наступил на грабли.&lt;/p&gt;</content><author><name></name></author><summary type="html">Оказывается два java.util.Date могут быть: before after equals</summary></entry></feed>
+Люди выступающие за фиксы, оправдывают это бизнес составляющей, но при этом если бизнес от этого не выигрывает в постоянной конкурентной гонке, что становится очевидно не сразу, то это оправдание не работает.&lt;/p&gt;</content><author><name></name></author><summary type="html">Заметил такую слабость за собой: Во время ревью кода я понимаю, что код написан не идеально у этой задачи есть другое лучшее решение Сажусь разбираться с чужим решением, чтобы понять где нужно подправить чтобы получилось мое решение По ходу разбирательства понимаю, что можно подправить и пофиксить баг не воплощая свое лучшее решение Исправляю чужое решение, баг фиксится, но технический долг растет</summary></entry></feed>
