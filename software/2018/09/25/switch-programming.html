@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>Автоматное программирование | Записки Java программиста</title>
+<meta name="generator" content="Jekyll v3.5.2" />
+<meta property="og:title" content="Автоматное программирование" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Сегодня изучал работы Шалыто посвященные автоматному программированию. Эта технология кажется перспективной. Однако на мой вкус представлена из рук вон плохо, я например стал чуть-чуть понимать суть только с третьего подхода. Даже функциональное программирование и теорию категорий, кажется проще освоить." />
+<meta property="og:description" content="Сегодня изучал работы Шалыто посвященные автоматному программированию. Эта технология кажется перспективной. Однако на мой вкус представлена из рук вон плохо, я например стал чуть-чуть понимать суть только с третьего подхода. Даже функциональное программирование и теорию категорий, кажется проще освоить." />
+<link rel="canonical" href="http://yamakarov.ru/software/2018/09/25/switch-programming.html" />
+<meta property="og:url" content="http://yamakarov.ru/software/2018/09/25/switch-programming.html" />
+<meta property="og:site_name" content="Записки Java программиста" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-09-25T17:30:00+03:00" />
+<script type="application/ld+json">
+{"url":"http://yamakarov.ru/software/2018/09/25/switch-programming.html","description":"Сегодня изучал работы Шалыто посвященные автоматному программированию. Эта технология кажется перспективной. Однако на мой вкус представлена из рук вон плохо, я например стал чуть-чуть понимать суть только с третьего подхода. Даже функциональное программирование и теорию категорий, кажется проще освоить.","headline":"Автоматное программирование","dateModified":"2018-09-25T17:30:00+03:00","datePublished":"2018-09-25T17:30:00+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://yamakarov.ru/software/2018/09/25/switch-programming.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://yamakarov.ru/feed.xml" title="Записки Java программиста" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Записки Java программиста</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">Обо мне</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Автоматное программирование</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-09-25T17:30:00+03:00" itemprop="datePublished">Sep 25, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Сегодня изучал работы <a href="https://ru.wikipedia.org/wiki/%D0%A8%D0%B0%D0%BB%D1%8B%D1%82%D0%BE,_%D0%90%D0%BD%D0%B0%D1%82%D0%BE%D0%BB%D0%B8%D0%B9_%D0%90%D0%B1%D1%80%D0%B0%D0%BC%D0%BE%D0%B2%D0%B8%D1%87">Шалыто</a> посвященные автоматному программированию.
+Эта технология кажется перспективной.
+Однако на мой вкус представлена из рук вон плохо, я например стал чуть-чуть понимать суть только с третьего подхода.
+Даже функциональное программирование и теорию категорий, кажется проще освоить.</p>
+
+<p>Идея автоматного программирования заключается в построении управляющего автомата.
+Для этой цели программа описывается, как набор состояний, событий и переходов между состояниями.</p>
+
+<p>В статьях про <a href="http://is.ifmo.ru/automata/">автоматное программирование</a> с сайта университета ИТМО приводятся примеры использования
+автоматного программирования для разработки микроконтроллеров.</p>
+
+<p>Сам Шалыто в своих статьях упирает на то, что использовать автоматное программирование надо повсеместно.
+Такие программы проще в отладке и подаются неведомому мне Model Checking.</p>
+
+<p>Это полностью укладывается в мою вчерашнюю фразу по <a href="/software/2018/09/24/programmer-job.html">интереснyю концепцию</a>  написания программ. 
+По-видимому это были отголоски предыдущих попыток осознать автоматное программирование.</p>
+
+<p>Мне кажутся перспективными следующие моменты:</p>
+<ul>
+  <li>Идея состояний - четко выделив состояния, мы можем определить так называемое фазовое пространство системы и в нем доказывать разные свойства, обычно состояние в программе не выделяется и на осознается, от этого не понятны краевые условия. Они не понятны и не проверяются, а в эксплуатации из-за этого происходят ошибки.</li>
+  <li>Идея событий - события это очень модная сейчас тема, которая под вывеской реактивного программирования переходит из UI в серверное программирование. Если совместить события с состояниями, то получается очень мощная концепция разработки, которая не раз помогала мне в решении различных багов при многопоточном программировании. Когда мы выделяем события, мы тем самым определяем что может произойти в системе. Выделив события мы чисто формально можем создать цепочки событий и применить их к выделенным состояниям. И в этом случае становится просто убедиться, что отсутствуют ошибки при любых событиях в любых состояниях. 
+Если же ошибка все таки находится, это значит только что мы неправильно определили состояния или не учли все события.</li>
+  <li>События и состояния недостаточны для моделирования окружающего мира, поэтому в автоматном программировании используются обработчики переходов из состояния в состояние.</li>
+</ul>
+
+<p>Даже базовое примение этих концепций, без формальных доказательств, приводи к упрощению  по крайней мере разработки пользовательских интерфейсов.
+Это странно, но я вижу несколько причин недостаточного развития автоматного программирования:</p>
+<ul>
+  <li>Авторы упирают на графические интерфейсы, что не есть гуд. Опыт показал, что текстовое представление предпочтительней.</li>
+  <li>Большое количество примеров касается лифта, что не является классическим примером для программирования, по-видимому школа ИТМО не заморачивалась сильно на пользовательские интерфейсы, или я еще не нашел нужных данных.</li>
+  <li>Возможно, просто не нашелся герой, который двинет автоматное программирование в массы.</li>
+</ul>
+
+  </div><a class="u-url" href="/software/2018/09/25/switch-programming.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Записки Java программиста</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Записки Java программиста</li><li><a class="u-email" href="mailto:yakov_makarov@mail.ru">yakov_makarov@mail.ru</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/ymakarov"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">ymakarov</span></a></li><li><a href="https://www.twitter.com/iamakarov"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">iamakarov</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Блог о разработке web админок, CRM-ок и прочего. 
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
