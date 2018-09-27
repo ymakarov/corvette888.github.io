@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-09-27T18:49:08+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-09-27T18:50:06+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
 </subtitle><entry><title type="html">Ускоряем Jekyll с помощью Kotlin</title><link href="http://yamakarov.ru/kotlin/jekyll/2018/09/27/kotlin-jekyll.html" rel="alternate" type="text/html" title="Ускоряем Jekyll с помощью Kotlin" /><published>2018-09-27T18:24:00+03:00</published><updated>2018-09-27T18:24:00+03:00</updated><id>http://yamakarov.ru/kotlin/jekyll/2018/09/27/kotlin-jekyll</id><content type="html" xml:base="http://yamakarov.ru/kotlin/jekyll/2018/09/27/kotlin-jekyll.html">&lt;p&gt;Одним из первых постов в этот блог был пост про &lt;a href=&quot;/java/jekyll/2018/04/09/jekyll-boost.html&quot;&gt;ускорение работы с Jekyll с помощью Java&lt;/a&gt;.
 Там я писал, что:&lt;/p&gt;
 
@@ -60,7 +60,7 @@
 &lt;p&gt;Оказалось очень удобно.
 Хочется отметить следующие моменты:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;На Kotling можно писать один в один как на Java. 
+  &lt;li&gt;На Kotlin можно писать один в один как на Java. 
 Это не значит, что нужно так делать. Но то, что можно очень хорошо. Существенно упрощает переход на новый язык.&lt;/li&gt;
   &lt;li&gt;Я не знал, но оказывается можно не ставить точку с запятой в конце утверждения&lt;/li&gt;
   &lt;li&gt;В IDEA работает &lt;code class=&quot;highlighter-rouge&quot;&gt;sout&lt;/code&gt; тоже удобно для тех, кто переходит с Java&lt;/li&gt;
