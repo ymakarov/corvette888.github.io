@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>Ускоряем Jekyll с помощью Kotlin | Записки Java программиста</title>
+<meta name="generator" content="Jekyll v3.5.2" />
+<meta property="og:title" content="Ускоряем Jekyll с помощью Kotlin" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Одним из первых постов в этот блог был пост про ускорение работы с Jekyll с помощью Java. Там я писал, что:" />
+<meta property="og:description" content="Одним из первых постов в этот блог был пост про ускорение работы с Jekyll с помощью Java. Там я писал, что:" />
+<link rel="canonical" href="http://yamakarov.ru/kotlin/jekyll/2018/09/27/kotlin-jekyll.html" />
+<meta property="og:url" content="http://yamakarov.ru/kotlin/jekyll/2018/09/27/kotlin-jekyll.html" />
+<meta property="og:site_name" content="Записки Java программиста" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-09-27T18:24:00+03:00" />
+<script type="application/ld+json">
+{"url":"http://yamakarov.ru/kotlin/jekyll/2018/09/27/kotlin-jekyll.html","description":"Одним из первых постов в этот блог был пост про ускорение работы с Jekyll с помощью Java. Там я писал, что:","headline":"Ускоряем Jekyll с помощью Kotlin","dateModified":"2018-09-27T18:24:00+03:00","datePublished":"2018-09-27T18:24:00+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://yamakarov.ru/kotlin/jekyll/2018/09/27/kotlin-jekyll.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://yamakarov.ru/feed.xml" title="Записки Java программиста" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Записки Java программиста</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">Обо мне</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Ускоряем Jekyll с помощью Kotlin</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-09-27T18:24:00+03:00" itemprop="datePublished">Sep 27, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Одним из первых постов в этот блог был пост про <a href="/java/jekyll/2018/04/09/jekyll-boost.html">ускорение работы с Jekyll с помощью Java</a>.
+Там я писал, что:</p>
+
+<blockquote>
+  <p>Я засек время потраченное на написание программы 34 минуты. Мне надо сделать около 50 постов, чтобы оно окупилось, и надо чтобы в программе не нашлось новых багов.</p>
+</blockquote>
+
+<p>Я написал эти 50 постов. Сейчас в блоге 125 записей.
+И эксперимент оказался очень <a href="/commandline/2018/09/17/command-line-power.html">удачным</a>.
+Я решил продолжить его перевести программу для генерации постов с Java на Kotlin.
+Это оказалось очень просто, IntelliJ IDEA умеет делать это автоматически:</p>
+
+<figure class="highlight"><pre><code class="language-kotlin" data-lang="kotlin"><span class="k">package</span> <span class="nn">ru.yamakarov.jekyll</span>
+
+<span class="k">import</span> <span class="nn">java.io.IOException</span>
+<span class="k">import</span> <span class="nn">java.nio.file.FileSystems</span>
+<span class="k">import</span> <span class="nn">java.nio.file.Files</span>
+<span class="k">import</span> <span class="nn">java.text.SimpleDateFormat</span>
+<span class="k">import</span> <span class="nn">java.util.*</span>
+
+
+<span class="k">fun</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span> <span class="n">Array</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="n">size</span> <span class="p">&lt;</span> <span class="m">2</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">"No command do nothing\n"</span> <span class="p">+</span>
+                <span class="s">"possible options:\n"</span> <span class="p">+</span>
+                <span class="s">"-n name  Creates new post \n"</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="kd">val</span> <span class="py">command</span> <span class="p">=</span> <span class="n">args</span><span class="p">[</span><span class="m">0</span><span class="p">]</span>
+    <span class="k">if</span> <span class="p">(</span><span class="s">"-n"</span> <span class="p">==</span> <span class="n">command</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kd">val</span> <span class="py">name</span> <span class="p">=</span> <span class="n">args</span><span class="p">[</span><span class="m">1</span><span class="p">]</span>
+        <span class="kd">val</span> <span class="py">date</span> <span class="p">=</span> <span class="n">Date</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="n">currentTimeMillis</span><span class="p">())</span>
+        <span class="kd">val</span> <span class="py">template</span> <span class="p">=</span> <span class="s">"---\n"</span> <span class="p">+</span>
+                <span class="s">"layout: post\n"</span> <span class="p">+</span>
+                <span class="s">"title:  \"\"\n"</span> <span class="p">+</span>
+                <span class="s">"date:   "</span> <span class="p">+</span> <span class="n">SimpleDateFormat</span><span class="p">(</span><span class="s">"yyyy-MM-dd HH:mm"</span><span class="p">).</span><span class="n">format</span><span class="p">(</span><span class="n">date</span><span class="p">)</span> <span class="p">+</span> <span class="s">"\n"</span> <span class="p">+</span>
+                <span class="s">"categories: \n"</span> <span class="p">+</span>
+                <span class="s">"---\n\n"</span>
+        <span class="kd">val</span> <span class="py">fileName</span> <span class="p">=</span> <span class="n">SimpleDateFormat</span><span class="p">(</span><span class="s">"yyyy-MM-dd"</span><span class="p">).</span><span class="n">format</span><span class="p">(</span><span class="n">date</span><span class="p">)</span> <span class="p">+</span>
+                <span class="s">"-"</span> <span class="p">+</span> <span class="n">name</span> <span class="p">+</span> <span class="s">".markdown"</span>
+        <span class="kd">val</span> <span class="py">path</span> <span class="p">=</span> <span class="n">FileSystems</span><span class="p">.</span><span class="n">getDefault</span><span class="p">().</span><span class="n">getPath</span><span class="p">(</span><span class="s">"_posts"</span><span class="p">,</span>
+                <span class="n">fileName</span><span class="p">)</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(!</span><span class="n">Files</span><span class="p">.</span><span class="n">exists</span><span class="p">(</span><span class="n">path</span><span class="p">))</span> <span class="p">{</span>
+                <span class="n">Files</span><span class="p">.</span><span class="n">createFile</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+            <span class="p">}</span>
+            <span class="n">Files</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="n">template</span><span class="p">))</span>
+            <span class="n">println</span><span class="p">(</span><span class="n">fileName</span><span class="p">)</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">e</span><span class="p">:</span> <span class="n">IOException</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">println</span><span class="p">(</span><span class="s">"Exception writing file"</span><span class="p">)</span>
+            <span class="n">e</span><span class="p">.</span><span class="n">printStackTrace</span><span class="p">()</span>
+        <span class="p">}</span>
+
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Оказалось очень удобно.
+Хочется отметить следующие моменты:</p>
+<ul>
+  <li>На Kotling можно писать один в один как на Java. 
+Это не значит, что нужно так делать. Но то, что можно очень хорошо. Существенно упрощает переход на новый язык.</li>
+  <li>Я не знал, но оказывается можно не ставить точку с запятой в конце утверждения</li>
+  <li>В IDEA работает <code class="highlighter-rouge">sout</code> тоже удобно для тех, кто переходит с Java</li>
+  <li>В сконвертированной программе нет ни одного объявления типа, а значит не надо писать Борщ борщ = new Борщ(), это удобно на мой взгляд.</li>
+</ul>
+
+  </div><a class="u-url" href="/kotlin/jekyll/2018/09/27/kotlin-jekyll.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Записки Java программиста</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Записки Java программиста</li><li><a class="u-email" href="mailto:yakov_makarov@mail.ru">yakov_makarov@mail.ru</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/ymakarov"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">ymakarov</span></a></li><li><a href="https://www.twitter.com/iamakarov"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">iamakarov</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Блог о разработке web админок, CRM-ок и прочего. 
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
