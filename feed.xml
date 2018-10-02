@@ -1,5 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-10-01T18:56:25+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
-</subtitle><entry><title type="html">Инлайнинг методов в Java</title><link href="http://yamakarov.ru/jvm/2018/10/01/method-inlining.html" rel="alternate" type="text/html" title="Инлайнинг методов в Java" /><published>2018-10-01T18:41:00+03:00</published><updated>2018-10-01T18:41:00+03:00</updated><id>http://yamakarov.ru/jvm/2018/10/01/method-inlining</id><content type="html" xml:base="http://yamakarov.ru/jvm/2018/10/01/method-inlining.html">&lt;p&gt;Я уже писал про &lt;a href=&quot;http://psy-lob-saw.blogspot.com&quot;&gt;отличный блог Нитсана Вакарта&lt;/a&gt;, посвященный внутренностям JVM.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-10-02T17:55:39+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
+</subtitle><entry><title type="html">Как подключить LaTeX к Jekyll</title><link href="http://yamakarov.ru/jekyll/latex/2018/10/02/latex.html" rel="alternate" type="text/html" title="Как подключить LaTeX к Jekyll" /><published>2018-10-02T17:44:00+03:00</published><updated>2018-10-02T17:44:00+03:00</updated><id>http://yamakarov.ru/jekyll/latex/2018/10/02/latex</id><content type="html" xml:base="http://yamakarov.ru/jekyll/latex/2018/10/02/latex.html">&lt;p&gt;Я продолжаю осваивать Jekyll и чтобы можно было писать более содержательные статьи, решил разобраться с тем как подключить LaTeX для написания формул.
+Содержательность в данном случае измеряется в количестве математических формул.
+Ведь нельзя же что-то доказать, не приведя ни одной формулы и не запудрив читателю мозги.&lt;/p&gt;
+
+&lt;p&gt;Итак для того, чтобы вывести простейшую формулу:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;E = mc^2&lt;/script&gt;
+
+&lt;p&gt;Надо написать &lt;code class=&quot;highlighter-rouge&quot;&gt;$$ E = mc^2 $$&lt;/code&gt;, знак доллара пишется 2 раза так как Markdown один убирает.
+Также я подключил библиотеку &lt;a href=&quot;https://www.mathjax.org/&quot;&gt;MathJax&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;script src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot; type=&quot;text/javascript&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Для этого я скопировал из темы minima, которую можно найти так:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle show minima
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Файл &lt;code class=&quot;highlighter-rouge&quot;&gt;_includes/head.html&lt;/code&gt; и прописал там свой скрипт.
+Я кастомизирую Jekyll темы копирую в свою папку нужные файлы из общей темы и переопределяя их.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Viola!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Пост написан на основе &lt;a href=&quot;http://www.iangoodfellow.com/blog/jekyll/markdown/tex/2016/11/07/latex-in-markdown.html&quot;&gt;найденного в интернете&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Я продолжаю осваивать Jekyll и чтобы можно было писать более содержательные статьи, решил разобраться с тем как подключить LaTeX для написания формул. Содержательность в данном случае измеряется в количестве математических формул. Ведь нельзя же что-то доказать, не приведя ни одной формулы и не запудрив читателю мозги.</summary></entry><entry><title type="html">Инлайнинг методов в Java</title><link href="http://yamakarov.ru/jvm/2018/10/01/method-inlining.html" rel="alternate" type="text/html" title="Инлайнинг методов в Java" /><published>2018-10-01T18:41:00+03:00</published><updated>2018-10-01T18:41:00+03:00</updated><id>http://yamakarov.ru/jvm/2018/10/01/method-inlining</id><content type="html" xml:base="http://yamakarov.ru/jvm/2018/10/01/method-inlining.html">&lt;p&gt;Я уже писал про &lt;a href=&quot;http://psy-lob-saw.blogspot.com&quot;&gt;отличный блог Нитсана Вакарта&lt;/a&gt;, посвященный внутренностям JVM.
 Сегодня я хочу отметить ряд моментом в его &lt;a href=&quot;http://psy-lob-saw.blogspot.com/2018/07/how-inlined-code-confusing-profiles.html&quot;&gt;заметке про инлайнинг методов&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;В статье рассказывается, что такое инлайнинг, когда он работает и когда нет.
@@ -340,34 +365,4 @@
 
 &lt;p&gt;Подводя итог, чтобы сделать что-то великое в программировании, нужно много читать, много писать и общаться с великими. 
 Читать чтобы знать, писать чтобы получать фидбек, общаться чтобы были идеи.
-В принципе, читать и писать достаточно, это уже и есть общение.&lt;/p&gt;</content><author><name></name></author><summary type="html">Для меня люди двигающие науку программирования вперед были всегда непостижимы. Я совсем не понимал, как у них получается делать такие крутые штуки. Теперь я начал немного понимать, как у них это получается.</summary></entry><entry><title type="html">Angular во внутренней разработке</title><link href="http://yamakarov.ru/angular/2018/09/18/angular-pitfalls.html" rel="alternate" type="text/html" title="Angular во внутренней разработке" /><published>2018-09-18T18:13:00+03:00</published><updated>2018-09-18T18:13:00+03:00</updated><id>http://yamakarov.ru/angular/2018/09/18/angular-pitfalls</id><content type="html" xml:base="http://yamakarov.ru/angular/2018/09/18/angular-pitfalls.html">&lt;p&gt;Для внутренней фронтенд разработки мы используем &lt;a href=&quot;https://angular.io/&quot;&gt;Angular&lt;/a&gt;.
-Это отличный фреймворк, который существенно ускоряет разработку.
-В связке с &lt;a href=&quot;https://www.typescriptlang.org/&quot;&gt;Typescript&lt;/a&gt; он становится еще мощнее.&lt;/p&gt;
-
-&lt;p&gt;Преимуществом Angular является то, что на нем очень удобно делать компоненты и управлять состоянием.
-Идея отслеживать изменения модели и автоматически перерисовывать представление оказывается очень мощной.
-Ею легко овладеть.
-Несмотря на то, что порог вхождения считается довольно высоким из моего получается, что это не так.
-У одного и того же разработчика, на jQuery и Angular получаются очень разные по функциональности компоненты.&lt;/p&gt;
-
-&lt;p&gt;Скажем так, что на jQuery они вообще не получаются, на выходе месиво из разных функций, беспорядочно вызываемых.
-В то же время на Angular все разбито на компоненты и более менее упорядочено.&lt;/p&gt;
-
-&lt;p&gt;Но кое за что мне хочется поругать Angular.
-В нем довольно сложно переиспользовать компоненты.
-Из-за того, что фреймворк нещадно смешивает html и код приложения, трудно отделить верстку от бизнес логики.
-И мои приложения получаются сборником довольно разувесистых компонент, которые совсем не комбинируются друг с другом, 
-а просто являются отдельными страницами приложения.&lt;/p&gt;
-
-&lt;p&gt;В этом плане мне нравится идея, так сказать перенести рендеринг на сервер.
-Там можно строить тот же виртуальный дом, что строится на клиенте при изменении модели и отправлять назад в браузер.
-Клиентскому коду останется только собирать ввод пользователя, отправлять на сервер и подставлять в реальный dom, dom отрендаренный на сервере.&lt;/p&gt;
-
-&lt;p&gt;Что это даст?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Клиент будет содержать минимальную, хотя и довольно сложную логику&lt;/li&gt;
-  &lt;li&gt;Все компоненты будут строиться, а значит и тестироваться на сервере, тут можно возразить, что тестировать можно и клиентский Angular, но иметь два фреймворка для тестирования хуже чем один и потому тестировать на сервере мне видится проще&lt;/li&gt;
-  &lt;li&gt;Такой подход удобен для индексации поисковиками, хотя это и не случай внутренней разработки&lt;/li&gt;
-  &lt;li&gt;При генерации html серверными функциями можно пользоваться всею мощью любимой IDE&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Для внутренней фронтенд разработки мы используем Angular. Это отличный фреймворк, который существенно ускоряет разработку. В связке с Typescript он становится еще мощнее.</summary></entry></feed>
+В принципе, читать и писать достаточно, это уже и есть общение.&lt;/p&gt;</content><author><name></name></author><summary type="html">Для меня люди двигающие науку программирования вперед были всегда непостижимы. Я совсем не понимал, как у них получается делать такие крутые штуки. Теперь я начал немного понимать, как у них это получается.</summary></entry></feed>
