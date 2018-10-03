@@ -1,5 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-10-02T17:55:39+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
-</subtitle><entry><title type="html">Как подключить LaTeX к Jekyll</title><link href="http://yamakarov.ru/jekyll/latex/2018/10/02/latex.html" rel="alternate" type="text/html" title="Как подключить LaTeX к Jekyll" /><published>2018-10-02T17:44:00+03:00</published><updated>2018-10-02T17:44:00+03:00</updated><id>http://yamakarov.ru/jekyll/latex/2018/10/02/latex</id><content type="html" xml:base="http://yamakarov.ru/jekyll/latex/2018/10/02/latex.html">&lt;p&gt;Я продолжаю осваивать Jekyll и чтобы можно было писать более содержательные статьи, решил разобраться с тем как подключить LaTeX для написания формул.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-10-03T18:07:33+03:00</updated><id>http://yamakarov.ru/</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
+</subtitle><entry><title type="html">Теория вероятностей</title><link href="http://yamakarov.ru/probability/2018/10/03/probability.html" rel="alternate" type="text/html" title="Теория вероятностей" /><published>2018-10-03T18:00:00+03:00</published><updated>2018-10-03T18:00:00+03:00</updated><id>http://yamakarov.ru/probability/2018/10/03/probability</id><content type="html" xml:base="http://yamakarov.ru/probability/2018/10/03/probability.html">&lt;p&gt;Сегодня с коллегой обсуждали интересный факт из теории вероятностей &lt;a href=&quot;https://fermatslibrary.com/s/pick-the-largest-number&quot;&gt;про выбор наибольшего числа&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Задача чем-то напоминает задачу о &lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B0_%D0%BE_%D0%B4%D0%B2%D1%83%D1%85_%D0%BA%D0%BE%D0%BD%D0%B2%D0%B5%D1%80%D1%82%D0%B0%D1%85&quot;&gt;двух конвертах&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Я даже написал симулятор на kotlin:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-kotlin&quot; data-lang=&quot;kotlin&quot;&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;ru.yamakarov&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.apache.commons.math3.distribution.UniformRealDistribution&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.0&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10000&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;random&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UniformRealDistribution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Double&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MAX_VALUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Double&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MAX_VALUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;++&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sample&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sample&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sample&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+        &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Оказалось, что выбирать при выборе t случайным образом вероятность где-то 0.67, а если брать середину интервала 
+то получается 0.75&lt;/p&gt;
+
+&lt;p&gt;И тут я не понял как моделировать бесконечные числа на компьютере.
+Вероятность выбрать число среди бесконечного числа возможностей равна 0, а среди конечного пусть маленькая, но отличная от ноля.
+И стратегия с 0 на бесконечном интервале не должна работать, однако я не нашел способа это проверить.&lt;/p&gt;</content><author><name></name></author><summary type="html">Сегодня с коллегой обсуждали интересный факт из теории вероятностей про выбор наибольшего числа.</summary></entry><entry><title type="html">Как подключить LaTeX к Jekyll</title><link href="http://yamakarov.ru/jekyll/latex/2018/10/02/latex.html" rel="alternate" type="text/html" title="Как подключить LaTeX к Jekyll" /><published>2018-10-02T17:44:00+03:00</published><updated>2018-10-02T17:44:00+03:00</updated><id>http://yamakarov.ru/jekyll/latex/2018/10/02/latex</id><content type="html" xml:base="http://yamakarov.ru/jekyll/latex/2018/10/02/latex.html">&lt;p&gt;Я продолжаю осваивать Jekyll и чтобы можно было писать более содержательные статьи, решил разобраться с тем как подключить LaTeX для написания формул.
 Содержательность в данном случае измеряется в количестве математических формул.
 Ведь нельзя же что-то доказать, не приведя ни одной формулы и не запудрив читателю мозги.&lt;/p&gt;
 
@@ -325,44 +362,4 @@
 Когда пишется ПО для взаимодействия со внешней системой, для это внешней системы строится модель.
 Эта модель может очень сильно отличаться от реальности и это приводит к необходимости сильно переделывать программу.&lt;/p&gt;
 
-&lt;p&gt;Надо отчетливо понимать степень декларативности текущего алгоритма решения задачи, и там где все крайне абстрактно быть крайне осторожным.&lt;/p&gt;</content><author><name></name></author><summary type="html">Человеческая жизнь ограничена. И люди могут достичь конечное количество целей. Может быть с этим связано то, что мы хотим знать когда та или иная работа закончится.</summary></entry><entry><title type="html">Выдающиеся люди в программировании</title><link href="http://yamakarov.ru/software/2018/09/19/outstanding-people.html" rel="alternate" type="text/html" title="Выдающиеся люди в программировании" /><published>2018-09-19T18:25:00+03:00</published><updated>2018-09-19T18:25:00+03:00</updated><id>http://yamakarov.ru/software/2018/09/19/outstanding-people</id><content type="html" xml:base="http://yamakarov.ru/software/2018/09/19/outstanding-people.html">&lt;p&gt;Для меня люди двигающие науку программирования вперед были всегда непостижимы.
-Я совсем не понимал, как у них получается делать такие крутые штуки.
-Теперь я начал немного понимать, как у них это получается.&lt;/p&gt;
-
-&lt;p&gt;Для того, чтобы написать что-то интересное надо иметь светлый ум и большие знания.
-Со светлым умом, кому-то повезло, кому-то нет. 
-Каждому приходится жить с тем, чем наградила его природа.
-Вроде как даже с очень ограниченными мозгами, при достаточной концентрации и упертости можно много чего сделать.
-Главное отбросить все лишние, что не у всех получается.
-Тут я не уверен в диагнозе, но кажется одержимость идеей и легкая форма шизофрении очень кстати.&lt;/p&gt;
-
-&lt;p&gt;Знания копятся в процессе обучения. 
-Самый хороший способ это получать знания от наставника, он поможет решить трудные но не важные проблемы на старте.
-Наставник даст направление и укажет материалы, которые необходимо освоить.
-Также поддержит в трудную минуту и скорректирует путь.
-Лично мне не удалось найти наставника и я стараюсь черпать знания из книг.
-Такой способ хорош, при системном подходе, который опять же так может дать наставник, но бессистемное чтение приводит к отрывочным знаниям и неэффективной трате времени.&lt;/p&gt;
-
-&lt;p&gt;Книги хорошо тем, что дают обзор проблемы, а особенно хорошие книги как SICP просто кладезь мудрости на каждой странице.
-Большое количество книг содержат довольно много воды, и если вы уже в теми читать их долго и скучно.
-Гораздо интереснее читать статьи.&lt;/p&gt;
-
-&lt;p&gt;Но с ними есть определенная сложность. 
-Читать все подряд не слишком эффективно. 
-Огромное количество статей ни о чем и написаны плохо.
-Бывают статьи об интересном достижении, но написана так непонятно, что нет никакой возможности разобраться.
-Но в целом это, пожалуй, единственный способ держать руку на пульсе.
-Те материалы, которые попали в книги, или уже даже книги переведенные на русский, часто глубоко устарели.
-На основе этих данных очень трудно создать что-то новое, все простое уже давно в своих статьях описали последователи, которые почерпнули знания из статей.&lt;/p&gt;
-
-&lt;p&gt;Однако, знания это не все что требуется и не только из статей их можно получать. 
-Я уже говорил про наставника - это пример человеческого взаимодействия.
-Взаимодействовать можно и в более широком смысле.
-Нужно общаться с другими людьми в этой области.
-Часто у людей просто нет времени реализовать ту или иную хорошую идею.
-Они могут ей только поделиться.
-Эту идею можно подхватить развить и отрецензировать.&lt;/p&gt;
-
-&lt;p&gt;Подводя итог, чтобы сделать что-то великое в программировании, нужно много читать, много писать и общаться с великими. 
-Читать чтобы знать, писать чтобы получать фидбек, общаться чтобы были идеи.
-В принципе, читать и писать достаточно, это уже и есть общение.&lt;/p&gt;</content><author><name></name></author><summary type="html">Для меня люди двигающие науку программирования вперед были всегда непостижимы. Я совсем не понимал, как у них получается делать такие крутые штуки. Теперь я начал немного понимать, как у них это получается.</summary></entry></feed>
+&lt;p&gt;Надо отчетливо понимать степень декларативности текущего алгоритма решения задачи, и там где все крайне абстрактно быть крайне осторожным.&lt;/p&gt;</content><author><name></name></author><summary type="html">Человеческая жизнь ограничена. И люди могут достичь конечное количество целей. Может быть с этим связано то, что мы хотим знать когда та или иная работа закончится.</summary></entry></feed>
