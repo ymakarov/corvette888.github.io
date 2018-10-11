@@ -1,5 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-10-10T12:20:18+03:00</updated><id>http://yamakarov.ru/feed.xml</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
-</subtitle><entry><title type="html">Typescript release notes</title><link href="http://yamakarov.ru/typescript/2018/10/10/release-notes.html" rel="alternate" type="text/html" title="Typescript release notes" /><published>2018-10-10T11:35:00+03:00</published><updated>2018-10-10T11:35:00+03:00</updated><id>http://yamakarov.ru/typescript/2018/10/10/release-notes</id><content type="html" xml:base="http://yamakarov.ru/typescript/2018/10/10/release-notes.html">&lt;p&gt;Чтение &lt;a href=&quot;https://www.typescriptlang.org/docs/handbook/release-notes/typescript-1-1.html&quot;&gt;Typescript release notes&lt;/a&gt; оказалось на удивление увлекательным.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-10-11T17:35:21+03:00</updated><id>http://yamakarov.ru/feed.xml</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
+</subtitle><entry><title type="html">Дьявольские флаги</title><link href="http://yamakarov.ru/software/2018/10/11/evil-flags.html" rel="alternate" type="text/html" title="Дьявольские флаги" /><published>2018-10-11T17:31:00+03:00</published><updated>2018-10-11T17:31:00+03:00</updated><id>http://yamakarov.ru/software/2018/10/11/evil-flags</id><content type="html" xml:base="http://yamakarov.ru/software/2018/10/11/evil-flags.html">&lt;p&gt;Если вы хотите существенно затруднить понимание программы:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Определите состояние программы с помощью 5-6 глобальных булевых переменных&lt;/li&gt;
+  &lt;li&gt;Присваивайте этим переменным разные значения в ходе выполнения программы&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Собственно всё, больше ничего делать не надо, чтобы сделать сложным отладку такой программы.&lt;/p&gt;</content><author><name></name></author><summary type="html">Если вы хотите существенно затруднить понимание программы: Определите состояние программы с помощью 5-6 глобальных булевых переменных Присваивайте этим переменным разные значения в ходе выполнения программы</summary></entry><entry><title type="html">Typescript release notes</title><link href="http://yamakarov.ru/typescript/2018/10/10/release-notes.html" rel="alternate" type="text/html" title="Typescript release notes" /><published>2018-10-10T11:35:00+03:00</published><updated>2018-10-10T11:35:00+03:00</updated><id>http://yamakarov.ru/typescript/2018/10/10/release-notes</id><content type="html" xml:base="http://yamakarov.ru/typescript/2018/10/10/release-notes.html">&lt;p&gt;Чтение &lt;a href=&quot;https://www.typescriptlang.org/docs/handbook/release-notes/typescript-1-1.html&quot;&gt;Typescript release notes&lt;/a&gt; оказалось на удивление увлекательным.
 Новый фичи описываются по пунктам:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Как было раньше&lt;/li&gt;
@@ -141,70 +147,4 @@
 Если поменять инициализатор на возвращение &lt;code class=&quot;highlighter-rouge&quot;&gt;Int&lt;/code&gt; то будет использоваться &lt;code class=&quot;highlighter-rouge&quot;&gt;Integer[]&lt;/code&gt;.
 Для того, чтобы работал &lt;code class=&quot;highlighter-rouge&quot;&gt;int[]&lt;/code&gt; надо использовать &lt;code class=&quot;highlighter-rouge&quot;&gt;IntArray&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Подводя итог, кажется что можно очень кратко писать и получать производительный код.&lt;/p&gt;</content><author><name></name></author><summary type="html">Полгода назад я собирался разобраться с массивами в Kotlin. Нельзя сказать, чтобы я разобрался, но у меня появилось несколько замечаний по этому поводу. Возьмем простейший код:</summary></entry><entry><title type="html">Ускоряем Jekyll с помощью Kotlin</title><link href="http://yamakarov.ru/kotlin/jekyll/2018/09/27/kotlin-jekyll.html" rel="alternate" type="text/html" title="Ускоряем Jekyll с помощью Kotlin" /><published>2018-09-27T18:24:00+03:00</published><updated>2018-09-27T18:24:00+03:00</updated><id>http://yamakarov.ru/kotlin/jekyll/2018/09/27/kotlin-jekyll</id><content type="html" xml:base="http://yamakarov.ru/kotlin/jekyll/2018/09/27/kotlin-jekyll.html">&lt;p&gt;Одним из первых постов в этот блог был пост про &lt;a href=&quot;/java/jekyll/2018/04/09/jekyll-boost.html&quot;&gt;ускорение работы с Jekyll с помощью Java&lt;/a&gt;.
-Там я писал, что:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Я засек время потраченное на написание программы 34 минуты. Мне надо сделать около 50 постов, чтобы оно окупилось, и надо чтобы в программе не нашлось новых багов.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Я написал эти 50 постов. Сейчас в блоге 125 записей.
-И эксперимент оказался очень &lt;a href=&quot;/commandline/2018/09/17/command-line-power.html&quot;&gt;удачным&lt;/a&gt;.
-Я решил продолжить его перевести программу для генерации постов с Java на Kotlin.
-Это оказалось очень просто, IntelliJ IDEA умеет делать это автоматически:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-kotlin&quot; data-lang=&quot;kotlin&quot;&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;ru.yamakarov.jekyll&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.IOException&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.nio.file.FileSystems&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.nio.file.Files&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.text.SimpleDateFormat&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.*&lt;/span&gt;
-
-
-&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;No command do nothing\n&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt;
-                &lt;span class=&quot;s&quot;&gt;&quot;possible options:\n&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt;
-                &lt;span class=&quot;s&quot;&gt;&quot;-n name  Creates new post \n&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;command&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;-n&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;date&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;currentTimeMillis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;template&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;---\n&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt;
-                &lt;span class=&quot;s&quot;&gt;&quot;layout: post\n&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt;
-                &lt;span class=&quot;s&quot;&gt;&quot;title:  \&quot;\&quot;\n&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt;
-                &lt;span class=&quot;s&quot;&gt;&quot;date:   &quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SimpleDateFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;yyyy-MM-dd HH:mm&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;\n&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt;
-                &lt;span class=&quot;s&quot;&gt;&quot;categories: \n&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt;
-                &lt;span class=&quot;s&quot;&gt;&quot;---\n\n&quot;&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;fileName&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SimpleDateFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;yyyy-MM-dd&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt;
-                &lt;span class=&quot;s&quot;&gt;&quot;-&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;.markdown&quot;&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FileSystems&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getDefault&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;_posts&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;fileName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exists&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;createFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;listOf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fileName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;IOException&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Exception writing file&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Оказалось очень удобно.
-Хочется отметить следующие моменты:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;На Kotlin можно писать один в один как на Java. 
-Это не значит, что нужно так делать. Но то, что можно очень хорошо. Существенно упрощает переход на новый язык.&lt;/li&gt;
-  &lt;li&gt;Я не знал, но оказывается можно не ставить точку с запятой в конце утверждения&lt;/li&gt;
-  &lt;li&gt;В IDEA работает &lt;code class=&quot;highlighter-rouge&quot;&gt;sout&lt;/code&gt; тоже удобно для тех, кто переходит с Java&lt;/li&gt;
-  &lt;li&gt;В сконвертированной программе нет ни одного объявления типа, а значит не надо писать Борщ борщ = new Борщ(), это удобно на мой взгляд.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Одним из первых постов в этот блог был пост про ускорение работы с Jekyll с помощью Java. Там я писал, что:</summary></entry></feed>
+&lt;p&gt;Подводя итог, кажется что можно очень кратко писать и получать производительный код.&lt;/p&gt;</content><author><name></name></author><summary type="html">Полгода назад я собирался разобраться с массивами в Kotlin. Нельзя сказать, чтобы я разобрался, но у меня появилось несколько замечаний по этому поводу. Возьмем простейший код:</summary></entry></feed>
