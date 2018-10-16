@@ -1,5 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-10-15T18:35:32+03:00</updated><id>http://yamakarov.ru/feed.xml</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
-</subtitle><entry><title type="html">Насколько быстро можно узнать текущее время в Java</title><link href="http://yamakarov.ru/java/2018/10/15/java-time.html" rel="alternate" type="text/html" title="Насколько быстро можно узнать текущее время в Java" /><published>2018-10-15T18:31:00+03:00</published><updated>2018-10-15T18:31:00+03:00</updated><id>http://yamakarov.ru/java/2018/10/15/java-time</id><content type="html" xml:base="http://yamakarov.ru/java/2018/10/15/java-time.html">&lt;p&gt;Выясняя сколько времени занимает &lt;code class=&quot;highlighter-rouge&quot;&gt;System.currentTimeMillis()&lt;/code&gt; нашел интересную &lt;a href=&quot;http://pzemtsov.github.io/2017/07/23/the-slow-currenttimemillis.html&quot;&gt;статью с замерами производительности&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-10-16T18:29:43+03:00</updated><id>http://yamakarov.ru/feed.xml</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
+</subtitle><entry><title type="html">Высокоуровневые абстракции</title><link href="http://yamakarov.ru/high-level-abstractions/2018/10/16/high-level-abstractions.html" rel="alternate" type="text/html" title="Высокоуровневые абстракции" /><published>2018-10-16T18:26:00+03:00</published><updated>2018-10-16T18:26:00+03:00</updated><id>http://yamakarov.ru/high-level-abstractions/2018/10/16/high-level-abstractions</id><content type="html" xml:base="http://yamakarov.ru/high-level-abstractions/2018/10/16/high-level-abstractions.html">&lt;p&gt;Приятно почитать &lt;a href=&quot;https://github.com/angular/angular-cli/blob/master/packages/angular/cli/commands/new-impl.ts&quot;&gt;код серьезных товарщей&lt;/a&gt;.
+Такие абстрактные понятия:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Command&lt;/li&gt;
+  &lt;li&gt;Workflow&lt;/li&gt;
+  &lt;li&gt;Registry&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Все чудесным образом взаимодействует и определяется объектами, которые выполняют отдельные хорошо определенные функции.
+Правда с ходу не поймешь, как это взаимодействует.&lt;/p&gt;</content><author><name></name></author><summary type="html">Приятно почитать код серьезных товарщей. Такие абстрактные понятия: Command Workflow Registry</summary></entry><entry><title type="html">Насколько быстро можно узнать текущее время в Java</title><link href="http://yamakarov.ru/java/2018/10/15/java-time.html" rel="alternate" type="text/html" title="Насколько быстро можно узнать текущее время в Java" /><published>2018-10-15T18:31:00+03:00</published><updated>2018-10-15T18:31:00+03:00</updated><id>http://yamakarov.ru/java/2018/10/15/java-time</id><content type="html" xml:base="http://yamakarov.ru/java/2018/10/15/java-time.html">&lt;p&gt;Выясняя сколько времени занимает &lt;code class=&quot;highlighter-rouge&quot;&gt;System.currentTimeMillis()&lt;/code&gt; нашел интересную &lt;a href=&quot;http://pzemtsov.github.io/2017/07/23/the-slow-currenttimemillis.html&quot;&gt;статью с замерами производительности&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Оказывается, что если вам повезет, то получение текущего времени занимает несколько наносекунд и является чтением 3 слов из памяти, что работает очень быстро.
 Также, забавен факт, что получение времени обходится дешевле промаха мимо L3 кэша, который отнимает 100 наносекунд.&lt;/p&gt;
@@ -75,27 +84,4 @@
 
 &lt;p&gt;И тут я не понял как моделировать бесконечные числа на компьютере.
 Вероятность выбрать число среди бесконечного числа возможностей равна 0, а среди конечного пусть маленькая, но отличная от ноля.
-И стратегия с 0 на бесконечном интервале не должна работать, однако я не нашел способа это проверить.&lt;/p&gt;</content><author><name></name></author><summary type="html">Сегодня с коллегой обсуждали интересный факт из теории вероятностей про выбор наибольшего числа.</summary></entry><entry><title type="html">Как подключить LaTeX к Jekyll</title><link href="http://yamakarov.ru/jekyll/latex/2018/10/02/latex.html" rel="alternate" type="text/html" title="Как подключить LaTeX к Jekyll" /><published>2018-10-02T17:44:00+03:00</published><updated>2018-10-02T17:44:00+03:00</updated><id>http://yamakarov.ru/jekyll/latex/2018/10/02/latex</id><content type="html" xml:base="http://yamakarov.ru/jekyll/latex/2018/10/02/latex.html">&lt;p&gt;Я продолжаю осваивать Jekyll и чтобы можно было писать более содержательные статьи, решил разобраться с тем как подключить LaTeX для написания формул.
-Содержательность в данном случае измеряется в количестве математических формул.
-Ведь нельзя же что-то доказать, не приведя ни одной формулы и не запудрив читателю мозги.&lt;/p&gt;
-
-&lt;p&gt;Итак для того, чтобы вывести простейшую формулу:&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;E = mc^2&lt;/script&gt;
-
-&lt;p&gt;Надо написать &lt;code class=&quot;highlighter-rouge&quot;&gt;$$ E = mc^2 $$&lt;/code&gt;, знак доллара пишется 2 раза так как Markdown один убирает.
-Также я подключил библиотеку &lt;a href=&quot;https://www.mathjax.org/&quot;&gt;MathJax&lt;/a&gt;:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;script src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot; type=&quot;text/javascript&quot;&amp;gt;&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Для этого я скопировал из темы minima, которую можно найти так:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle show minima
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Файл &lt;code class=&quot;highlighter-rouge&quot;&gt;_includes/head.html&lt;/code&gt; и прописал там свой скрипт.
-Я кастомизирую Jekyll темы копирую в свою папку нужные файлы из общей темы и переопределяя их.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Viola!&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Пост написан на основе &lt;a href=&quot;http://www.iangoodfellow.com/blog/jekyll/markdown/tex/2016/11/07/latex-in-markdown.html&quot;&gt;найденного в интернете&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Я продолжаю осваивать Jekyll и чтобы можно было писать более содержательные статьи, решил разобраться с тем как подключить LaTeX для написания формул. Содержательность в данном случае измеряется в количестве математических формул. Ведь нельзя же что-то доказать, не приведя ни одной формулы и не запудрив читателю мозги.</summary></entry></feed>
+И стратегия с 0 на бесконечном интервале не должна работать, однако я не нашел способа это проверить.&lt;/p&gt;</content><author><name></name></author><summary type="html">Сегодня с коллегой обсуждали интересный факт из теории вероятностей про выбор наибольшего числа.</summary></entry></feed>
