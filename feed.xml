@@ -1,5 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-11-13T19:14:30+03:00</updated><id>http://yamakarov.ru/feed.xml</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
-</subtitle><entry><title type="html">Достигая совершенства</title><link href="http://yamakarov.ru/excellence/2018/11/13/archieving-excellence.html" rel="alternate" type="text/html" title="Достигая совершенства" /><published>2018-11-13T19:07:00+03:00</published><updated>2018-11-13T19:07:00+03:00</updated><id>http://yamakarov.ru/excellence/2018/11/13/archieving-excellence</id><content type="html" xml:base="http://yamakarov.ru/excellence/2018/11/13/archieving-excellence.html">&lt;p&gt;Очень интересная статья, про то как &lt;a href=&quot;https://fermatslibrary.com/s/the-mundanity-of-excellence-an-ethnographic-report-on-stratification-and-olympic-swimmers&quot;&gt;пловцы достигают совершенства&lt;/a&gt;.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-11-14T18:55:37+03:00</updated><id>http://yamakarov.ru/feed.xml</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
+</subtitle><entry><title type="html">Неизвестные языки</title><link href="http://yamakarov.ru/software/2018/11/14/unknown-languages.html" rel="alternate" type="text/html" title="Неизвестные языки" /><published>2018-11-14T18:50:00+03:00</published><updated>2018-11-14T18:50:00+03:00</updated><id>http://yamakarov.ru/software/2018/11/14/unknown-languages</id><content type="html" xml:base="http://yamakarov.ru/software/2018/11/14/unknown-languages.html">&lt;p&gt;Раньше было хорошо.
+Взял тоненькую книжечку от Кернигана и Ричи про C, прочитал, и кодь себе на здоровье.
+Ничего тебе больше и не надо знать.&lt;/p&gt;
+
+&lt;p&gt;Теперь другое.
+Я не знаю:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Java для того, чтобы написать бекэнд&lt;/li&gt;
+  &lt;li&gt;Не знаю Groovy для сборки проекта&lt;/li&gt;
+  &lt;li&gt;Не знаю SQL для запросов к базе данных&lt;/li&gt;
+  &lt;li&gt;Не знаю Typescript для фронтенда&lt;/li&gt;
+  &lt;li&gt;Не знаю Javascript, в который конвертируется Typescript&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Как жить-то при таком количестве языков?&lt;/p&gt;</content><author><name></name></author><summary type="html">Раньше было хорошо. Взял тоненькую книжечку от Кернигана и Ричи про C, прочитал, и кодь себе на здоровье. Ничего тебе больше и не надо знать.</summary></entry><entry><title type="html">Достигая совершенства</title><link href="http://yamakarov.ru/excellence/2018/11/13/archieving-excellence.html" rel="alternate" type="text/html" title="Достигая совершенства" /><published>2018-11-13T19:07:00+03:00</published><updated>2018-11-13T19:07:00+03:00</updated><id>http://yamakarov.ru/excellence/2018/11/13/archieving-excellence</id><content type="html" xml:base="http://yamakarov.ru/excellence/2018/11/13/archieving-excellence.html">&lt;p&gt;Очень интересная статья, про то как &lt;a href=&quot;https://fermatslibrary.com/s/the-mundanity-of-excellence-an-ethnographic-report-on-stratification-and-olympic-swimmers&quot;&gt;пловцы достигают совершенства&lt;/a&gt;.
 Кажется, это может быть верно в любой области.&lt;/p&gt;
 
 &lt;p&gt;Основные тезисы в заключении:&lt;/p&gt;
@@ -53,8 +67,4 @@ Google сделал отличный набор компонент для раз
 &lt;p&gt;Подсоединиться к этой базе можно с помощью:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run -it --rm --link some-postgres:postgres postgres psql -h postgres -U postgres
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Чтобы запустить postgres на своей машине достаточно установить docker и выполнить:</summary></entry><entry><title type="html">Java на русском</title><link href="http://yamakarov.ru/java/2018/10/30/russian-java.html" rel="alternate" type="text/html" title="Java на русском" /><published>2018-10-30T19:41:00+03:00</published><updated>2018-10-30T19:41:00+03:00</updated><id>http://yamakarov.ru/java/2018/10/30/russian-java</id><content type="html" xml:base="http://yamakarov.ru/java/2018/10/30/russian-java.html">&lt;p&gt;Я не знаю хороших ресурсов по Java на русском языке. 
-Все сильные программисты знают английский и читают документацию на нем.
-Многие, кто хочет добиться публичности, пишут материалы сразу на английском языке.
-И довольно сложно ответить на вопрос о целесообразности создания русскоязычных ресурсов по программированию.
-Хотя &lt;a href=&quot;http://php.net/manual/ru/&quot;&gt;php.net&lt;/a&gt; переведен.&lt;/p&gt;</content><author><name></name></author><summary type="html">Я не знаю хороших ресурсов по Java на русском языке. Все сильные программисты знают английский и читают документацию на нем. Многие, кто хочет добиться публичности, пишут материалы сразу на английском языке. И довольно сложно ответить на вопрос о целесообразности создания русскоязычных ресурсов по программированию. Хотя php.net переведен.</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Чтобы запустить postgres на своей машине достаточно установить docker и выполнить:</summary></entry></feed>
