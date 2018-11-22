@@ -1,5 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-11-21T15:22:04+03:00</updated><id>http://yamakarov.ru/feed.xml</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
-</subtitle><entry><title type="html">Java: вывод типов</title><link href="http://yamakarov.ru/java/2018/11/21/java-var.html" rel="alternate" type="text/html" title="Java: вывод типов" /><published>2018-11-21T14:53:00+03:00</published><updated>2018-11-21T14:53:00+03:00</updated><id>http://yamakarov.ru/java/2018/11/21/java-var</id><content type="html" xml:base="http://yamakarov.ru/java/2018/11/21/java-var.html">&lt;p&gt;В Java 10 появилось ключевое слово &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt;.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-11-22T18:35:43+03:00</updated><id>http://yamakarov.ru/feed.xml</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
+</subtitle><entry><title type="html">Программирование управляемое данными</title><link href="http://yamakarov.ru/data-oriented-programming/2018/11/22/dop.html" rel="alternate" type="text/html" title="Программирование управляемое данными" /><published>2018-11-22T18:26:00+03:00</published><updated>2018-11-22T18:26:00+03:00</updated><id>http://yamakarov.ru/data-oriented-programming/2018/11/22/dop</id><content type="html" xml:base="http://yamakarov.ru/data-oriented-programming/2018/11/22/dop.html">&lt;p&gt;Посмотрел интересный доклад с CppCon 2018 про &lt;a href=&quot;https://www.youtube.com/watch?v=yy8jQgmhbAU&quot;&gt;программирование управляемое данными&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Несмотря на противоречивое название доклада, он оказался по существу и критикует результаты к которым приводит объектно ориентированная парадигма в разработке больших систем.&lt;/p&gt;
+
+&lt;p&gt;Сокрытие данных оказывается плохой идеей, так как очень часто невозможно пользоваться из одного объекта другим не зная его реализацию.
+По крайне мере очень трудно сделать это достаточно эффективно.&lt;/p&gt;
+
+&lt;p&gt;Докладчик приводит конкретный пример реализации анимаций в движке html рендеринга, который получается ускорить в 6 раз отказавшись от работы с объектами и перейдя к использованию парадигмы 
+программирования управляемого данными.&lt;/p&gt;
+
+&lt;p&gt;В целом такой подход можно отнести к суровым оптимазициям, которые следует применять в хорошо изученной области.
+Там же где требования не ясны и все изменчиво, по признанию автора, не следует отказываться от объектно-ориентированной парадигмы.&lt;/p&gt;
+
+&lt;p&gt;В интернетах также рекомендуют посмотреть еще одно &lt;a href=&quot;https://www.youtube.com/watch?v=rX0ItVEVjHc&quot;&gt;видео&lt;/a&gt; на эту тему.&lt;/p&gt;
+
+&lt;p&gt;В целом после доклада мне стало понятнее, как делать программы дружественные кэшу. 
+Также очевидно это перекликается с функциональным программирование и программирование для видеокарт.
+Этот подход способен существенно увеличить параллелизм программ.&lt;/p&gt;
+
+&lt;p&gt;Еще Кнут писал, не распараллеливайте алгоритмы, распараллеливайте работу с данными.
+И в принципе концепция пайпов обработки данных, кажется очень мощной.&lt;/p&gt;</content><author><name></name></author><summary type="html">Посмотрел интересный доклад с CppCon 2018 про программирование управляемое данными.</summary></entry><entry><title type="html">Java: вывод типов</title><link href="http://yamakarov.ru/java/2018/11/21/java-var.html" rel="alternate" type="text/html" title="Java: вывод типов" /><published>2018-11-21T14:53:00+03:00</published><updated>2018-11-21T14:53:00+03:00</updated><id>http://yamakarov.ru/java/2018/11/21/java-var</id><content type="html" xml:base="http://yamakarov.ru/java/2018/11/21/java-var.html">&lt;p&gt;В Java 10 появилось ключевое слово &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt;.
 Теперь можно не писать тип переменной.
 В некоторых случаях компилятор сам его выведет.
 Например, работает вот такой код:&lt;/p&gt;
@@ -149,6 +169,4 @@
   &lt;li&gt;Повторяйте до тех пор, пока не получите нужный результат&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Особенно полезными будут обширные знания, внимательное изучение спецификации, бенчмарки и профилирование.&lt;/p&gt;</content><author><name></name></author><summary type="html">В твиттере пролетела ссылка на интересно видео о том, как пофиксить производительность HttpClient. Вкратце, рецепт простой:</summary></entry><entry><title type="html">Вышел Angular 7</title><link href="http://yamakarov.ru/angular7/2018/11/08/angular7.html" rel="alternate" type="text/html" title="Вышел Angular 7" /><published>2018-11-08T18:25:00+03:00</published><updated>2018-11-08T18:25:00+03:00</updated><id>http://yamakarov.ru/angular7/2018/11/08/angular7</id><content type="html" xml:base="http://yamakarov.ru/angular7/2018/11/08/angular7.html">&lt;p&gt;Angular отличный фреймворк для разработки админок.
-Google сделал отличный набор компонент для разработки на этом фреймворк с реализацией material дизайна.
-Сейчас актуальна &lt;a href=&quot;https://blog.angular.io/version-7-of-angular-cli-prompts-virtual-scroll-drag-and-drop-and-more-c594e22e7b8c&quot;&gt;7 версия&lt;/a&gt; c виртуальным скроллом и драгндропом.&lt;/p&gt;</content><author><name></name></author><summary type="html">Angular отличный фреймворк для разработки админок. Google сделал отличный набор компонент для разработки на этом фреймворк с реализацией material дизайна. Сейчас актуальна 7 версия c виртуальным скроллом и драгндропом.</summary></entry></feed>
+&lt;p&gt;Особенно полезными будут обширные знания, внимательное изучение спецификации, бенчмарки и профилирование.&lt;/p&gt;</content><author><name></name></author><summary type="html">В твиттере пролетела ссылка на интересно видео о том, как пофиксить производительность HttpClient. Вкратце, рецепт простой:</summary></entry></feed>
