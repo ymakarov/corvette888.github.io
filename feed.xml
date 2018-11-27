@@ -1,5 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-11-26T18:12:38+03:00</updated><id>http://yamakarov.ru/feed.xml</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
-</subtitle><entry><title type="html">Чак Норрис запускает программы без операционной системы</title><link href="http://yamakarov.ru/software/2018/11/26/without-os.html" rel="alternate" type="text/html" title="Чак Норрис запускает программы без операционной системы" /><published>2018-11-26T18:07:00+03:00</published><updated>2018-11-26T18:07:00+03:00</updated><id>http://yamakarov.ru/software/2018/11/26/without-os</id><content type="html" xml:base="http://yamakarov.ru/software/2018/11/26/without-os.html">&lt;p&gt;Очень интересный ответ на StackOverflow про то как &lt;a href=&quot;https://stackoverflow.com/questions/22054578/how-to-run-a-program-without-an-operating-system/32483545#32483545&quot;&gt;запустить программу без использования операционной системы&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Очень интересный ответ на StackOverflow про то как запустить программу без использования операционной системы.</summary></entry><entry><title type="html">Интересное введение в (Ре)Акторы</title><link href="http://yamakarov.ru/software/2018/11/23/multi-threading.html" rel="alternate" type="text/html" title="Интересное введение в (Ре)Акторы" /><published>2018-11-23T18:18:00+03:00</published><updated>2018-11-23T18:18:00+03:00</updated><id>http://yamakarov.ru/software/2018/11/23/multi-threading</id><content type="html" xml:base="http://yamakarov.ru/software/2018/11/23/multi-threading.html">&lt;p&gt;Понравились &lt;a href=&quot;http://ithare.com/multi-coring-and-non-blocking-instead-of-multi-threading-with-a-script/&quot;&gt;слайды про реакторы&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-11-27T20:53:44+03:00</updated><id>http://yamakarov.ru/feed.xml</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
+</subtitle><entry><title type="html">Особенности виртуальной памяти</title><link href="http://yamakarov.ru/os/2018/11/27/virtual-memory.html" rel="alternate" type="text/html" title="Особенности виртуальной памяти" /><published>2018-11-27T20:46:00+03:00</published><updated>2018-11-27T20:46:00+03:00</updated><id>http://yamakarov.ru/os/2018/11/27/virtual-memory</id><content type="html" xml:base="http://yamakarov.ru/os/2018/11/27/virtual-memory.html">&lt;p&gt;Нашел интересный способ познакомиться с устройством виртуальной памяти на моем ноутбуке.
+Можно вызвать команду:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vm_stats
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Эта команда выводит статистику по использованию виртуальной памяти,
+которая на моем компьютере выглядит вот так:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Pages free:                             1248077.
+Pages active:                           1039334.
+Pages inactive:                          681085.
+Pages speculative:                       102637.
+Pages throttled:                              0.
+Pages wired down:                        947732.
+Pages purgeable:                         165924.
+&quot;Translation faults&quot;:                2872353573.
+Pages copy-on-write:                   84084404.
+Pages zero filled:                   1389615466.
+Pages reactivated:                     32939465.
+Pages purged:                          21042545.
+File-backed pages:                       574634.
+Anonymous pages:                        1248422.
+Pages stored in compressor:             1060136.
+Pages occupied by compressor:            175000.
+Decompressions:                        71676136.
+Compressions:                         102546494.
+Pageins:                               32667988.
+Pageouts:                                269292.
+Swapins:                               21328597.
+Swapouts:                              23569093.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Так как я не указал интервал, то выводится статистика за все время работы.
+Если указать 1ms или 1s то статистика будет выводиться с заданным интервалом.&lt;/p&gt;
+
+&lt;p&gt;Посмотреть, что значат эти числа можно в мануале.&lt;/p&gt;</content><author><name></name></author><summary type="html">Нашел интересный способ познакомиться с устройством виртуальной памяти на моем ноутбуке. Можно вызвать команду:</summary></entry><entry><title type="html">Чак Норрис запускает программы без операционной системы</title><link href="http://yamakarov.ru/software/2018/11/26/without-os.html" rel="alternate" type="text/html" title="Чак Норрис запускает программы без операционной системы" /><published>2018-11-26T18:07:00+03:00</published><updated>2018-11-26T18:07:00+03:00</updated><id>http://yamakarov.ru/software/2018/11/26/without-os</id><content type="html" xml:base="http://yamakarov.ru/software/2018/11/26/without-os.html">&lt;p&gt;Очень интересный ответ на StackOverflow про то как &lt;a href=&quot;https://stackoverflow.com/questions/22054578/how-to-run-a-program-without-an-operating-system/32483545#32483545&quot;&gt;запустить программу без использования операционной системы&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Очень интересный ответ на StackOverflow про то как запустить программу без использования операционной системы.</summary></entry><entry><title type="html">Интересное введение в (Ре)Акторы</title><link href="http://yamakarov.ru/software/2018/11/23/multi-threading.html" rel="alternate" type="text/html" title="Интересное введение в (Ре)Акторы" /><published>2018-11-23T18:18:00+03:00</published><updated>2018-11-23T18:18:00+03:00</updated><id>http://yamakarov.ru/software/2018/11/23/multi-threading</id><content type="html" xml:base="http://yamakarov.ru/software/2018/11/23/multi-threading.html">&lt;p&gt;Понравились &lt;a href=&quot;http://ithare.com/multi-coring-and-non-blocking-instead-of-multi-threading-with-a-script/&quot;&gt;слайды про реакторы&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Особенно была интересная первая часть про требования и зачем нужна многопоточность.
 И надо повнимательнее разобраться с третьей частью по результаты использования реакторов.
@@ -145,12 +181,4 @@
   &lt;li&gt;Не знаю Javascript, в который конвертируется Typescript&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Как жить-то при таком количестве языков?&lt;/p&gt;</content><author><name></name></author><summary type="html">Раньше было хорошо. Взял тоненькую книжечку от Кернигана и Ричи про C, прочитал, и кодь себе на здоровье. Ничего тебе больше и не надо знать.</summary></entry><entry><title type="html">Достигая совершенства</title><link href="http://yamakarov.ru/excellence/2018/11/13/archieving-excellence.html" rel="alternate" type="text/html" title="Достигая совершенства" /><published>2018-11-13T19:07:00+03:00</published><updated>2018-11-13T19:07:00+03:00</updated><id>http://yamakarov.ru/excellence/2018/11/13/archieving-excellence</id><content type="html" xml:base="http://yamakarov.ru/excellence/2018/11/13/archieving-excellence.html">&lt;p&gt;Очень интересная статья, про то как &lt;a href=&quot;https://fermatslibrary.com/s/the-mundanity-of-excellence-an-ethnographic-report-on-stratification-and-olympic-swimmers&quot;&gt;пловцы достигают совершенства&lt;/a&gt;.
-Кажется, это может быть верно в любой области.&lt;/p&gt;
-
-&lt;p&gt;Основные тезисы в заключении:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Качество превосходит количество. Делать больше не значит делать лучше. Важно в процессе работы меняться и совершенствоваться.&lt;/li&gt;
-  &lt;li&gt;Талант ничего не объясняет. Совершенство не является следствием природных данных.&lt;/li&gt;
-  &lt;li&gt;Совершенство есть результат составных усилий. Повторение и улучшение обычных простых действий с течением времени приводит к выдающимся результатам.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Очень интересная статья, про то как пловцы достигают совершенства. Кажется, это может быть верно в любой области.</summary></entry></feed>
+&lt;p&gt;Как жить-то при таком количестве языков?&lt;/p&gt;</content><author><name></name></author><summary type="html">Раньше было хорошо. Взял тоненькую книжечку от Кернигана и Ричи про C, прочитал, и кодь себе на здоровье. Ничего тебе больше и не надо знать.</summary></entry></feed>
