@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-11-27T20:53:44+03:00</updated><id>http://yamakarov.ru/feed.xml</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
-</subtitle><entry><title type="html">Особенности виртуальной памяти</title><link href="http://yamakarov.ru/os/2018/11/27/virtual-memory.html" rel="alternate" type="text/html" title="Особенности виртуальной памяти" /><published>2018-11-27T20:46:00+03:00</published><updated>2018-11-27T20:46:00+03:00</updated><id>http://yamakarov.ru/os/2018/11/27/virtual-memory</id><content type="html" xml:base="http://yamakarov.ru/os/2018/11/27/virtual-memory.html">&lt;p&gt;Нашел интересный способ познакомиться с устройством виртуальной памяти на моем ноутбуке.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-11-28T18:44:56+03:00</updated><id>http://yamakarov.ru/feed.xml</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
+</subtitle><entry><title type="html">В уважающем себя языке должны быть макросы</title><link href="http://yamakarov.ru/rust/2018/11/28/macros.html" rel="alternate" type="text/html" title="В уважающем себя языке должны быть макросы" /><published>2018-11-28T18:36:00+03:00</published><updated>2018-11-28T18:36:00+03:00</updated><id>http://yamakarov.ru/rust/2018/11/28/macros</id><content type="html" xml:base="http://yamakarov.ru/rust/2018/11/28/macros.html">&lt;p&gt;Rust себя уважает, в нем есть &lt;a href=&quot;https://doc.rust-lang.org/book/2018-edition/appendix-04-macros.html&quot;&gt;макросы&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Rust себя уважает, в нем есть макросы.</summary></entry><entry><title type="html">Особенности виртуальной памяти</title><link href="http://yamakarov.ru/os/2018/11/27/virtual-memory.html" rel="alternate" type="text/html" title="Особенности виртуальной памяти" /><published>2018-11-27T20:46:00+03:00</published><updated>2018-11-27T20:46:00+03:00</updated><id>http://yamakarov.ru/os/2018/11/27/virtual-memory</id><content type="html" xml:base="http://yamakarov.ru/os/2018/11/27/virtual-memory.html">&lt;p&gt;Нашел интересный способ познакомиться с устройством виртуальной памяти на моем ноутбуке.
 Можно вызвать команду:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vm_stats
@@ -167,18 +167,4 @@ Swapouts:                              23569093.
 И тогда значение параметра вычисляется не в момент вызова функции, а в момент использования.
 Это позволяет не только экономить ресурсы при выключенном дебаге, но и делать еще некоторые трюки, например реализовать функцию &lt;code class=&quot;highlighter-rouge&quot;&gt;notIf&lt;/code&gt;, которая вычисляет значение выражение только если условие выполняется.&lt;/p&gt;
 
-&lt;p&gt;В Java такого нет, а в Clojure такое можно было бы реализовать с помощью макросов.&lt;/p&gt;</content><author><name></name></author><summary type="html">Сегодня встретился с интересным кодом на Scala:</summary></entry><entry><title type="html">Неизвестные языки</title><link href="http://yamakarov.ru/software/2018/11/14/unknown-languages.html" rel="alternate" type="text/html" title="Неизвестные языки" /><published>2018-11-14T18:50:00+03:00</published><updated>2018-11-14T18:50:00+03:00</updated><id>http://yamakarov.ru/software/2018/11/14/unknown-languages</id><content type="html" xml:base="http://yamakarov.ru/software/2018/11/14/unknown-languages.html">&lt;p&gt;Раньше было хорошо.
-Взял тоненькую книжечку от Кернигана и Ричи про C, прочитал, и кодь себе на здоровье.
-Ничего тебе больше и не надо знать.&lt;/p&gt;
-
-&lt;p&gt;Теперь другое.
-Я не знаю:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Java для того, чтобы написать бекэнд&lt;/li&gt;
-  &lt;li&gt;Не знаю Groovy для сборки проекта&lt;/li&gt;
-  &lt;li&gt;Не знаю SQL для запросов к базе данных&lt;/li&gt;
-  &lt;li&gt;Не знаю Typescript для фронтенда&lt;/li&gt;
-  &lt;li&gt;Не знаю Javascript, в который конвертируется Typescript&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Как жить-то при таком количестве языков?&lt;/p&gt;</content><author><name></name></author><summary type="html">Раньше было хорошо. Взял тоненькую книжечку от Кернигана и Ричи про C, прочитал, и кодь себе на здоровье. Ничего тебе больше и не надо знать.</summary></entry></feed>
+&lt;p&gt;В Java такого нет, а в Clojure такое можно было бы реализовать с помощью макросов.&lt;/p&gt;</content><author><name></name></author><summary type="html">Сегодня встретился с интересным кодом на Scala:</summary></entry></feed>
