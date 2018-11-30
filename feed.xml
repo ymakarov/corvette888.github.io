@@ -1,5 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-11-29T18:19:45+03:00</updated><id>http://yamakarov.ru/feed.xml</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
-</subtitle><entry><title type="html">Просто о Paxos</title><link href="http://yamakarov.ru/distributed/2018/11/29/lamport-paxos.html" rel="alternate" type="text/html" title="Просто о Paxos" /><published>2018-11-29T18:16:00+03:00</published><updated>2018-11-29T18:16:00+03:00</updated><id>http://yamakarov.ru/distributed/2018/11/29/lamport-paxos</id><content type="html" xml:base="http://yamakarov.ru/distributed/2018/11/29/lamport-paxos.html">&lt;p&gt;Просто о Paxos не очень получается несмотря на название  &lt;a href=&quot;file:///Users/yakov.makarov/Documents/books/articles/paxos-made-simple.pdf&quot;&gt;Paxos made simple&lt;/a&gt;.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-11-30T18:13:44+03:00</updated><id>http://yamakarov.ru/feed.xml</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
+</subtitle><entry><title type="html">NoSQL на пальцах</title><link href="http://yamakarov.ru/nosql/2018/11/30/nosql.html" rel="alternate" type="text/html" title="NoSQL на пальцах" /><published>2018-11-30T18:08:00+03:00</published><updated>2018-11-30T18:08:00+03:00</updated><id>http://yamakarov.ru/nosql/2018/11/30/nosql</id><content type="html" xml:base="http://yamakarov.ru/nosql/2018/11/30/nosql.html">&lt;p&gt;Популярная статья о сущности &lt;a href=&quot;https://use-the-index-luke.com/blog/2013-04/whats-left-of-nosql&quot;&gt;NoSQL&lt;/a&gt;.
+Довольно старая, но не потерявшая актуальности.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;NoSQL - это не “нет” SQL, а да и еще чуть&lt;/li&gt;
+  &lt;li&gt;Лучше было говорить про NoACID, однако ACID труднее продать&lt;/li&gt;
+  &lt;li&gt;SQL - жив, потому что это удобный язык для описания данных&lt;/li&gt;
+  &lt;li&gt;Это все про масштабируемость за счет снижения требований к достоверности, хотим чтобы не всегда выполнялось, а когда-нибудь в будущем выполнялось&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Популярная статья о сущности NoSQL. Довольно старая, но не потерявшая актуальности.</summary></entry><entry><title type="html">Просто о Paxos</title><link href="http://yamakarov.ru/distributed/2018/11/29/lamport-paxos.html" rel="alternate" type="text/html" title="Просто о Paxos" /><published>2018-11-29T18:16:00+03:00</published><updated>2018-11-29T18:16:00+03:00</updated><id>http://yamakarov.ru/distributed/2018/11/29/lamport-paxos</id><content type="html" xml:base="http://yamakarov.ru/distributed/2018/11/29/lamport-paxos.html">&lt;p&gt;Просто о Paxos не очень получается несмотря на название  &lt;a href=&quot;file:///Users/yakov.makarov/Documents/books/articles/paxos-made-simple.pdf&quot;&gt;Paxos made simple&lt;/a&gt;.
 Мне сложно осознать этот материал.
 Но в целом очень нравится стиль изложения Лампорта.
 По ходу повествования вводятся новые и новые минимальные требования, чем доказывается их необходимость.
@@ -139,17 +147,4 @@ Swapouts:                              23569093.
   &lt;li&gt;Обновляем тикет&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;И тут даже мне очевидно, где объектно-ориентированный подход, а где процедурный.&lt;/p&gt;</content><author><name></name></author><summary type="html">Есть библиотека для работы с Jira Rest API.</summary></entry><entry><title type="html">Serializable уровень изоляции</title><link href="http://yamakarov.ru/serializable/2018/11/16/serializable-isolation-level.html" rel="alternate" type="text/html" title="Serializable уровень изоляции" /><published>2018-11-16T18:21:00+03:00</published><updated>2018-11-16T18:21:00+03:00</updated><id>http://yamakarov.ru/serializable/2018/11/16/serializable-isolation-level</id><content type="html" xml:base="http://yamakarov.ru/serializable/2018/11/16/serializable-isolation-level.html">&lt;p&gt;Наконец-то понял как работает &lt;a href=&quot;https://sqlperformance.com/2014/04/t-sql-queries/the-serializable-isolation-level&quot;&gt;serailizable уровень изоляции&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Нашел ему применение.
-Пусть у вас есть таблица, в которой добавлются новые записи с возврастающими id.
-Вы читаете из этой таблицы только новые записи.
-И вам очень не хотелось бы, чтобы записи с более высоким id появлялись раньше более низких.
-А такое может произойти, если в в начале транзакции вы генерите id и они длятся разное время, так что по времени 
-транзакции могут быть вложены друг в друга.&lt;/p&gt;
-
-&lt;p&gt;Serializable уровень изоляции требует, чтобы записи и чтения в транзакции происходили, так как будто они происходят в какой-то линейной последовательности.
-Таким образом исключается возможность вложения транзакций описанное выше.&lt;/p&gt;
-
-&lt;p&gt;Конечно, ничего не бывает бесплатным и приходится платить за взятие лока на записи которые используются при чтении.
-В моем случае лочится будет вся таблица, что меня устраивает, таблица не нагружена и очень важно не потерять ни одного обновления.&lt;/p&gt;</content><author><name></name></author><summary type="html">Наконец-то понял как работает serailizable уровень изоляции.</summary></entry></feed>
+&lt;p&gt;И тут даже мне очевидно, где объектно-ориентированный подход, а где процедурный.&lt;/p&gt;</content><author><name></name></author><summary type="html">Есть библиотека для работы с Jira Rest API.</summary></entry></feed>
