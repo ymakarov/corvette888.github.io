@@ -1,5 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-12-04T15:20:01+03:00</updated><id>http://yamakarov.ru/feed.xml</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
-</subtitle><entry><title type="html">Google Bigquery</title><link href="http://yamakarov.ru/highload/2018/12/04/bigquery.html" rel="alternate" type="text/html" title="Google Bigquery" /><published>2018-12-04T15:15:00+03:00</published><updated>2018-12-04T15:15:00+03:00</updated><id>http://yamakarov.ru/highload/2018/12/04/bigquery</id><content type="html" xml:base="http://yamakarov.ru/highload/2018/12/04/bigquery.html">&lt;p&gt;Хорошо зарекомендовавшее себя решение для анализа больших данных: &lt;a href=&quot;https://cloud.google.com/bigquery/&quot;&gt;Bigquery&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-12-05T17:50:26+03:00</updated><id>http://yamakarov.ru/feed.xml</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
+</subtitle><entry><title type="html">Java LinkedList</title><link href="http://yamakarov.ru/linked-list/2018/12/05/LinkedList.html" rel="alternate" type="text/html" title="Java LinkedList" /><published>2018-12-05T17:16:00+03:00</published><updated>2018-12-05T17:16:00+03:00</updated><id>http://yamakarov.ru/linked-list/2018/12/05/LinkedList</id><content type="html" xml:base="http://yamakarov.ru/linked-list/2018/12/05/LinkedList.html">&lt;p&gt;Не могу себе представить более странную структуру данных, чем LinkedList.
+С одной стороны очевидно должны существовать ситуации в которых она показывает производительность лучшую чем у ArrayList.
+Однако найти такой кейс оказывается сложно.
+Хотя многие уверены, что он есть и активно минусуют &lt;a href=&quot;https://stackoverflow.com/questions/322715/when-to-use-linkedlist-over-arraylist-in-java/323889#323889&quot;&gt;ответ LinkedList - отстой&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Я надеялся, что хотя бы добавление в начала списка работает быстрее в случае LinkedList, но по ходу и это не так.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Benchmark                      Mode  Cnt     Score      Error  Units
+ListBenchmark.testArrayList   thrpt    5  6260.096 ± 3249.035  ops/s
+ListBenchmark.testLinkedList  thrpt    5     4.953 ±    1.743  ops/s
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Хотя, мой тест показывает только как драматично падает производительность при постоянном срабатывании GC.
+Если же удалять перед добавлением, то получатся более похожие на правду результаты:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Benchmark                      Mode  Cnt         Score          Error  Units
+ListBenchmark.testArrayList   thrpt    5     22450.002 ±     8560.238  ops/s
+ListBenchmark.testLinkedList  thrpt    5  57681435.183 ± 28196927.137  ops/s
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;script src=&quot;https://gist.github.com/ymakarov/a4201d51e9210f8a5494cf35c2c6b0e5.js&quot;&gt;&lt;/script&gt;</content><author><name></name></author><summary type="html">Не могу себе представить более странную структуру данных, чем LinkedList. С одной стороны очевидно должны существовать ситуации в которых она показывает производительность лучшую чем у ArrayList. Однако найти такой кейс оказывается сложно. Хотя многие уверены, что он есть и активно минусуют ответ LinkedList - отстой.</summary></entry><entry><title type="html">Google Bigquery</title><link href="http://yamakarov.ru/highload/2018/12/04/bigquery.html" rel="alternate" type="text/html" title="Google Bigquery" /><published>2018-12-04T15:15:00+03:00</published><updated>2018-12-04T15:15:00+03:00</updated><id>http://yamakarov.ru/highload/2018/12/04/bigquery</id><content type="html" xml:base="http://yamakarov.ru/highload/2018/12/04/bigquery.html">&lt;p&gt;Хорошо зарекомендовавшее себя решение для анализа больших данных: &lt;a href=&quot;https://cloud.google.com/bigquery/&quot;&gt;Bigquery&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Можно залить огромные объемы информации и сравнительно дешево хранить их в облаке.
 Сервис быстро выполняет запросы.&lt;/p&gt;
@@ -81,24 +101,4 @@ Swapouts:                              23569093.
 Этот подход способен существенно увеличить параллелизм программ.&lt;/p&gt;
 
 &lt;p&gt;Еще Кнут писал, не распараллеливайте алгоритмы, распараллеливайте работу с данными.
-И в принципе концепция пайпов обработки данных, кажется очень мощной.&lt;/p&gt;</content><author><name></name></author><summary type="html">Посмотрел интересный доклад с CppCon 2018 про программирование управляемое данными.</summary></entry><entry><title type="html">Java: вывод типов</title><link href="http://yamakarov.ru/java/2018/11/21/java-var.html" rel="alternate" type="text/html" title="Java: вывод типов" /><published>2018-11-21T14:53:00+03:00</published><updated>2018-11-21T14:53:00+03:00</updated><id>http://yamakarov.ru/java/2018/11/21/java-var</id><content type="html" xml:base="http://yamakarov.ru/java/2018/11/21/java-var.html">&lt;p&gt;В Java 10 появилось ключевое слово &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt;.
-Теперь можно не писать тип переменной.
-В некоторых случаях компилятор сам его выведет.
-Например, работает вот такой код:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Script&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Hello type inference!&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Эта фича сокращает объем кода, который надо написать.
-Она удобна, когда у вас есть несколько вложенных вызовов, в которые передается параметр и вы хотите поменять тип этого параметра.
-В этом случае вам не придется переопределять сигнатуры вызываемых методов.&lt;/p&gt;
-
-&lt;p&gt;К недостаткам можно отнести снижение читаемости кода.
-Если раньше при объявлении переменной сразу был ясен ее тип, то сейчас надо переходить к определению функции, возвращающей объект.
-В IDE это сделать довольно просто, но если вы читаете пуллреквест на github, это сделать сложнее.&lt;/p&gt;
-
-&lt;p&gt;Лично мне эта функциональность нравится и она удобна в большинстве случаев, но есть люди, которые считают это шагом назад в развитии Java.&lt;/p&gt;</content><author><name></name></author><summary type="html">В Java 10 появилось ключевое слово var. Теперь можно не писать тип переменной. В некоторых случаях компилятор сам его выведет. Например, работает вот такой код:</summary></entry></feed>
+И в принципе концепция пайпов обработки данных, кажется очень мощной.&lt;/p&gt;</content><author><name></name></author><summary type="html">Посмотрел интересный доклад с CppCon 2018 про программирование управляемое данными.</summary></entry></feed>
