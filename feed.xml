@@ -1,5 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-12-05T17:50:26+03:00</updated><id>http://yamakarov.ru/feed.xml</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
-</subtitle><entry><title type="html">Java LinkedList</title><link href="http://yamakarov.ru/linked-list/2018/12/05/LinkedList.html" rel="alternate" type="text/html" title="Java LinkedList" /><published>2018-12-05T17:16:00+03:00</published><updated>2018-12-05T17:16:00+03:00</updated><id>http://yamakarov.ru/linked-list/2018/12/05/LinkedList</id><content type="html" xml:base="http://yamakarov.ru/linked-list/2018/12/05/LinkedList.html">&lt;p&gt;Не могу себе представить более странную структуру данных, чем LinkedList.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2018-12-06T17:43:35+03:00</updated><id>http://yamakarov.ru/feed.xml</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
+</subtitle><entry><title type="html">Многопоточность без использования локов</title><link href="http://yamakarov.ru/mutlithreading/2018/12/06/no-locks.html" rel="alternate" type="text/html" title="Многопоточность без использования локов" /><published>2018-12-06T17:39:00+03:00</published><updated>2018-12-06T17:39:00+03:00</updated><id>http://yamakarov.ru/mutlithreading/2018/12/06/no-locks</id><content type="html" xml:base="http://yamakarov.ru/mutlithreading/2018/12/06/no-locks.html">&lt;p&gt;Интересный пример избавления от локов с помощью &lt;a href=&quot;http://lucteo.ro/2018/11/18/look-ma-no-locks/&quot;&gt;очереди тасков&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Очень похоже на то что делают Executors в Java. 
+Например сделав Executor, который выполняет входящие таски в один поток мы гарантируем, что только этот поток и имеет доступ к ресурсу.&lt;/p&gt;
+
+&lt;p&gt;А с помощью Future можно избавиться от callback ада, и делать вид что все выполняется синхронно последовательно.&lt;/p&gt;</content><author><name></name></author><summary type="html">Интересный пример избавления от локов с помощью очереди тасков.</summary></entry><entry><title type="html">Java LinkedList</title><link href="http://yamakarov.ru/linked-list/2018/12/05/LinkedList.html" rel="alternate" type="text/html" title="Java LinkedList" /><published>2018-12-05T17:16:00+03:00</published><updated>2018-12-05T17:16:00+03:00</updated><id>http://yamakarov.ru/linked-list/2018/12/05/LinkedList</id><content type="html" xml:base="http://yamakarov.ru/linked-list/2018/12/05/LinkedList.html">&lt;p&gt;Не могу себе представить более странную структуру данных, чем LinkedList.
 С одной стороны очевидно должны существовать ситуации в которых она показывает производительность лучшую чем у ArrayList.
 Однако найти такой кейс оказывается сложно.
 Хотя многие уверены, что он есть и активно минусуют &lt;a href=&quot;https://stackoverflow.com/questions/322715/when-to-use-linkedlist-over-arraylist-in-java/323889#323889&quot;&gt;ответ LinkedList - отстой&lt;/a&gt;.&lt;/p&gt;
@@ -81,24 +86,4 @@ Swapouts:                              23569093.
 
 &lt;p&gt;Особенно была интересная первая часть про требования и зачем нужна многопоточность.
 И надо повнимательнее разобраться с третьей частью по результаты использования реакторов.
-Они впечатляют, удалось снизить количество серверов в системе и при этом увеличить пропускную способность до космических значений.&lt;/p&gt;</content><author><name></name></author><summary type="html">Понравились слайды про реакторы.</summary></entry><entry><title type="html">Программирование управляемое данными</title><link href="http://yamakarov.ru/data-oriented-programming/2018/11/22/dop.html" rel="alternate" type="text/html" title="Программирование управляемое данными" /><published>2018-11-22T18:26:00+03:00</published><updated>2018-11-22T18:26:00+03:00</updated><id>http://yamakarov.ru/data-oriented-programming/2018/11/22/dop</id><content type="html" xml:base="http://yamakarov.ru/data-oriented-programming/2018/11/22/dop.html">&lt;p&gt;Посмотрел интересный доклад с CppCon 2018 про &lt;a href=&quot;https://www.youtube.com/watch?v=yy8jQgmhbAU&quot;&gt;программирование управляемое данными&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Несмотря на противоречивое название доклада, он оказался по существу и критикует результаты к которым приводит объектно ориентированная парадигма в разработке больших систем.&lt;/p&gt;
-
-&lt;p&gt;Сокрытие данных оказывается плохой идеей, так как очень часто невозможно пользоваться из одного объекта другим не зная его реализацию.
-По крайне мере очень трудно сделать это достаточно эффективно.&lt;/p&gt;
-
-&lt;p&gt;Докладчик приводит конкретный пример реализации анимаций в движке html рендеринга, который получается ускорить в 6 раз отказавшись от работы с объектами и перейдя к использованию парадигмы 
-программирования управляемого данными.&lt;/p&gt;
-
-&lt;p&gt;В целом такой подход можно отнести к суровым оптимазициям, которые следует применять в хорошо изученной области.
-Там же где требования не ясны и все изменчиво, по признанию автора, не следует отказываться от объектно-ориентированной парадигмы.&lt;/p&gt;
-
-&lt;p&gt;В интернетах также рекомендуют посмотреть еще одно &lt;a href=&quot;https://www.youtube.com/watch?v=rX0ItVEVjHc&quot;&gt;видео&lt;/a&gt; на эту тему.&lt;/p&gt;
-
-&lt;p&gt;В целом после доклада мне стало понятнее, как делать программы дружественные кэшу. 
-Также очевидно это перекликается с функциональным программирование и программирование для видеокарт.
-Этот подход способен существенно увеличить параллелизм программ.&lt;/p&gt;
-
-&lt;p&gt;Еще Кнут писал, не распараллеливайте алгоритмы, распараллеливайте работу с данными.
-И в принципе концепция пайпов обработки данных, кажется очень мощной.&lt;/p&gt;</content><author><name></name></author><summary type="html">Посмотрел интересный доклад с CppCon 2018 про программирование управляемое данными.</summary></entry></feed>
+Они впечатляют, удалось снизить количество серверов в системе и при этом увеличить пропускную способность до космических значений.&lt;/p&gt;</content><author><name></name></author><summary type="html">Понравились слайды про реакторы.</summary></entry></feed>
