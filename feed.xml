@@ -1,5 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2019-05-28T18:38:17+03:00</updated><id>http://yamakarov.ru/feed.xml</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
-</subtitle><entry><title type="html">SSD Disk: 5Гб в секунду</title><link href="http://yamakarov.ru/2019/05/28/fast-ssd.html" rel="alternate" type="text/html" title="SSD Disk: 5Гб в секунду" /><published>2019-05-28T18:30:00+03:00</published><updated>2019-05-28T18:30:00+03:00</updated><id>http://yamakarov.ru/2019/05/28/fast-ssd</id><content type="html" xml:base="http://yamakarov.ru/2019/05/28/fast-ssd.html">&lt;p&gt;Уже появились диски, которые могут обеспечивать скорость последовательного чтения 5Гб в секунду.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://yamakarov.ru/feed.xml" rel="self" type="application/atom+xml" /><link href="http://yamakarov.ru/" rel="alternate" type="text/html" /><updated>2019-05-31T12:20:37+03:00</updated><id>http://yamakarov.ru/feed.xml</id><title type="html">Записки Java программиста</title><subtitle>Блог о разработке web админок, CRM-ок и прочего. 
+</subtitle><entry><title type="html">Быстродействие оперативной памяти</title><link href="http://yamakarov.ru/2019/05/31/dram-latencies.html" rel="alternate" type="text/html" title="Быстродействие оперативной памяти" /><published>2019-05-31T12:12:00+03:00</published><updated>2019-05-31T12:12:00+03:00</updated><id>http://yamakarov.ru/2019/05/31/dram-latencies</id><content type="html" xml:base="http://yamakarov.ru/2019/05/31/dram-latencies.html">&lt;p&gt;Хочу поделиться статьей на хабре про &lt;a href=&quot;https://habr.com/ru/post/281929/&quot;&gt;быстродействие памяти&lt;/a&gt;. 
+Мне особенно полезными показались комментарии в конце статьи.&lt;/p&gt;
+
+&lt;p&gt;Для себя вынес следующие показатели:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Доступ к памяти занимает 14-50 мс&lt;/li&gt;
+  &lt;li&gt;Максимальная пропускная способность 14Гб/с (можно сравнить с &lt;a href=&quot;/2019/05/28/fast-ssd.html&quot;&gt;NAND-овскими 5Гб/с&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;А началось всё с того, что обещают &lt;a href=&quot;https://medium.com/@mwolczko/non-volatile-memory-and-java-part-4-17f7a7f78f1e&quot;&gt;сдвиг парадигмы с NVRAM&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Хочу поделиться статьей на хабре про быстродействие памяти. Мне особенно полезными показались комментарии в конце статьи.</summary></entry><entry><title type="html">SSD Disk: 5Гб в секунду</title><link href="http://yamakarov.ru/2019/05/28/fast-ssd.html" rel="alternate" type="text/html" title="SSD Disk: 5Гб в секунду" /><published>2019-05-28T18:30:00+03:00</published><updated>2019-05-28T18:30:00+03:00</updated><id>http://yamakarov.ru/2019/05/28/fast-ssd</id><content type="html" xml:base="http://yamakarov.ru/2019/05/28/fast-ssd.html">&lt;p&gt;Уже появились диски, которые могут обеспечивать скорость последовательного чтения 5Гб в секунду.
 Есть &lt;a href=&quot;https://hothardware.com/news/corsair-mp600&quot;&gt;Corsair MP600 M.2 SSD&lt;/a&gt; и &lt;a href=&quot;https://hothardware.com/news/gigabyte-pcie-40-ssd-teases-5gbs-ryzen-3000-zen-2-motherboards&quot;&gt;Gigabyte’s PCIe 4.0 SSD&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Уже появились диски, которые могут обеспечивать скорость последовательного чтения 5Гб в секунду. Есть Corsair MP600 M.2 SSD и Gigabyte’s PCIe 4.0 SSD.</summary></entry><entry><title type="html">Как правильно оценивать время выполнения задач?</title><link href="http://yamakarov.ru/software/2019/04/16/task-estimate.html" rel="alternate" type="text/html" title="Как правильно оценивать время выполнения задач?" /><published>2019-04-16T14:32:00+03:00</published><updated>2019-04-16T14:32:00+03:00</updated><id>http://yamakarov.ru/software/2019/04/16/task-estimate</id><content type="html" xml:base="http://yamakarov.ru/software/2019/04/16/task-estimate.html">&lt;p&gt;В статье &lt;a href=&quot;https://erikbern.com/2019/04/15/why-software-projects-take-longer-than-you-think-a-statistical-model.html&quot;&gt;Почему программные проекты требуют больше времени чем вы думаете&lt;/a&gt; высказывается интересная мысль о том, что программисты правильно оценивают медиану времени выполнения задачи, но нам надо знать среднее.&lt;/p&gt;
 
 &lt;p&gt;Медиана, это статистическое понятие, пусть у нас есть выборка элементов и медианой будет элемент, у которого число элементов больше равно числу элементов меньше.&lt;/p&gt;
@@ -62,40 +71,4 @@ ListBenchmark.testLinkedList  thrpt    5  57681435.183 ± 28196927.137  ops/s
 Мне сложно осознать этот материал.
 Но в целом очень нравится стиль изложения Лампорта.
 По ходу повествования вводятся новые и новые минимальные требования, чем доказывается их необходимость.
-И когда все что можно придумать, введено, требуется доказать достаточность и готово!&lt;/p&gt;</content><author><name></name></author><summary type="html">Просто о Paxos не очень получается несмотря на название Paxos made simple. Мне сложно осознать этот материал. Но в целом очень нравится стиль изложения Лампорта. По ходу повествования вводятся новые и новые минимальные требования, чем доказывается их необходимость. И когда все что можно придумать, введено, требуется доказать достаточность и готово!</summary></entry><entry><title type="html">В уважающем себя языке должны быть макросы</title><link href="http://yamakarov.ru/rust/2018/11/28/macros.html" rel="alternate" type="text/html" title="В уважающем себя языке должны быть макросы" /><published>2018-11-28T18:36:00+03:00</published><updated>2018-11-28T18:36:00+03:00</updated><id>http://yamakarov.ru/rust/2018/11/28/macros</id><content type="html" xml:base="http://yamakarov.ru/rust/2018/11/28/macros.html">&lt;p&gt;Rust себя уважает, в нем есть &lt;a href=&quot;https://doc.rust-lang.org/book/2018-edition/appendix-04-macros.html&quot;&gt;макросы&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Rust себя уважает, в нем есть макросы.</summary></entry><entry><title type="html">Особенности виртуальной памяти</title><link href="http://yamakarov.ru/os/2018/11/27/virtual-memory.html" rel="alternate" type="text/html" title="Особенности виртуальной памяти" /><published>2018-11-27T20:46:00+03:00</published><updated>2018-11-27T20:46:00+03:00</updated><id>http://yamakarov.ru/os/2018/11/27/virtual-memory</id><content type="html" xml:base="http://yamakarov.ru/os/2018/11/27/virtual-memory.html">&lt;p&gt;Нашел интересный способ познакомиться с устройством виртуальной памяти на моем ноутбуке.
-Можно вызвать команду:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vm_stats
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Эта команда выводит статистику по использованию виртуальной памяти,
-которая на моем компьютере выглядит вот так:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Pages free:                             1248077.
-Pages active:                           1039334.
-Pages inactive:                          681085.
-Pages speculative:                       102637.
-Pages throttled:                              0.
-Pages wired down:                        947732.
-Pages purgeable:                         165924.
-&quot;Translation faults&quot;:                2872353573.
-Pages copy-on-write:                   84084404.
-Pages zero filled:                   1389615466.
-Pages reactivated:                     32939465.
-Pages purged:                          21042545.
-File-backed pages:                       574634.
-Anonymous pages:                        1248422.
-Pages stored in compressor:             1060136.
-Pages occupied by compressor:            175000.
-Decompressions:                        71676136.
-Compressions:                         102546494.
-Pageins:                               32667988.
-Pageouts:                                269292.
-Swapins:                               21328597.
-Swapouts:                              23569093.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Так как я не указал интервал, то выводится статистика за все время работы.
-Если указать 1ms или 1s то статистика будет выводиться с заданным интервалом.&lt;/p&gt;
-
-&lt;p&gt;Посмотреть, что значат эти числа можно в мануале.&lt;/p&gt;</content><author><name></name></author><summary type="html">Нашел интересный способ познакомиться с устройством виртуальной памяти на моем ноутбуке. Можно вызвать команду:</summary></entry></feed>
+И когда все что можно придумать, введено, требуется доказать достаточность и готово!&lt;/p&gt;</content><author><name></name></author><summary type="html">Просто о Paxos не очень получается несмотря на название Paxos made simple. Мне сложно осознать этот материал. Но в целом очень нравится стиль изложения Лампорта. По ходу повествования вводятся новые и новые минимальные требования, чем доказывается их необходимость. И когда все что можно придумать, введено, требуется доказать достаточность и готово!</summary></entry><entry><title type="html">В уважающем себя языке должны быть макросы</title><link href="http://yamakarov.ru/rust/2018/11/28/macros.html" rel="alternate" type="text/html" title="В уважающем себя языке должны быть макросы" /><published>2018-11-28T18:36:00+03:00</published><updated>2018-11-28T18:36:00+03:00</updated><id>http://yamakarov.ru/rust/2018/11/28/macros</id><content type="html" xml:base="http://yamakarov.ru/rust/2018/11/28/macros.html">&lt;p&gt;Rust себя уважает, в нем есть &lt;a href=&quot;https://doc.rust-lang.org/book/2018-edition/appendix-04-macros.html&quot;&gt;макросы&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Rust себя уважает, в нем есть макросы.</summary></entry></feed>
